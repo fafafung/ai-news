@@ -593,16 +593,42 @@ def generate_daily(json_path):
 # ---------------------------------------------------------------------------
 
 def generate_index():
-    """Generate index.html from index_data.json."""
+    """Generate index.html from index_data.json, with weekly links."""
     index_data = load_index_data()
     entries = index_data.get("entries", [])
+
+    # Compute unique weeks from entries
+    seen_weeks = set()
+    sorted_weeks = []
+    for entry in entries:
+        key = (entry.get("iso_year", 0), entry.get("iso_week", 0))
+        if key not in seen_weeks and key != (0, 0):
+            seen_weeks.add(key)
+            sorted_weeks.append(key)
+    sorted_weeks.sort(reverse=True)
 
     title = "AI 新聞檔案"
     subtitle = (
         f"一共 {len(entries)} 天的新聞記錄"
     )
+    if sorted_weeks:
+        subtitle += f" · {len(sorted_weeks)} 個星期"
 
     nav_links = ""
+
+    # Weekly summary section
+    weekly_html = ""
+    if sorted_weeks:
+        weekly_html = '<div class="section"><div class="section-title">📊 週報</div>'
+        for iso_year, iso_week in sorted_weeks:
+            weekly_html += (
+                f'<div class="week-entry" style="padding:12px 16px;">'
+                f'<div class="week-title" style="font-size:1rem;">'
+                f'<a href="weekly-{iso_year}-W{iso_week:02d}.html">'
+                f'📊 第{iso_week:02d}週 ({iso_year})</a></div>'
+                f'</div>'
+            )
+        weekly_html += '</div>'
 
     # Build the daily list HTML
     daily_rows = []
@@ -635,7 +661,13 @@ def generate_index():
         row_parts.append('</div>')
         daily_rows.append("\n".join(row_parts))
 
-    body = "\n".join(daily_rows) if daily_rows else "<p>暫無記錄</p>"
+    body = weekly_html
+    if daily_rows:
+        body += '<div class="section"><div class="section-title">📅 每日新聞</div>'
+        body += "\n".join(daily_rows)
+        body += '</div>'
+    else:
+        body += "<p>暫無記錄</p>"
 
     full_html = HTML_HEAD.format(
         title=title,
