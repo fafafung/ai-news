@@ -3,306 +3,605 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI News Archive — AI 新聞 · 2026-06-20</title>
+<title>AI 新聞 · 2026-06-20</title>
 <style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
 :root {
   --bg: #0d1117;
   --bg2: #161b22;
   --bg3: #1c2333;
+  --bg4: #21262d;
   --text: #e6edf3;
   --text2: #8b949e;
   --text3: #58a6ff;
   --border: #30363d;
+  --border2: #3d444d;
   --accent: #58a6ff;
   --card-hover: #1c2333;
   --link: #58a6ff;
-  --stat-bg: #0d1117;
+  --badge-text: #ffffff;
+  --shadow: rgba(0,0,0,0.3);
+  --featured-bg: linear-gradient(135deg, #161b22 0%, #1c2333 100%);
+  --featured-border: #58a6ff;
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
     --bg2: #f6f8fa;
     --bg3: #eef1f5;
+    --bg4: #e8ecf0;
     --text: #1f2328;
     --text2: #656d76;
     --text3: #0969da;
     --border: #d0d7de;
+    --border2: #d8dee4;
     --accent: #0969da;
     --card-hover: #f3f4f6;
     --link: #0969da;
-    --stat-bg: #ffffff;
+    --badge-text: #ffffff;
+    --shadow: rgba(0,0,0,0.08);
+    --featured-border: #0969da;
   }
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
     sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
+
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
 
-/* Header */
+/* ── Layout ── */
+.container { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+
+/* ── Header ── */
 .header {
   border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
 }
 .header h1 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.header h1 .date-weekday {
+  font-weight: 400;
+  color: var(--text2);
+  font-size: 0.9em;
 }
 .header .sub {
   color: var(--text2);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  margin-top: 2px;
 }
 .header .nav {
-  margin-top: 12px;
+  margin-top: 16px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 .header .nav a {
   color: var(--text2);
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
   background: var(--bg2);
-  transition: background 0.15s;
+  border: 1px solid var(--border);
+  transition: all 0.15s;
 }
 .header .nav a:hover {
   background: var(--bg3);
+  border-color: var(--text3);
   text-decoration: none;
+  color: var(--text);
 }
 
-/* Stats bar */
+/* ── Stats Bar ── */
 .stats {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
-  font-size: 0.85rem;
+  margin-bottom: 28px;
 }
 .stat-box {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 16px;
+  border-radius: 10px;
+  padding: 12px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;
+  min-width: 76px;
 }
 .stat-box .num {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: var(--accent);
+  line-height: 1.2;
 }
 .stat-box .label {
   color: var(--text2);
-  font-size: 0.75rem;
-  margin-top: 2px;
+  font-size: 0.72rem;
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-/* Category sections */
-.section {
-  margin-bottom: 28px;
+/* ── Day-of-week stat box ── */
+.stat-box.dow-box .num {
+  font-size: 1.1rem;
 }
-.section-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--accent);
+
+/* ── Section (Category Group) ── */
+.section {
+  margin-bottom: 36px;
+}
+.section-header {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.section-header .section-icon {
+  font-size: 1.3rem;
+}
+.section-header .section-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.section-header .section-count {
+  font-size: 0.78rem;
+  color: var(--text2);
+  background: var(--bg3);
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
 }
 
-/* Cards */
+/* ── News Card ── */
 .card {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  transition: background 0.15s, border-color 0.15s;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+  position: relative;
 }
 .card:hover {
   background: var(--card-hover);
   border-color: var(--accent);
+  box-shadow: 0 4px 12px var(--shadow);
 }
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+.card-accent-border {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: calc(100% - 16px);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Title row */
+.card-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
-.card-title a {
+.card-title-link {
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
 }
-.card-title a:hover {
+.card-title-link:hover {
   color: var(--link);
 }
-.card-why {
-  color: var(--text2);
-  font-size: 0.88rem;
-  margin-top: 2px;
+.card-title-link .emoji-prefix {
+  margin-right: 4px;
 }
 
 /* Badges */
+.badge-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 12px;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
   white-space: nowrap;
   letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 .badge-signal {
-  color: #fff;
+  color: var(--badge-text);
 }
-
-/* Stars */
-.stars {
+.badge-source {
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.badge-stars {
+  background: rgba(227, 179, 65, 0.15);
   color: #e3b341;
-  font-size: 0.8rem;
-  font-weight: 500;
-  white-space: nowrap;
+  border: 1px solid rgba(227, 179, 65, 0.3);
 }
 
-/* Summary block */
+/* Description — the main readable content */
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* Why (short one-liner) — metadata fallback */
+.card-why {
+  font-size: 0.82rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+/* Metadata bar */
+.card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 4px;
+}
+.card-meta .meta-item {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+/* ── Summary Box ── */
 .summary-box {
   background: linear-gradient(135deg, var(--bg2), var(--bg3));
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin-top: 28px;
-  margin-bottom: 28px;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
-.summary-box .label {
+.summary-box .summary-label {
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 4px;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Footer */
-.footer {
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-  margin-top: 40px;
-  text-align: center;
-  color: var(--text2);
+  margin-bottom: 6px;
   font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
-.footer a { color: var(--text2); }
 
-/* Weekly-specific */
-.week-entry {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 20px;
-  margin-bottom: 14px;
-  transition: background 0.15s;
+/* ── Featured Section (Index) ── */
+.featured-section {
+  margin-bottom: 36px;
 }
-.week-entry:hover {
-  background: var(--card-hover);
-}
-.week-entry .week-title {
-  font-size: 1.15rem;
+.featured-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
   font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.featured-card {
+  background: var(--featured-bg);
+  border: 1px solid var(--featured-border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: all 0.2s;
+}
+.featured-card:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.featured-card .fc-date {
+  font-size: 1.35rem;
+  font-weight: 800;
   margin-bottom: 4px;
 }
-.week-entry .week-meta {
+.featured-card .fc-date a {
+  color: var(--text);
+}
+.featured-card .fc-date a:hover {
+  color: var(--link);
+}
+.featured-card .fc-meta {
   color: var(--text2);
   font-size: 0.85rem;
   margin-bottom: 8px;
 }
-.week-entry .week-stats {
+.featured-card .fc-summary {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── History Entry (Index) ── */
+.history-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: all 0.15s;
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+.history-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.history-entry .he-date {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.history-entry .he-date a {
+  color: var(--text);
+}
+.history-entry .he-date a:hover {
+  color: var(--link);
+}
+.history-entry .he-badge {
+  font-size: 0.72rem;
+  background: var(--bg3);
+  color: var(--text2);
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+.history-entry .he-snippet {
+  font-size: 0.85rem;
+  color: var(--text2);
+  flex-basis: 100%;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ── Week Entry (Index & Weekly page) ── */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  transition: all 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.week-entry .we-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .we-title a { color: var(--text); }
+.week-entry .we-title a:hover { color: var(--link); }
+.week-entry .we-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .we-stats {
+  display: flex;
+  gap: 14px;
   flex-wrap: wrap;
   font-size: 0.82rem;
 }
+.week-entry .we-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
-/* Daily item in weekly view */
+/* ── Daily Mini (for weekly page day list) ── */
 .daily-mini {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background: var(--bg3);
-  border-radius: 6px;
-  padding: 3px 10px;
+  border-radius: 8px;
+  padding: 4px 12px;
   font-size: 0.82rem;
-  margin: 2px 4px 2px 0;
+  margin: 3px 5px 3px 0;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .container { padding: 16px 12px; }
-  .header h1 { font-size: 1.3rem; }
-  .stats { gap: 8px; }
-  .stat-box { min-width: 60px; padding: 8px 12px; }
-  .stat-box .num { font-size: 1.1rem; }
-  .card { padding: 12px 14px; }
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 48px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.8rem;
+  line-height: 1.8;
 }
+.footer a { color: var(--text2); }
+.footer a:hover { color: var(--link); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container { padding: 20px 14px; }
+  .header h1 { font-size: 1.35rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 14px; }
+  .stat-box .num { font-size: 1.15rem; }
+  .card { padding: 14px 16px; }
+  .card-title-link { font-size: 0.95rem; }
+  .card-description { font-size: 0.88rem; }
+  .featured-card { padding: 18px 20px; }
+  .featured-card .fc-date { font-size: 1.15rem; }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 14px 10px; }
+  .header h1 { font-size: 1.15rem; }
+  .stat-box { min-width: 50px; padding: 6px 10px; }
+  .stat-box .num { font-size: 1rem; }
+  .section-header { flex-wrap: wrap; }
+}
+
 </style>
 </head>
 <body>
 <div class="container">
 
 <header class="header">
-  <h1>AI 新聞 · 2026-06-20</h1>
+  <h1>AI 新聞 · 2026-06-20 <span class="date-weekday">星期六</span></h1>
   <div class="sub">星期六 · 2026-06-20</div>
   <nav class="nav">
     <a href="index.html">🏠 主頁</a>
-    <a href="index.html">📋 目錄</a>
+    <a href="index.html">📋 目錄</a><a href="weekly-2026-W25.html">📊 第25週</a>
   </nav>
 </header>
 <div class="stats">
-<div class="stat-box"><span class="num">10</span><span class="label">總計</span></div>
-<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
-<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
-<div class="stat-box"><span class="num">2</span><span class="label">📰 General</span></div>
+<div class="stat-box"><span class="num">10</span><span class="label">新聞總數</span></div>
+<div class="stat-box dow-box"><span class="num">星期六</span><span class="label">星期</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub 開源</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 科技新聞</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 業界動態</span></div>
 </div><div class="section">
-<div class="section-title">⚡ GitHub</div>
-<div class="card"><div class="card-title"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">⚡ anthropics/skills</a><span class="stars">⭐ 153.0k</span></div><div class="card-why">Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code 同 API 都食得，仲有 docx/pdf/pptx skill 做 reference</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener">⚡ ChromeDevTools/chrome-devtools-mcp</a><span class="stars">⭐ 44.0k</span></div><div class="card-why">Chrome DevTools 變 MCP server！coding agent 可以直接開 browser 做 performance trace、network inspect、Lighthouse audit — 慳返人手 debug 時間</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener">⚡ bytedance/UI-TARS-desktop ~</a><span class="stars">⭐ 30.0k</span></div><div class="card-why">ByteDance 出嘅 open-source multimodal GUI agent stack。Agent TARS + UI-TARS Desktop，可以操控 browser / desktop / terminal，支援 MCP tools。大廠入 desktop agent 賽道</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/google-research/timesfm" target="_blank" rel="noopener">⚡ google-research/timesfm</a><span class="stars">⭐ 24.1k</span></div><div class="card-why">Google Research 嘅 time-series foundation model v2.5，Apache 2.0。你玩開 xgboost 嘅話呢個係新 paradigm — pretrained forecasting model，仲有 LoRA fine-tuning example</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank" rel="noopener">⚡ asgeirtj/system_prompts_leaks</a><span class="stars">⭐ 43.6k</span></div><div class="card-why">各大 AI 公司 system prompt 收集庫：Claude Fable 5 / Opus 4.8、GPT 5.5、Gemini 3.5 Flash、Grok、Cursor、Copilot 全部有齊，更新頻密。Prompt engineering 必睇</div></div>
+<div class="section-header" style="border-bottom-color:#e3b34140;">
+<span class="section-icon">⚡</span>
+<span class="section-label" style="color:#e3b341;">GitHub 開源</span>
+<span class="section-count">5 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/anthropics/skills" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>anthropics/skills</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 153.0k</span></div>
+</div>
+<div class="card-description">Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code 同 API 都食得，仲有 docx/pdf/pptx skill 做 reference</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>ChromeDevTools/chrome-devtools-mcp</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 44.0k</span></div>
+</div>
+<div class="card-description">Chrome DevTools 變 MCP server！coding agent 可以直接開 browser 做 performance trace、network inspect、Lighthouse audit — 慳返人手 debug 時間</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>bytedance/UI-TARS-desktop ~</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 30.0k</span></div>
+</div>
+<div class="card-description">ByteDance 出嘅 open-source multimodal GUI agent stack。Agent TARS + UI-TARS Desktop，可以操控 browser / desktop / terminal，支援 MCP tools。大廠入 desktop agent 賽道</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/google-research/timesfm" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>google-research/timesfm</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 24.1k</span></div>
+</div>
+<div class="card-description">Google Research 嘅 time-series foundation model v2.5，Apache 2.0。你玩開 xgboost 嘅話呢個係新 paradigm — pretrained forecasting model，仲有 LoRA fine-tuning example</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>asgeirtj/system_prompts_leaks</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 43.6k</span></div>
+</div>
+<div class="card-description">各大 AI 公司 system prompt 收集庫：Claude Fable 5 / Opus 4.8、GPT 5.5、Gemini 3.5 Flash、Grok、Cursor、Copilot 全部有齊，更新頻密。Prompt engineering 必睇</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
 </div><div class="section">
-<div class="section-title">🔬 Tech</div>
-<div class="card"><div class="card-title"><a href="https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost" target="_blank" rel="noopener">🔬 GLM-5.2 開放權重 753B</a></div><div class="card-why">以 MIT license 開源，SWE-bench Pro 62.1 贏 GPT-5.5 嘅 58.6，價錢只係 1/6（$5.80 vs $35.00 /M tokens）。IndexShare 注意力優化 + Multi-Token Prediction，1M context window。Z.ai 呢腳好大</div></div>
-<div class="card"><div class="card-title"><a href="https://www.bbc.com/news/articles/c932g3v3e13o" target="_blank" rel="noopener">🔬 Claude Fable 5 被 US govt 封殺</a></div><div class="card-why">推出 72 小時後美國出口管制令 Anthropic 暫停服務，但仍然可以經 API access。Cybersecurity 憂慮做 trigger。Anthropic 同時 raise 咗 $65B Series H @ $965B valuation，史上最大 AI funding</div></div>
-<div class="card"><div class="card-title"><a href="https://pricepertoken.com/news/model-releases" target="_blank" rel="noopener">🔬 Google 推出 Gemini 3 Pro Image & 3.1 Flash Image</a></div><div class="card-why">Jun 18 發佈，multi-modal image understanding model。Gemini 3 Pro Image $2/$12 per M tokens，Flash 版 $0.50/$3。同場加映 DiffusionGemma 26B-A4B 開源</div></div>
+<div class="section-header" style="border-bottom-color:#58a6ff40;">
+<span class="section-icon">🔬</span>
+<span class="section-label" style="color:#58a6ff;">科技新聞</span>
+<span class="section-count">3 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>GLM-5.2 開放權重 753B</a>
+</div>
+<div class="card-description">以 MIT license 開源，SWE-bench Pro 62.1 贏 GPT-5.5 嘅 58.6，價錢只係 1/6（$5.80 vs $35.00 /M tokens）。IndexShare 注意力優化 + Multi-Token Prediction，1M context window。Z.ai 呢腳好大</div>
+<div class="card-meta"><span class="badge badge-source">venturebeat.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.bbc.com/news/articles/c932g3v3e13o" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>Claude Fable 5 被 US govt 封殺</a>
+</div>
+<div class="card-description">推出 72 小時後美國出口管制令 Anthropic 暫停服務，但仍然可以經 API access。Cybersecurity 憂慮做 trigger。Anthropic 同時 raise 咗 $65B Series H @ $965B valuation，史上最大 AI funding</div>
+<div class="card-meta"><span class="badge badge-source">bbc.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://pricepertoken.com/news/model-releases" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>Google 推出 Gemini 3 Pro Image & 3.1 Flash Image</a>
+</div>
+<div class="card-description">Jun 18 發佈，multi-modal image understanding model。Gemini 3 Pro Image $2/$12 per M tokens，Flash 版 $0.50/$3。同場加映 DiffusionGemma 26B-A4B 開源</div>
+<div class="card-meta"><span class="badge badge-source">pricepertoken.com</span></div>
+</div>
 </div><div class="section">
-<div class="section-title">📰 General</div>
-<div class="card"><div class="card-title"><a href="https://www.artificialintelligence-news.com/news/microsoft-sells-openai-models-china/" target="_blank" rel="noopener">📰 Microsoft 在中國賣 OpenAI models</a></div><div class="card-why">而 OpenAI 同 Anthropic 自己唔入中國。Microsoft 透過 Azure China 賣 GPT 系列，地緣政治嘅 AI 銷售策略好微妙</div></div>
-<div class="card"><div class="card-title"><a href="https://www.artificialintelligence-news.com/news/ai-content-labelling-eu-code-of-practice/" target="_blank" rel="noopener">📰 EU 公佈 AI content labelling playbook</a></div><div class="card-why">為 August 嘅 AI Act deadline 做準備。內容標籤框架出爐，影響所有喺 EU 營運嘅 AI product</div></div>
-</div><div class="summary-box"><div class="label">📝 總結</div>星期六少啲人出 announcement，但 GLM-5.2 同 Fable 5 ban 夠撐場。GitHub 方面 anthropics/skills 同 chrome-devtools-mcp 值得你即時 bookmark，尤其你玩開 agent skills 同 MCP。TimesFM 係 time-series 新範式，有興趣可以 pip install timesfm==2.0.0 試下。聽日見！</div><footer class="footer">
-  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+<div class="section-header" style="border-bottom-color:#bc8cff40;">
+<span class="section-icon">📰</span>
+<span class="section-label" style="color:#bc8cff;">業界動態</span>
+<span class="section-count">2 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.artificialintelligence-news.com/news/microsoft-sells-openai-models-china/" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>Microsoft 在中國賣 OpenAI models</a>
+</div>
+<div class="card-description">而 OpenAI 同 Anthropic 自己唔入中國。Microsoft 透過 Azure China 賣 GPT 系列，地緣政治嘅 AI 銷售策略好微妙</div>
+<div class="card-meta"><span class="badge badge-source">artificialintelligence-news.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.artificialintelligence-news.com/news/ai-content-labelling-eu-code-of-practice/" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>EU 公佈 AI content labelling playbook</a>
+</div>
+<div class="card-description">為 August 嘅 AI Act deadline 做準備。內容標籤框架出爐，影響所有喺 EU 營運嘅 AI product</div>
+<div class="card-meta"><span class="badge badge-source">artificialintelligence-news.com</span></div>
+</div>
+</div><div class="summary-box"><div class="summary-label">📝 總結</div>星期六少啲人出 announcement，但 GLM-5.2 同 Fable 5 ban 夠撐場。GitHub 方面 anthropics/skills 同 chrome-devtools-mcp 值得你即時 bookmark，尤其你玩開 agent skills 同 MCP。TimesFM 係 time-series 新範式，有興趣可以 pip install timesfm==2.0.0 試下。聽日見！</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/fafafung/ai-news">GitHub</a></p>
+  <p style="margin-top:4px;font-size:0.75rem;opacity:0.7;">AI 新聞檔案 · 每日更新</p>
 </footer>
 </div>
 </body>

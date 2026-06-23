@@ -3,311 +3,626 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI News Archive — AI 新聞 · 2026-06-14</title>
+<title>AI 新聞 · 2026-06-14</title>
 <style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
 :root {
   --bg: #0d1117;
   --bg2: #161b22;
   --bg3: #1c2333;
+  --bg4: #21262d;
   --text: #e6edf3;
   --text2: #8b949e;
   --text3: #58a6ff;
   --border: #30363d;
+  --border2: #3d444d;
   --accent: #58a6ff;
   --card-hover: #1c2333;
   --link: #58a6ff;
-  --stat-bg: #0d1117;
+  --badge-text: #ffffff;
+  --shadow: rgba(0,0,0,0.3);
+  --featured-bg: linear-gradient(135deg, #161b22 0%, #1c2333 100%);
+  --featured-border: #58a6ff;
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
     --bg2: #f6f8fa;
     --bg3: #eef1f5;
+    --bg4: #e8ecf0;
     --text: #1f2328;
     --text2: #656d76;
     --text3: #0969da;
     --border: #d0d7de;
+    --border2: #d8dee4;
     --accent: #0969da;
     --card-hover: #f3f4f6;
     --link: #0969da;
-    --stat-bg: #ffffff;
+    --badge-text: #ffffff;
+    --shadow: rgba(0,0,0,0.08);
+    --featured-border: #0969da;
   }
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
     sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
+
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
 
-/* Header */
+/* ── Layout ── */
+.container { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+
+/* ── Header ── */
 .header {
   border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
 }
 .header h1 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.header h1 .date-weekday {
+  font-weight: 400;
+  color: var(--text2);
+  font-size: 0.9em;
 }
 .header .sub {
   color: var(--text2);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  margin-top: 2px;
 }
 .header .nav {
-  margin-top: 12px;
+  margin-top: 16px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 .header .nav a {
   color: var(--text2);
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
   background: var(--bg2);
-  transition: background 0.15s;
+  border: 1px solid var(--border);
+  transition: all 0.15s;
 }
 .header .nav a:hover {
   background: var(--bg3);
+  border-color: var(--text3);
   text-decoration: none;
+  color: var(--text);
 }
 
-/* Stats bar */
+/* ── Stats Bar ── */
 .stats {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
-  font-size: 0.85rem;
+  margin-bottom: 28px;
 }
 .stat-box {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 16px;
+  border-radius: 10px;
+  padding: 12px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;
+  min-width: 76px;
 }
 .stat-box .num {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: var(--accent);
+  line-height: 1.2;
 }
 .stat-box .label {
   color: var(--text2);
-  font-size: 0.75rem;
-  margin-top: 2px;
+  font-size: 0.72rem;
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-/* Category sections */
-.section {
-  margin-bottom: 28px;
+/* ── Day-of-week stat box ── */
+.stat-box.dow-box .num {
+  font-size: 1.1rem;
 }
-.section-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--accent);
+
+/* ── Section (Category Group) ── */
+.section {
+  margin-bottom: 36px;
+}
+.section-header {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.section-header .section-icon {
+  font-size: 1.3rem;
+}
+.section-header .section-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.section-header .section-count {
+  font-size: 0.78rem;
+  color: var(--text2);
+  background: var(--bg3);
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
 }
 
-/* Cards */
+/* ── News Card ── */
 .card {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  transition: background 0.15s, border-color 0.15s;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+  position: relative;
 }
 .card:hover {
   background: var(--card-hover);
   border-color: var(--accent);
+  box-shadow: 0 4px 12px var(--shadow);
 }
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+.card-accent-border {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: calc(100% - 16px);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Title row */
+.card-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
-.card-title a {
+.card-title-link {
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
 }
-.card-title a:hover {
+.card-title-link:hover {
   color: var(--link);
 }
-.card-why {
-  color: var(--text2);
-  font-size: 0.88rem;
-  margin-top: 2px;
+.card-title-link .emoji-prefix {
+  margin-right: 4px;
 }
 
 /* Badges */
+.badge-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 12px;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
   white-space: nowrap;
   letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 .badge-signal {
-  color: #fff;
+  color: var(--badge-text);
 }
-
-/* Stars */
-.stars {
+.badge-source {
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.badge-stars {
+  background: rgba(227, 179, 65, 0.15);
   color: #e3b341;
-  font-size: 0.8rem;
-  font-weight: 500;
-  white-space: nowrap;
+  border: 1px solid rgba(227, 179, 65, 0.3);
 }
 
-/* Summary block */
+/* Description — the main readable content */
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* Why (short one-liner) — metadata fallback */
+.card-why {
+  font-size: 0.82rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+/* Metadata bar */
+.card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 4px;
+}
+.card-meta .meta-item {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+/* ── Summary Box ── */
 .summary-box {
   background: linear-gradient(135deg, var(--bg2), var(--bg3));
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin-top: 28px;
-  margin-bottom: 28px;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
-.summary-box .label {
+.summary-box .summary-label {
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 4px;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Footer */
-.footer {
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-  margin-top: 40px;
-  text-align: center;
-  color: var(--text2);
+  margin-bottom: 6px;
   font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
-.footer a { color: var(--text2); }
 
-/* Weekly-specific */
-.week-entry {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 20px;
-  margin-bottom: 14px;
-  transition: background 0.15s;
+/* ── Featured Section (Index) ── */
+.featured-section {
+  margin-bottom: 36px;
 }
-.week-entry:hover {
-  background: var(--card-hover);
-}
-.week-entry .week-title {
-  font-size: 1.15rem;
+.featured-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
   font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.featured-card {
+  background: var(--featured-bg);
+  border: 1px solid var(--featured-border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: all 0.2s;
+}
+.featured-card:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.featured-card .fc-date {
+  font-size: 1.35rem;
+  font-weight: 800;
   margin-bottom: 4px;
 }
-.week-entry .week-meta {
+.featured-card .fc-date a {
+  color: var(--text);
+}
+.featured-card .fc-date a:hover {
+  color: var(--link);
+}
+.featured-card .fc-meta {
   color: var(--text2);
   font-size: 0.85rem;
   margin-bottom: 8px;
 }
-.week-entry .week-stats {
+.featured-card .fc-summary {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── History Entry (Index) ── */
+.history-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: all 0.15s;
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+.history-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.history-entry .he-date {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.history-entry .he-date a {
+  color: var(--text);
+}
+.history-entry .he-date a:hover {
+  color: var(--link);
+}
+.history-entry .he-badge {
+  font-size: 0.72rem;
+  background: var(--bg3);
+  color: var(--text2);
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+.history-entry .he-snippet {
+  font-size: 0.85rem;
+  color: var(--text2);
+  flex-basis: 100%;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ── Week Entry (Index & Weekly page) ── */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  transition: all 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.week-entry .we-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .we-title a { color: var(--text); }
+.week-entry .we-title a:hover { color: var(--link); }
+.week-entry .we-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .we-stats {
+  display: flex;
+  gap: 14px;
   flex-wrap: wrap;
   font-size: 0.82rem;
 }
+.week-entry .we-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
-/* Daily item in weekly view */
+/* ── Daily Mini (for weekly page day list) ── */
 .daily-mini {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background: var(--bg3);
-  border-radius: 6px;
-  padding: 3px 10px;
+  border-radius: 8px;
+  padding: 4px 12px;
   font-size: 0.82rem;
-  margin: 2px 4px 2px 0;
+  margin: 3px 5px 3px 0;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .container { padding: 16px 12px; }
-  .header h1 { font-size: 1.3rem; }
-  .stats { gap: 8px; }
-  .stat-box { min-width: 60px; padding: 8px 12px; }
-  .stat-box .num { font-size: 1.1rem; }
-  .card { padding: 12px 14px; }
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 48px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.8rem;
+  line-height: 1.8;
 }
+.footer a { color: var(--text2); }
+.footer a:hover { color: var(--link); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container { padding: 20px 14px; }
+  .header h1 { font-size: 1.35rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 14px; }
+  .stat-box .num { font-size: 1.15rem; }
+  .card { padding: 14px 16px; }
+  .card-title-link { font-size: 0.95rem; }
+  .card-description { font-size: 0.88rem; }
+  .featured-card { padding: 18px 20px; }
+  .featured-card .fc-date { font-size: 1.15rem; }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 14px 10px; }
+  .header h1 { font-size: 1.15rem; }
+  .stat-box { min-width: 50px; padding: 6px 10px; }
+  .stat-box .num { font-size: 1rem; }
+  .section-header { flex-wrap: wrap; }
+}
+
 </style>
 </head>
 <body>
 <div class="container">
 
 <header class="header">
-  <h1>AI 新聞 · 2026-06-14</h1>
+  <h1>AI 新聞 · 2026-06-14 <span class="date-weekday">星期日</span></h1>
   <div class="sub">星期日 · 2026-06-14</div>
   <nav class="nav">
     <a href="index.html">🏠 主頁</a>
-    <a href="index.html">📋 目錄</a>
+    <a href="index.html">📋 目錄</a><a href="weekly-2026-W24.html">📊 第24週</a>
   </nav>
 </header>
 <div class="stats">
-<div class="stat-box"><span class="num">12</span><span class="label">總計</span></div>
-<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
-<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
-<div class="stat-box"><span class="num">3</span><span class="label">📰 General</span></div>
-<div class="stat-box"><span class="num">1</span><span class="label">📄 Research</span></div>
+<div class="stat-box"><span class="num">12</span><span class="label">新聞總數</span></div>
+<div class="stat-box dow-box"><span class="num">星期日</span><span class="label">星期</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub 開源</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 科技新聞</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">📰 業界動態</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 研究論文</span></div>
 </div><div class="section">
-<div class="section-title">⚡ GitHub</div>
-<div class="card"><div class="card-title"><a href="https://github.com/elder-plinius/CL4R1T4S" target="_blank" rel="noopener">⚡ elder-plinius/CL4R1T4S</a><span class="stars">⭐ 751</span></div><div class="card-why">被外洩嘅 ChatGPT/Claude/Gemini/Grok/Perplexity/Cursor 等 system prompts 大合集。AI transparency 界嘅維基解密，極具參考價值</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/XiaomiMiMo" target="_blank" rel="noopener">⚡ XiaomiMiMo/MiMo-Code</a><span class="stars">⭐ 550</span></div><div class="card-why">小米正式進軍 AI coding agent！MiMo-V2-Flash 係 309B MoE (15B active) 嘅 terminal-native coding assistant，有 persistent memory system。大廠入場 signal</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/DanMcInerney/architect-loop" target="_blank" rel="noopener">⚡ DanMcInerney/architect-loop</a><span class="stars">⭐ 166</span></div><div class="card-why">Claude Fable 5 做 architect 設計 + 審查，GPT-5.5 Codex 做 builder 執行。Cross-vendor agent loop，可以 reduction 80% Fable tokens。Fafa 玩 multi-model agent 必睇</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/LMCache/LMCache" target="_blank" rel="noopener">⚡ LMCache/LMCache</a></div><div class="card-why">最快嘅 KV cache layer for LLM inference。支援 multi-node P2P CPU memory sharing，直接影響 vLLM/ollama 呢類 local inference 嘅 latency。開咗新 paradigm</div></div>
-<div class="card"><div class="card-title"><a href="https://github.com/MiniMax-AI/MiniMax-M3" target="_blank" rel="noopener">⚡ MiniMax-AI/MiniMax-M3</a></div><div class="card-why">MiniMax M3 開源！Frontier-level coding + agentic，1M context window，$0.30/$1.20 per M tokens 超抵。Fafa 用開 MiniMax 更加要留意</div></div>
+<div class="section-header" style="border-bottom-color:#e3b34140;">
+<span class="section-icon">⚡</span>
+<span class="section-label" style="color:#e3b341;">GitHub 開源</span>
+<span class="section-count">5 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/elder-plinius/CL4R1T4S" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>elder-plinius/CL4R1T4S</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 751</span></div>
+</div>
+<div class="card-description">被外洩嘅 ChatGPT/Claude/Gemini/Grok/Perplexity/Cursor 等 system prompts 大合集。AI transparency 界嘅維基解密，極具參考價值</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/XiaomiMiMo" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>XiaomiMiMo/MiMo-Code</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 550</span></div>
+</div>
+<div class="card-description">小米正式進軍 AI coding agent！MiMo-V2-Flash 係 309B MoE (15B active) 嘅 terminal-native coding assistant，有 persistent memory system。大廠入場 signal</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/DanMcInerney/architect-loop" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>DanMcInerney/architect-loop</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 166</span></div>
+</div>
+<div class="card-description">Claude Fable 5 做 architect 設計 + 審查，GPT-5.5 Codex 做 builder 執行。Cross-vendor agent loop，可以 reduction 80% Fable tokens。Fafa 玩 multi-model agent 必睇</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/LMCache/LMCache" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>LMCache/LMCache</a>
+</div>
+<div class="card-description">最快嘅 KV cache layer for LLM inference。支援 multi-node P2P CPU memory sharing，直接影響 vLLM/ollama 呢類 local inference 嘅 latency。開咗新 paradigm</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/MiniMax-AI/MiniMax-M3" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>MiniMax-AI/MiniMax-M3</a>
+</div>
+<div class="card-description">MiniMax M3 開源！Frontier-level coding + agentic，1M context window，$0.30/$1.20 per M tokens 超抵。Fafa 用開 MiniMax 更加要留意</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span></div>
+</div>
 </div><div class="section">
-<div class="section-title">🔬 Tech</div>
-<div class="card"><div class="card-title"><a href="https://anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">🔬 Anthropic Claude Fable 5 & Mythos 5 正式推出</a></div><div class="card-why">Frontier model，1M context，128K output tokens，$10/$50 per M tokens。Fable 5 可以做 video games，但 cybersecurity 研究者話 guardrails 太弱。同時 Claude Opus 4.8 繼續驅動 Anthropic 收入</div></div>
-<div class="card"><div class="card-title"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026" target="_blank" rel="noopener">🔬 Microsoft MAI-Thinking-1 發布</a></div><div class="card-why">Mustafa Suleyman 喺 Build Day 2 公開嘅 in-house reasoning model，性能 ~Claude Sonnet 4.6。Microsoft 逐步減低對 OpenAI 嘅 strategic dependence</div></div>
-<div class="card"><div class="card-title"><a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code" target="_blank" rel="noopener">🔬 Moonshot AI 開源 Kimi K2.7 Code</a></div><div class="card-why">Coding-focused agentic model，基於 K2.6 大幅改進 real-world coding tasks。Open source，可 self-host</div></div>
+<div class="section-header" style="border-bottom-color:#58a6ff40;">
+<span class="section-icon">🔬</span>
+<span class="section-label" style="color:#58a6ff;">科技新聞</span>
+<span class="section-count">3 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>Anthropic Claude Fable 5 & Mythos 5 正式推出</a>
+</div>
+<div class="card-description">Frontier model，1M context，128K output tokens，$10/$50 per M tokens。Fable 5 可以做 video games，但 cybersecurity 研究者話 guardrails 太弱。同時 Claude Opus 4.8 繼續驅動 Anthropic 收入</div>
+<div class="card-meta"><span class="badge badge-source">anthropic.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>Microsoft MAI-Thinking-1 發布</a>
+</div>
+<div class="card-description">Mustafa Suleyman 喺 Build Day 2 公開嘅 in-house reasoning model，性能 ~Claude Sonnet 4.6。Microsoft 逐步減低對 OpenAI 嘅 strategic dependence</div>
+<div class="card-meta"><span class="badge badge-source">buildfastwithai.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>Moonshot AI 開源 Kimi K2.7 Code</a>
+</div>
+<div class="card-description">Coding-focused agentic model，基於 K2.6 大幅改進 real-world coding tasks。Open source，可 self-host</div>
+<div class="card-meta"><span class="badge badge-source">huggingface.co</span></div>
+</div>
 </div><div class="section">
-<div class="section-title">📰 General</div>
-<div class="card"><div class="card-title"><a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html" target="_blank" rel="noopener">📰 SpaceX 創史上最大 IPO</a></div><div class="card-why">以 SPCX 登陸 Nasdaq，集資 $75B，市值 ~$1.77T。本質係 AI infrastructure play — 資金直接 funding xAI 嘅 Colossus 超算同 compute buildout</div></div>
-<div class="card"><div class="card-title"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026" target="_blank" rel="noopener">📰 Anthropic 喺美國企業採用率首超 OpenAI</a></div><div class="card-why">Ramp AI Index: Anthropic 34.4% vs OpenAI 32.3%。Claude Code 係最大 driver — 估計 4% 嘅 public GitHub commits 由 Claude Code 寫</div></div>
-<div class="card"><div class="card-title"><a href="https://promptailearning.com/ai-news/daily/top-5-ai-news-june-14-2026" target="_blank" rel="noopener">📰 Mistral AI 尋求 $3B 融資，估值 $20B</a></div><div class="card-why">定位做 EU-friendly sovereign AI alternative。Fafa 可以留意下 Mistral 啲 model 做 workflow 多樣化</div></div>
+<div class="section-header" style="border-bottom-color:#bc8cff40;">
+<span class="section-icon">📰</span>
+<span class="section-label" style="color:#bc8cff;">業界動態</span>
+<span class="section-count">3 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>SpaceX 創史上最大 IPO</a>
+</div>
+<div class="card-description">以 SPCX 登陸 Nasdaq，集資 $75B，市值 ~$1.77T。本質係 AI infrastructure play — 資金直接 funding xAI 嘅 Colossus 超算同 compute buildout</div>
+<div class="card-meta"><span class="badge badge-source">cnbc.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>Anthropic 喺美國企業採用率首超 OpenAI</a>
+</div>
+<div class="card-description">Ramp AI Index: Anthropic 34.4% vs OpenAI 32.3%。Claude Code 係最大 driver — 估計 4% 嘅 public GitHub commits 由 Claude Code 寫</div>
+<div class="card-meta"><span class="badge badge-source">buildfastwithai.com</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://promptailearning.com/ai-news/daily/top-5-ai-news-june-14-2026" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>Mistral AI 尋求 $3B 融資，估值 $20B</a>
+</div>
+<div class="card-description">定位做 EU-friendly sovereign AI alternative。Fafa 可以留意下 Mistral 啲 model 做 workflow 多樣化</div>
+<div class="card-meta"><span class="badge badge-source">promptailearning.com</span></div>
+</div>
 </div><div class="section">
-<div class="section-title">📄 Research</div>
-<div class="card"><div class="card-title"><a href="https://huggingface.co/papers/2606.13392" target="_blank" rel="noopener">📄 MiniMax Sparse Attention (MSA)</a></div><div class="card-why">MiniMax 新 attention architecture，係 M3 1M context 嘅核心技術。直接影響 agent 同 RAG 嘅 long-context performance</div></div>
-</div><div class="summary-box"><div class="label">📝 總結</div>今日算大新聞日，出咗 12 條。SpaceX IPO 同 Anthropic Fable 5 係 headline，GitHub 方面小米入場 coding agent 同 leaked system prompts 合集都係必睇。冇乜甩漏！</div><footer class="footer">
-  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+<div class="section-header" style="border-bottom-color:#3fb95040;">
+<span class="section-icon">📄</span>
+<span class="section-label" style="color:#3fb950;">研究論文</span>
+<span class="section-count">1 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#3fb950;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://huggingface.co/papers/2606.13392" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📖</span>MiniMax Sparse Attention (MSA)</a>
+</div>
+<div class="card-description">MiniMax 新 attention architecture，係 M3 1M context 嘅核心技術。直接影響 agent 同 RAG 嘅 long-context performance</div>
+<div class="card-meta"><span class="badge badge-source">huggingface.co</span></div>
+</div>
+</div><div class="summary-box"><div class="summary-label">📝 總結</div>今日算大新聞日，出咗 12 條。SpaceX IPO 同 Anthropic Fable 5 係 headline，GitHub 方面小米入場 coding agent 同 leaked system prompts 合集都係必睇。冇乜甩漏！</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/fafafung/ai-news">GitHub</a></p>
+  <p style="margin-top:4px;font-size:0.75rem;opacity:0.7;">AI 新聞檔案 · 每日更新</p>
 </footer>
 </div>
 </body>

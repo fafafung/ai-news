@@ -3,270 +3,480 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI News Archive — AI 新聞檔案</title>
+<title>AI 新聞檔案</title>
 <style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
 :root {
   --bg: #0d1117;
   --bg2: #161b22;
   --bg3: #1c2333;
+  --bg4: #21262d;
   --text: #e6edf3;
   --text2: #8b949e;
   --text3: #58a6ff;
   --border: #30363d;
+  --border2: #3d444d;
   --accent: #58a6ff;
   --card-hover: #1c2333;
   --link: #58a6ff;
-  --stat-bg: #0d1117;
+  --badge-text: #ffffff;
+  --shadow: rgba(0,0,0,0.3);
+  --featured-bg: linear-gradient(135deg, #161b22 0%, #1c2333 100%);
+  --featured-border: #58a6ff;
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
     --bg2: #f6f8fa;
     --bg3: #eef1f5;
+    --bg4: #e8ecf0;
     --text: #1f2328;
     --text2: #656d76;
     --text3: #0969da;
     --border: #d0d7de;
+    --border2: #d8dee4;
     --accent: #0969da;
     --card-hover: #f3f4f6;
     --link: #0969da;
-    --stat-bg: #ffffff;
+    --badge-text: #ffffff;
+    --shadow: rgba(0,0,0,0.08);
+    --featured-border: #0969da;
   }
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
     sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
+
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
 
-/* Header */
+/* ── Layout ── */
+.container { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+
+/* ── Header ── */
 .header {
   border-bottom: 1px solid var(--border);
-  padding-bottom: 20px;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
 }
 .header h1 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.header h1 .date-weekday {
+  font-weight: 400;
+  color: var(--text2);
+  font-size: 0.9em;
 }
 .header .sub {
   color: var(--text2);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  margin-top: 2px;
 }
 .header .nav {
-  margin-top: 12px;
+  margin-top: 16px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 .header .nav a {
   color: var(--text2);
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
   background: var(--bg2);
-  transition: background 0.15s;
+  border: 1px solid var(--border);
+  transition: all 0.15s;
 }
 .header .nav a:hover {
   background: var(--bg3);
+  border-color: var(--text3);
   text-decoration: none;
+  color: var(--text);
 }
 
-/* Stats bar */
+/* ── Stats Bar ── */
 .stats {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
-  font-size: 0.85rem;
+  margin-bottom: 28px;
 }
 .stat-box {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 16px;
+  border-radius: 10px;
+  padding: 12px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;
+  min-width: 76px;
 }
 .stat-box .num {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: var(--accent);
+  line-height: 1.2;
 }
 .stat-box .label {
   color: var(--text2);
-  font-size: 0.75rem;
-  margin-top: 2px;
+  font-size: 0.72rem;
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-/* Category sections */
-.section {
-  margin-bottom: 28px;
+/* ── Day-of-week stat box ── */
+.stat-box.dow-box .num {
+  font-size: 1.1rem;
 }
-.section-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--accent);
+
+/* ── Section (Category Group) ── */
+.section {
+  margin-bottom: 36px;
+}
+.section-header {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.section-header .section-icon {
+  font-size: 1.3rem;
+}
+.section-header .section-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.section-header .section-count {
+  font-size: 0.78rem;
+  color: var(--text2);
+  background: var(--bg3);
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
 }
 
-/* Cards */
+/* ── News Card ── */
 .card {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
-  transition: background 0.15s, border-color 0.15s;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+  position: relative;
 }
 .card:hover {
   background: var(--card-hover);
   border-color: var(--accent);
+  box-shadow: 0 4px 12px var(--shadow);
 }
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+.card-accent-border {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: calc(100% - 16px);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Title row */
+.card-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
-.card-title a {
+.card-title-link {
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
 }
-.card-title a:hover {
+.card-title-link:hover {
   color: var(--link);
 }
-.card-why {
-  color: var(--text2);
-  font-size: 0.88rem;
-  margin-top: 2px;
+.card-title-link .emoji-prefix {
+  margin-right: 4px;
 }
 
 /* Badges */
+.badge-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 12px;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
   white-space: nowrap;
   letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 .badge-signal {
-  color: #fff;
+  color: var(--badge-text);
 }
-
-/* Stars */
-.stars {
+.badge-source {
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.badge-stars {
+  background: rgba(227, 179, 65, 0.15);
   color: #e3b341;
-  font-size: 0.8rem;
-  font-weight: 500;
-  white-space: nowrap;
+  border: 1px solid rgba(227, 179, 65, 0.3);
 }
 
-/* Summary block */
+/* Description — the main readable content */
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* Why (short one-liner) — metadata fallback */
+.card-why {
+  font-size: 0.82rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+/* Metadata bar */
+.card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 4px;
+}
+.card-meta .meta-item {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+/* ── Summary Box ── */
 .summary-box {
   background: linear-gradient(135deg, var(--bg2), var(--bg3));
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin-top: 28px;
-  margin-bottom: 28px;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
-.summary-box .label {
+.summary-box .summary-label {
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 4px;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Footer */
-.footer {
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-  margin-top: 40px;
-  text-align: center;
-  color: var(--text2);
+  margin-bottom: 6px;
   font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
-.footer a { color: var(--text2); }
 
-/* Weekly-specific */
-.week-entry {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 20px;
-  margin-bottom: 14px;
-  transition: background 0.15s;
+/* ── Featured Section (Index) ── */
+.featured-section {
+  margin-bottom: 36px;
 }
-.week-entry:hover {
-  background: var(--card-hover);
-}
-.week-entry .week-title {
-  font-size: 1.15rem;
+.featured-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
   font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.featured-card {
+  background: var(--featured-bg);
+  border: 1px solid var(--featured-border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: all 0.2s;
+}
+.featured-card:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.featured-card .fc-date {
+  font-size: 1.35rem;
+  font-weight: 800;
   margin-bottom: 4px;
 }
-.week-entry .week-meta {
+.featured-card .fc-date a {
+  color: var(--text);
+}
+.featured-card .fc-date a:hover {
+  color: var(--link);
+}
+.featured-card .fc-meta {
   color: var(--text2);
   font-size: 0.85rem;
   margin-bottom: 8px;
 }
-.week-entry .week-stats {
+.featured-card .fc-summary {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── History Entry (Index) ── */
+.history-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: all 0.15s;
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+.history-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.history-entry .he-date {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.history-entry .he-date a {
+  color: var(--text);
+}
+.history-entry .he-date a:hover {
+  color: var(--link);
+}
+.history-entry .he-badge {
+  font-size: 0.72rem;
+  background: var(--bg3);
+  color: var(--text2);
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+.history-entry .he-snippet {
+  font-size: 0.85rem;
+  color: var(--text2);
+  flex-basis: 100%;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ── Week Entry (Index & Weekly page) ── */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  transition: all 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.week-entry .we-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .we-title a { color: var(--text); }
+.week-entry .we-title a:hover { color: var(--link); }
+.week-entry .we-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .we-stats {
+  display: flex;
+  gap: 14px;
   flex-wrap: wrap;
   font-size: 0.82rem;
 }
+.week-entry .we-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
-/* Daily item in weekly view */
+/* ── Daily Mini (for weekly page day list) ── */
 .daily-mini {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background: var(--bg3);
-  border-radius: 6px;
-  padding: 3px 10px;
+  border-radius: 8px;
+  padding: 4px 12px;
   font-size: 0.82rem;
-  margin: 2px 4px 2px 0;
+  margin: 3px 5px 3px 0;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .container { padding: 16px 12px; }
-  .header h1 { font-size: 1.3rem; }
-  .stats { gap: 8px; }
-  .stat-box { min-width: 60px; padding: 8px 12px; }
-  .stat-box .num { font-size: 1.1rem; }
-  .card { padding: 12px 14px; }
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 48px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.8rem;
+  line-height: 1.8;
 }
+.footer a { color: var(--text2); }
+.footer a:hover { color: var(--link); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container { padding: 20px 14px; }
+  .header h1 { font-size: 1.35rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 14px; }
+  .stat-box .num { font-size: 1.15rem; }
+  .card { padding: 14px 16px; }
+  .card-title-link { font-size: 0.95rem; }
+  .card-description { font-size: 0.88rem; }
+  .featured-card { padding: 18px 20px; }
+  .featured-card .fc-date { font-size: 1.15rem; }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 14px 10px; }
+  .header h1 { font-size: 1.15rem; }
+  .stat-box { min-width: 50px; padding: 6px 10px; }
+  .stat-box .num { font-size: 1rem; }
+  .section-header { flex-wrap: wrap; }
+}
+
 </style>
 </head>
 <body>
@@ -274,140 +484,194 @@ a:hover { text-decoration: underline; }
 
 <header class="header">
   <h1>AI 新聞檔案</h1>
-  <div class="sub">一共 18 天的新聞記錄 · 4 個星期</div>
+  <div class="sub">一共 18 天 · 195 條新聞記錄 · 4 個星期</div>
   <nav class="nav">
     <a href="index.html">🏠 主頁</a>
     
   </nav>
 </header>
-<div class="section"><div class="section-title">📊 週報</div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="weekly-2026-W26.html">📊 第26週 (2026)</a></div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="weekly-2026-W25.html">📊 第25週 (2026)</a></div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="weekly-2026-W24.html">📊 第24週 (2026)</a></div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="weekly-2026-W23.html">📊 第23週 (2026)</a></div></div></div><div class="section"><div class="section-title">📅 每日新聞</div><div class="week-entry">
-<div class="week-title"><a href="2026-06-23.html">📅 2026-06-23
+<div class="featured-section">
+<div class="featured-label">⭐ 今日精選</div>
+<div class="featured-card">
+<div class="fc-date"><a href="2026-06-23.html">📅 2026-06-23
  星期二
 </a></div>
-<div class="week-stats"><span>📰 10 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日超級大新聞日！Fable 5 突然收費、SpaceX 買 Cursor、OpenAI 買 uv/ruff — 三個都係撼動生態嘅消息，冇漏人！
-</div>
+<div class="fc-meta">📰 10 條新聞</div>
+<div class="fc-summary">今日超級大新聞日！Fable 5 突然收費、SpaceX 買 Cursor、OpenAI 買 uv/ruff — 三個都係撼動生態嘅消息，冇漏人！
+
+✅ HTML archive 已生成 → `file:///opt/data/ai-new…</div>
+</div></div>
+<div class="section">
+<div class="section-header" style="border-bottom-color:var(--accent);">
+<span class="section-icon">📊</span>
+<span class="section-label">週報</span>
+<span class="section-count">4 個星期</span>
 </div>
 <div class="week-entry">
-<div class="week-title"><a href="2026-06-21.html">📅 2026-06-21
+<div class="we-title">
+<a href="weekly-2026-W26.html">
+📊 第26週 (2026)</a></div>
+<div class="we-meta">2026-06-22 — 2026-06-28</div>
+<div class="we-stats">
+<span>📅 1 天</span>
+<span>📰 10 條新聞</span>
+</div></div>
+<div class="week-entry">
+<div class="we-title">
+<a href="weekly-2026-W25.html">
+📊 第25週 (2026)</a></div>
+<div class="we-meta">2026-06-15 — 2026-06-21</div>
+<div class="we-stats">
+<span>📅 7 天</span>
+<span>📰 74 條新聞</span>
+</div></div>
+<div class="week-entry">
+<div class="we-title">
+<a href="weekly-2026-W24.html">
+📊 第24週 (2026)</a></div>
+<div class="we-meta">2026-06-08 — 2026-06-14</div>
+<div class="we-stats">
+<span>📅 7 天</span>
+<span>📰 77 條新聞</span>
+</div></div>
+<div class="week-entry">
+<div class="we-title">
+<a href="weekly-2026-W23.html">
+📊 第23週 (2026)</a></div>
+<div class="we-meta">2026-06-01 — 2026-06-07</div>
+<div class="we-stats">
+<span>📅 3 天</span>
+<span>📰 34 條新聞</span>
+</div></div>
+</div>
+<div class="section">
+<div class="section-header" style="border-bottom-color:var(--border);">
+<span class="section-icon">📅</span>
+<span class="section-label">歷史記錄</span>
+<span class="section-count">17 天</span>
+</div>
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-21.html">📅 2026-06-21
  星期日
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日星期日新聞量正常，但 GLM-5.2 + DiffusionGemma 同一星期出都幾癲，仲有 Fable 5 被 ban 嘅 geopolitics 餘波。GitHub 方面 flue、OpenMontage、PixelRAG 三個好…</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">withastro/flue: Astro 團隊嘅 agent harness framework，用 TypeScript 寫 sandbox agent，支援子代理 / MCP / 持久化，仲有 …</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-20.html">📅 2026-06-20
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-20.html">📅 2026-06-20
  星期六
 </a></div>
-<div class="week-stats"><span>📰 10 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">星期六少啲人出 announcement，但 GLM-5.2 同 Fable 5 ban 夠撐場。GitHub 方面 anthropics/skills 同 chrome-devtools-mcp 值得你即時 bookmark，尤其你玩開 …</div>
+<span class="he-badge">📰 10 條</span>
+<div class="he-snippet">anthropics/skills: Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code …</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-19.html">📅 2026-06-19
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-19.html">📅 2026-06-19
  星期五
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日係大新聞日，出咗 11 條！Google image models、GLM-5.2、Cohere North Mini Code、NVIDIA SkillSpector 全部撞埋同一日，完全冇漏人 👍</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">NVIDIA/SkillSpector: NVIDIA 出嘅 AI agent skills security scanner，scan 到 26% 嘅 public skills 有 vulnera…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-18.html">📅 2026-06-18
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-18.html">📅 2026-06-18
  星期四
 </a></div>
-<div class="week-stats"><span>📰 9 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日最爆係 Claude Fable 5 shutdown 嘅餘波同 Karpathy 嘅 autoresearch——以後可能有更多人用 AI agents 做 overnight 研究。GLM-5.2 同 Step 3.7 Flash …</div>
+<span class="he-badge">📰 9 條</span>
+<div class="he-snippet">karpathy/autoresearch: Karpathy 新 project：AI agents 自動 overnight 做 LLM training 實驗，改 code→5分鐘 train→…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-17.html">📅 2026-06-17
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-17.html">📅 2026-06-17
  星期三
 </a></div>
-<div class="week-stats"><span>📰 10 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日算多料！SpaceX x Cursor $60B 係全城最爆，GLM-5.2 MIT license 開源都係大件事。GitHub discovery 方面 omnigent 同 trellis 對 agent workflow 好有用…</div>
+<span class="he-badge">📰 10 條</span>
+<div class="he-snippet">omnigent-ai/omnigent: Databricks 推出嘅 meta-harness，將 Claude Code、Codex、Pi 同自訂 agent 統一管理，有 security p…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-16.html">📅 2026-06-16
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-16.html">📅 2026-06-16
  星期二
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日超多料 — DiffsuionGemma 係新 paradigm（text diffusion！）、Anthropic Fable/Mythos 被 ban 係年度級政治事件、GitHub 方面 bumblebee 同 cua 都值得睇…</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">perplexityai/bumblebee: Perplexity AI 出嘅 supply chain scanner，掃 dependencies/MCP servers/browser ext…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-15.html">📅 2026-06-15
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-15.html">📅 2026-06-15
  星期一
 </a></div>
-<div class="week-stats"><span>📰 12 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日多料，DiffusionGemma 同 Kimi K2.7 Code 兩個 open-source release 都值得玩，Fable 5 同 Sora shutdown 就係 industry 層面嘅大新聞。GitHub 方面 ap…</div>
+<span class="he-badge">📰 12 條</span>
+<div class="he-snippet">apple/container: Apple 出咗官方工具用 lightweight VM 喺 Mac 行 Linux containers，Swift 寫，36K stars 爆升中，大廠正式入場 …</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-14.html">📅 2026-06-14
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-14.html">📅 2026-06-14
  星期日
 </a></div>
-<div class="week-stats"><span>📰 12 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日算大新聞日，出咗 12 條。SpaceX IPO 同 Anthropic Fable 5 係 headline，GitHub 方面小米入場 coding agent 同 leaked system prompts 合集都係必睇。冇乜甩漏…</div>
+<span class="he-badge">📰 12 條</span>
+<div class="he-snippet">elder-plinius/CL4R1T4S: 被外洩嘅 ChatGPT/Claude/Gemini/Grok/Perplexity/Cursor 等 system prompts 大合集。AI tr…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-13.html">📅 2026-06-13
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-13.html">📅 2026-06-13
  星期六
 </a></div>
-<div class="week-stats"><span>📰 10 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日好豐富 — Claude Fable 5、DiffusionGemma、Kimi K2.7 Code 三個重磅 model 同一週出，GitHub 方面 agent-skills 同 agentsview 都同你啱使，應該冇乜漏人 🤖</div>
+<span class="he-badge">📰 10 條</span>
+<div class="he-snippet">addyosmani/agent-skills: Production-grade engineering skills for AI coding agents，24 個 lifecycle ski…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-12.html">📅 2026-06-12
- 星期五
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-12.html">📅 2026-06-12
+ 星期星期五
 </a></div>
-<div class="week-stats"><span>📰 12 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日大新聞日，Google 嘅 DiffusionGemma 同 OpenAI x Oracle 係最重磅。GitHub 方面 NVIDIA Cosmos 同 OpenHands 值得睇實。冇漏人！🍵</div>
+<span class="he-badge">📰 12 條</span>
+<div class="he-snippet">NVIDIA/cosmos +⭐: NVIDIA 開源世界模型平台 Cosmos，專攻 Physical AI（機械人、自動駕駛），open platform 用 Apache 2.0，呢個係 Phy…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-11.html">📅 2026-06-11
- 星期四
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-11.html">📅 2026-06-11
+ 星期星期四
 </a></div>
-<div class="week-stats"><span>📰 10 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日係大新聞日，Anthropic出Fable 5 + Google出DiffusionGemma + Apple WWDC Siri AI，單係呢三單已經夠重磅。GitHub方面agent skill ecosystem繼續爆炸增長，冇乜…</div>
+<span class="he-badge">📰 10 條</span>
+<div class="he-snippet">pbakaus/impeccable ~: 前Google開發者Paul Bakaus整嘅設計語言skill for AI harnesses，23個commands + 41條anti-patter…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-10.html">📅 2026-06-10
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-10.html">📅 2026-06-10
  星期三
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日係大新聞日，Anthropic Fable 5 同 Google Live Translate 搶晒 headline，GitHub 方面 agent skill ecosystem 繼續爆發。應該冇漏到人。</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">mvanhorn/last30days-skill: AI agent skill 自動爬 Reddit/X/YouTube/HN/Polymarket 再合成 grounded summary，直接…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-09.html">📅 2026-06-09
- 星期二
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-09.html">📅 2026-06-09
+ 星期星期二
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日好熱鬧，Microsoft MAI 成個家族出齊 + Anthropic IPO + Dreaming V3 記憶升級，GitHub 方面 markitdown 同 codegraph 都係你直接用得著嘅 tools，冇乜漏人！</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">microsoft/markitdown: Microsoft 官方 file-to-Markdown 轉換器，支援 PDF/DOCX/PPTX/Excel/圖片 OCR。你用 Docling 做 R…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-08.html">📅 2026-06-08
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-08.html">📅 2026-06-08
  星期一
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日係 WWDC 大日，Apple 放咗個大炸彈出嚟 — Siri 換 Gemini engine ＋ 開放 Claude/ChatGPT 上 iPhone，成個 AI 生態圈嘅權力平衡會變。Microsoft 亦趁 Build 嘅 mom…</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">RyanCodrai/turbovec: 基於 Google TurboQuant 嘅向量索引，Rust 寫 + Python bindings。比 FAISS 更快更細（16×壓縮），直接 drop…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-07.html">📅 2026-06-07
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-07.html">📅 2026-06-07
  星期日
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今日星期日新聞相對靜，不過微軟 MAI、NVIDIA Nemotron 3 Ultra、Anthropic IPO 呢幾單都仲有餘溫。GitHub 方面 VoxCPM（廣東話 TTS！）同 liteparse 對你應該最直接有用。冇乜嘢大嘢…</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">OpenBMB/VoxCPM: VoxCPM2：Tokenizer-free TTS，支援 30 種語言包括粵語，Voice Design（文字描述直接生成聲線）、True-to-Life Cloni…</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-06.html">📅 2026-06-06
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-06.html">📅 2026-06-06
  星期六
 </a></div>
-<div class="week-stats"><span>📰 11 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">六仔少新聞日，主要係 Build 2026 嘅 MAI models 同 Gemma 4 QAT 延續。GitHub 反而好熱鬧，headroom 同 mempalace 都值得你即日睇下。冇乜嘢大漏人，聽日見！</div>
+<span class="he-badge">📰 11 條</span>
+<div class="he-snippet">chopratejas/headroom: Compress tool outputs、logs、RAG chunks 60-95% 先入 LLM，同一個答案但 token 少一大截。Library …</div>
 </div>
-<div class="week-entry">
-<div class="week-title"><a href="2026-06-05.html">📅 2026-06-05
+<div class="history-entry">
+<div class="he-date"><a href="2026-06-05.html">📅 2026-06-05
  星期五
 </a></div>
-<div class="week-stats"><span>📰 12 條新聞</span></div>
-<div class="card-why" style="margin-top:6px;">今期重點：Claude Opus 4.8 + Anthropic IPO 雙響炮，SubQ 用 12M context 證明 architecture 先係下一個戰場，而 opencode 夾 codex 嘅 coding agent 大戰…</div>
-</div></div><footer class="footer">
+<span class="he-badge">📰 12 條</span>
+<div class="he-snippet">Claude Opus 4.8 正式推出: Anthropic 最新旗艦，4× 更少放過 code flaws，新增 Dynamic Workflows 可 spawn 幾百個 parallel su…</div>
+</div>
+</div><footer class="footer">
   <p>🤖 由 AI 自動生成 · <a href="https://github.com/fafafung/ai-news">GitHub</a></p>
+  <p style="margin-top:4px;font-size:0.75rem;opacity:0.7;">AI 新聞檔案 · 每日更新</p>
 </footer>
 </div>
 </body>
