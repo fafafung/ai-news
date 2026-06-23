@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 2026-06-09</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-09</h1>
+  <div class="sub">星期星期二 · 2026-06-09</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">11</span><span class="label">總計</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 General</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 Research</span></div>
+</div><div class="section">
+<div class="section-title">⚡ GitHub</div>
+<div class="card"><div class="card-title"><a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">⚡ microsoft/markitdown</a><span class="stars">⭐ 148.0k</span></div><div class="card-why">Microsoft 官方 file-to-Markdown 轉換器，支援 PDF/DOCX/PPTX/Excel/圖片 OCR。你用 Docling 做 RAG preprocessing，呢個係另一個強力選擇，仲有 MCP server 可以直接俾 agent 用</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">⚡ affaan-m/ECC</a><span class="stars">⭐ 7.3k</span></div><div class="card-why">Agent harness performance optimization system。Skills、instincts、memory、security 全部包，支援 Claude Code / Codex / OpenCode / Cursor。你玩咁多 agent framework 一定啱睇</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/colbymchenry/codegraph" target="_blank" rel="noopener">⚡ colbymchenry/codegraph</a><span class="stars">⭐ 6.1k</span></div><div class="card-why">Pre-indexed code knowledge graph for Claude Code。比 Claude Code 讀你成個 codebase 之前已經 build 好 dependency graph，大幅減少 tokens 同 tool calls，100% local</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/multica-ai/andrej-karpathy-skills" target="_blank" rel="noopener">⚡ multica-ai/andrej-karpathy-skills</a><span class="stars">⭐ 4.8k</span></div><div class="card-why">Karpathy 將佢對 LLM coding pitfalls 嘅觀察整理成一份 CLAUDE.md，直接 improve Claude Code 嘅 output quality。如果你用 Claude Code 寫 code 一定要睇</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/nesquena/hermes-webui" target="_blank" rel="noopener">⚡ nesquena/hermes-webui</a><span class="stars">⭐ 3.6k</span></div><div class="card-why">Hermes Agent 嘅 Web UI！一個 container 搞掂，可以喺 browser 或手機用 Hermes。你係 Hermes Agent users，呢個可以直接提升你嘅 workflow</div></div>
+</div><div class="section">
+<div class="section-title">🔬 Tech</div>
+<div class="card"><div class="card-title"><a href="https://openai.com/index/dreaming-v3/" target="_blank" rel="noopener">🔬 OpenAI Dreaming V3</a></div><div class="card-why">ChatGPT 記憶系統大升級。自動 background synthesize 用戶偏好、constraints、時間敏感 context，唔使再講「記住呢句」。Compute efficiency 提升 ~5x，Plus/Pro 用戶 June 4 已推送</div></div>
+<div class="card"><div class="card-title"><a href="https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" target="_blank" rel="noopener">🔬 Microsoft 一口氣出 7 個 MAI 模型</a></div><div class="card-why">MAI-Thinking-1（1T params / 35B active reasoning model，preferred over Sonnet 4.6 in blind eval）、MAI-Code-1-Flash（5B active coding agent model，GitHub Copilot 已整合）、MAI-Transcribe-1.5（SOTA 語音辨識 43 語言，5x faster than competitors）。全部從頭 train，冇 distill 其他 lab</div></div>
+<div class="card"><div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/" target="_blank" rel="noopener">🔬 Google Gemma 4 QAT 推出</a></div><div class="card-why">Quantization-Aware Training 版本，target Q4，memory 大減適合 mobile/laptop local inference。你用 ollama 做 local inference 可以留意，GGUF 版就快有</div></div>
+</div><div class="section">
+<div class="section-title">📰 General</div>
+<div class="card"><div class="card-title"><a href="https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html" target="_blank" rel="noopener">📰 Anthropic 入紙 IPO</a></div><div class="card-why">6月1日 confidential S-1，估值 $965B，revenue run-rate ~$47B（YoY 5x growth）。同 OpenAI / SpaceX 爭今年最大 IPO</div></div>
+<div class="card"><div class="card-title"><a href="https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark" target="_blank" rel="noopener">📰 NVIDIA RTX Spark 亮相 Computex</a></div><div class="card-why">Arm-based superchip 將 AI agent 效能帶去 PC，Adobe Photoshop / Premiere Pro 已原生支援。Consumer laptop 預計秋季上市，AMD/Intel/Qualcomm 股價即插</div></div>
+</div><div class="section">
+<div class="section-title">📄 Research</div>
+<div class="card"><div class="card-title"><a href="https://huggingface.co/papers/2606.02800" target="_blank" rel="noopener">📄 NVIDIA Cosmos 3</a></div><div class="card-why">Omnimodal world models for physical AI，8.68k upvotes on HF。NVIDIA 嘅世界模型，將 vision / language / action 統一，for robotics 同 autonomous systems</div></div>
+</div><div class="summary-box"><div class="label">📝 總結</div>今日好熱鬧，Microsoft MAI 成個家族出齊 + Anthropic IPO + Dreaming V3 記憶升級，GitHub 方面 markitdown 同 codegraph 都係你直接用得著嘅 tools，冇乜漏人！</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

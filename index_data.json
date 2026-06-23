@@ -1,0 +1,166 @@
+{
+  "entries": [
+    {
+      "date": "2026-06-23",
+      "dow": "二",
+      "title": "AI 新聞 · 2026-06-23",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 26,
+      "summary": "今日超級大新聞日！Fable 5 突然收費、SpaceX 買 Cursor、OpenAI 買 uv/ruff — 三個都係撼動生態嘅消息，冇漏人！\n\n✅ HTML archive 已生成 → `file:///opt/data/ai-new…"
+    },
+    {
+      "date": "2026-06-21",
+      "dow": "日",
+      "title": "AI 新聞 · 2026-06-21",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "今日星期日新聞量正常，但 GLM-5.2 + DiffusionGemma 同一星期出都幾癲，仲有 Fable 5 被 ban 嘅 geopolitics 餘波。GitHub 方面 flue、OpenMontage、PixelRAG 三個好…"
+    },
+    {
+      "date": "2026-06-20",
+      "dow": "六",
+      "title": "AI 新聞 · 2026-06-20",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "星期六少啲人出 announcement，但 GLM-5.2 同 Fable 5 ban 夠撐場。GitHub 方面 anthropics/skills 同 chrome-devtools-mcp 值得你即時 bookmark，尤其你玩開 …"
+    },
+    {
+      "date": "2026-06-19",
+      "dow": "五",
+      "title": "AI 新聞 · 2026-06-19",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "今日係大新聞日，出咗 11 條！Google image models、GLM-5.2、Cohere North Mini Code、NVIDIA SkillSpector 全部撞埋同一日，完全冇漏人 👍"
+    },
+    {
+      "date": "2026-06-18",
+      "dow": "四",
+      "title": "AI 新聞 · 2026-06-18",
+      "item_count": 9,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "今日最爆係 Claude Fable 5 shutdown 嘅餘波同 Karpathy 嘅 autoresearch——以後可能有更多人用 AI agents 做 overnight 研究。GLM-5.2 同 Step 3.7 Flash …"
+    },
+    {
+      "date": "2026-06-17",
+      "dow": "三",
+      "title": "AI 新聞 · 2026-06-17",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "今日算多料！SpaceX x Cursor $60B 係全城最爆，GLM-5.2 MIT license 開源都係大件事。GitHub discovery 方面 omnigent 同 trellis 對 agent workflow 好有用…"
+    },
+    {
+      "date": "2026-06-16",
+      "dow": "二",
+      "title": "AI 新聞 · 2026-06-16",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "今日超多料 — DiffsuionGemma 係新 paradigm（text diffusion！）、Anthropic Fable/Mythos 被 ban 係年度級政治事件、GitHub 方面 bumblebee 同 cua 都值得睇…"
+    },
+    {
+      "date": "2026-06-15",
+      "dow": "一",
+      "title": "AI 新聞 · 2026-06-15",
+      "item_count": 12,
+      "iso_year": 2026,
+      "iso_week": 25,
+      "summary": "今日多料，DiffusionGemma 同 Kimi K2.7 Code 兩個 open-source release 都值得玩，Fable 5 同 Sora shutdown 就係 industry 層面嘅大新聞。GitHub 方面 ap…"
+    },
+    {
+      "date": "2026-06-14",
+      "dow": "日",
+      "title": "AI 新聞 · 2026-06-14",
+      "item_count": 12,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日算大新聞日，出咗 12 條。SpaceX IPO 同 Anthropic Fable 5 係 headline，GitHub 方面小米入場 coding agent 同 leaked system prompts 合集都係必睇。冇乜甩漏…"
+    },
+    {
+      "date": "2026-06-13",
+      "dow": "六",
+      "title": "AI 新聞 · 2026-06-13",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日好豐富 — Claude Fable 5、DiffusionGemma、Kimi K2.7 Code 三個重磅 model 同一週出，GitHub 方面 agent-skills 同 agentsview 都同你啱使，應該冇乜漏人 🤖"
+    },
+    {
+      "date": "2026-06-12",
+      "dow": "星期五",
+      "title": "AI 新聞 · 2026-06-12",
+      "item_count": 12,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日大新聞日，Google 嘅 DiffusionGemma 同 OpenAI x Oracle 係最重磅。GitHub 方面 NVIDIA Cosmos 同 OpenHands 值得睇實。冇漏人！🍵"
+    },
+    {
+      "date": "2026-06-11",
+      "dow": "星期四",
+      "title": "AI 新聞 · 2026-06-11",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日係大新聞日，Anthropic出Fable 5 + Google出DiffusionGemma + Apple WWDC Siri AI，單係呢三單已經夠重磅。GitHub方面agent skill ecosystem繼續爆炸增長，冇乜…"
+    },
+    {
+      "date": "2026-06-10",
+      "dow": "三",
+      "title": "AI 新聞 · 2026-06-10",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日係大新聞日，Anthropic Fable 5 同 Google Live Translate 搶晒 headline，GitHub 方面 agent skill ecosystem 繼續爆發。應該冇漏到人。"
+    },
+    {
+      "date": "2026-06-09",
+      "dow": "星期二",
+      "title": "AI 新聞 · 2026-06-09",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日好熱鬧，Microsoft MAI 成個家族出齊 + Anthropic IPO + Dreaming V3 記憶升級，GitHub 方面 markitdown 同 codegraph 都係你直接用得著嘅 tools，冇乜漏人！"
+    },
+    {
+      "date": "2026-06-08",
+      "dow": "一",
+      "title": "AI 新聞 · 2026-06-08",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 24,
+      "summary": "今日係 WWDC 大日，Apple 放咗個大炸彈出嚟 — Siri 換 Gemini engine ＋ 開放 Claude/ChatGPT 上 iPhone，成個 AI 生態圈嘅權力平衡會變。Microsoft 亦趁 Build 嘅 mom…"
+    },
+    {
+      "date": "2026-06-07",
+      "dow": "日",
+      "title": "AI 新聞 · 2026-06-07",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 23,
+      "summary": "今日星期日新聞相對靜，不過微軟 MAI、NVIDIA Nemotron 3 Ultra、Anthropic IPO 呢幾單都仲有餘溫。GitHub 方面 VoxCPM（廣東話 TTS！）同 liteparse 對你應該最直接有用。冇乜嘢大嘢…"
+    },
+    {
+      "date": "2026-06-06",
+      "dow": "六",
+      "title": "AI 新聞 · 2026-06-06",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 23,
+      "summary": "六仔少新聞日，主要係 Build 2026 嘅 MAI models 同 Gemma 4 QAT 延續。GitHub 反而好熱鬧，headroom 同 mempalace 都值得你即日睇下。冇乜嘢大漏人，聽日見！"
+    },
+    {
+      "date": "2026-06-05",
+      "dow": "五",
+      "title": "AI 新聞 · 2026-06-05",
+      "item_count": 12,
+      "iso_year": 2026,
+      "iso_week": 23,
+      "summary": "今期重點：Claude Opus 4.8 + Anthropic IPO 雙響炮，SubQ 用 12M context 證明 architecture 先係下一個戰場，而 opencode 夾 codex 嘅 coding agent 大戰…"
+    }
+  ]
+}

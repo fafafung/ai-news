@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp / generated data files (not the HTML though — those ARE the site)
+/tmp/
+*.swp
+*.swo

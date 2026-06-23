@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 2026-06-13</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-13</h1>
+  <div class="sub">星期六 · 2026-06-13</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">10</span><span class="label">總計</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 General</span></div>
+</div><div class="section">
+<div class="section-title">⚡ GitHub</div>
+<div class="card"><div class="card-title"><a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener">⚡ addyosmani/agent-skills</a><span class="stars">⭐ 56.0k</span></div><div class="card-why">Production-grade engineering skills for AI coding agents，24 個 lifecycle skills，由 Google Chrome team 嘅 Addy Osmani 整，同你嘅 Hermes skills  workflow 完美 complement</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/kenn-io/agentsview" target="_blank" rel="noopener">⚡ kenn-io/agentsview ⭐NEW⭐</a></div><div class="card-why">Local-first session intelligence for Claude Code、Codex、20+ 款 coding agents，追蹤 token consumption 同 cost，100x 快過 ccusage。你 multi-agent 一定用得著</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/nvidia/skillspector" target="_blank" rel="noopener">⚡ NVIDIA/SkillSpector ⭐NEW⭐</a></div><div class="card-why">Security scanner for AI agent skills，detect vulnerabilities、malicious patterns。NVIDIA 入 agent security 領域，裝 skill 前 scan 下就知安唔安全</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/microsoft/playwright-mcp" target="_blank" rel="noopener">⚡ microsoft/playwright-mcp</a><span class="stars">⭐ 18.9k</span></div><div class="card-why">Microsoft 官方 MCP server 俾 browser automation via Playwright。你個 Hermes Agent 有 native MCP client，直接用得</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/hexo-ai/sia" target="_blank" rel="noopener">⚡ hexo-ai/sia ⭐NEW⭐</a></div><div class="card-why">Self-Improving AI framework，可以 autonomously improve 任何 AI system/agent 嘅 benchmark performance。新 paradigm — AI 自己 improve 自己</div></div>
+</div><div class="section">
+<div class="section-title">🔬 Tech</div>
+<div class="card"><div class="card-title"><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">🔬 Anthropic Claude Fable 5 + Mythos 5 正式推出（Jun 9）— Anthropic 史上最強 public model，1M context，$10/$50 per M tokens。Mythos 5 係冇 safety guard 版。Simon Willison 實測話「感覺比 Opus 4.8 大好多」</a></div></div>
+<div class="card"><div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/" target="_blank" rel="noopener">🔬 Google DiffusionGemma 26B-A4B 開源（Jun 10）— 全球第一個 open-weight text diffusion model，用 diffusion 取代 autoregressive generation，4x 快過傳統 LLM，Apache 2.0 授權。可以用 ollama 本地行</a></div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/moonshotai/kimi-k2" target="_blank" rel="noopener">🔬 Moonshot AI Kimi K2.7 Code 開源（Jun 12）— 1T MoE / 32B activated 嘅 coding specialist，improved agentic capabilities over K2.5，已上 Cloudflare Workers AI。即日 open-weight</a></div></div>
+</div><div class="section">
+<div class="section-title">📰 General</div>
+<div class="card"><div class="card-title"><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">📰 Apple WWDC 2026</a></div><div class="card-why">Siri AI 14 年嚟最大更新，powered by Google Gemini。全新 Siri app、personal context understanding、on-screen awareness。iOS 27 今年 fall 出</div></div>
+<div class="card"><div class="card-title"><a href="https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" target="_blank" rel="noopener">📰 Microsoft Build 2026</a></div><div class="card-why">MAI-Thinking-1（自家 reasoning model）+ MAI-Code-1-Flash 正式推出，Microsoft 逐步減少對 OpenAI 依賴。仲有 Scout agentic Autopilot 跨 M365</div></div>
+</div><div class="summary-box"><div class="label">📝 總結</div>今日好豐富 — Claude Fable 5、DiffusionGemma、Kimi K2.7 Code 三個重磅 model 同一週出，GitHub 方面 agent-skills 同 agentsview 都同你啱使，應該冇乜漏人 🤖</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

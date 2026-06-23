@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 2026-06-17</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-17</h1>
+  <div class="sub">星期三 · 2026-06-17</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">10</span><span class="label">總計</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📰 General</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 Research</span></div>
+</div><div class="section">
+<div class="section-title">⚡ GitHub</div>
+<div class="card"><div class="card-title"><a href="https://github.com/omnigent-ai/omnigent" target="_blank" rel="noopener">⚡ omnigent-ai/omnigent</a><span class="stars">⭐ 862</span></div><div class="card-why">Databricks 推出嘅 meta-harness，將 Claude Code、Codex、Pi 同自訂 agent 統一管理，有 security policies、cost control、跨 device collaboration，一個命令起 server + web UI</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/mindfold-ai/trellis" target="_blank" rel="noopener">⚡ mindfold-ai/trellis</a><span class="stars">⭐ 10.1k</span></div><div class="card-why">In-repo agent memory framework：將 specs、tasks、workspace journal 直接 commit 入 git repo，任何 coding agent 跨 session 都有完整 context，解決「每次重置」嘅永恆問題</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/microsoft/SkillOpt" target="_blank" rel="noopener">⚡ microsoft/SkillOpt</a><span class="stars">⭐ 3.0k</span></div><div class="card-why">Microsoft 發表嘅 text-space optimizer，將 natural-language skill documents 當 trainable parameters 咁訓練，deploy 出 300-2000 tokens 嘅 `best_skill.md`，對 Hermes Agent skill 用家極度相關</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/Michael-A-Kuykendall/shimmy" target="_blank" rel="noopener">⚡ Michael-A-Kuykendall/shimmy</a><span class="stars">⭐ 5.3k</span></div><div class="card-why">Pure Rust 嘅 WebGPU inference engine，single binary 行 GGUF，no Python、no llama.cpp、no CUDA，行 Vulkan/D3D12/Metal，INT4 KV cache quant 省 7x VRAM</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/supertone-inc/supertonic" target="_blank" rel="noopener">⚡ supertone-inc/supertonic</a><span class="stars">⭐ 11.3k</span></div><div class="card-why">On-device TTS 經 ONNX Runtime，99M params 就可以 CPU/RPi/browser 即時出聲，31 語言，OpenAI-compatible endpoint，Fafa 搞粵語 TTS 嘅話呢個值得試</div></div>
+</div><div class="section">
+<div class="section-title">🔬 Tech</div>
+<div class="card"><div class="card-title"><a href="https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/" target="_blank" rel="noopener">🔬 SpaceX 用 $60B all-stock 買起 Anysphere（Cursor母公司）— 發生喺 Cursor 完成 Nasdaq IPO 幾日之後，AI coding tool 正式成為科技巨頭嘅企業戰場</a></div></div>
+<div class="card"><div class="card-title"><a href="https://www.scmp.com/tech/tech-trends/article/3357115/zhipu-ais-stock-rockets-after-chinese-firm-makes-glm-52-open-source" target="_blank" rel="noopener">🔬 Zhipu AI 推出 GLM-5.2</a></div><div class="card-why">開源 MIT license，1M context window，定價比 Claude/GPT-5 平約 10 倍，Zhipu 股價即日暴升。用兩個 reasoning modes（High/Max），可以 self-host</div></div>
+<div class="card"><div class="card-title"><a href="https://llm-stats.com/models/kimi-k2.7-code" target="_blank" rel="noopener">🔬 Moonshot AI 推出 Kimi K2.7 Code</a></div><div class="card-why">開源 coding-focused model，經 OpenRouter 可用，平價 coding AI 選擇又多咗一個</div></div>
+</div><div class="section">
+<div class="section-title">📰 General</div>
+<div class="card"><div class="card-title"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener">📰 AI Chatbot market share 大洗牌</a></div><div class="card-why">ChatGPT 由 76.5% 跌到 54.7%，Google Gemini 升到 27.4%（+104%），Claude 最癲升 306%（203M → 824M monthly visits），DeepSeek 4.1%，Grok 2.8%</div></div>
+</div><div class="section">
+<div class="section-title">📄 Research</div>
+<div class="card"><div class="card-title"><a href="https://huggingface.co/papers/2606.06036" target="_blank" rel="noopener">📄 Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents (NUS)</a></div><div class="card-why">挑戰傳統「retrieve-then-read」RAG，提出 agent 記憶係 dynamic reconstruction，用 graph memory 結構改善長期記憶同推理，Fafa 用 Zep/Mem0 嘅話值得睇</div></div>
+</div><div class="summary-box"><div class="label">📝 總結</div>今日算多料！SpaceX x Cursor $60B 係全城最爆，GLM-5.2 MIT license 開源都係大件事。GitHub discovery 方面 omnigent 同 trellis 對 agent workflow 好有用，SkillOpt 係 Hermes 用家必睇。應該冇漏人 👍</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 2026-06-08</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-08</h1>
+  <div class="sub">星期一 · 2026-06-08</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">11</span><span class="label">總計</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 General</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 Research</span></div>
+</div><div class="section">
+<div class="section-title">⚡ GitHub</div>
+<div class="card"><div class="card-title"><a href="https://github.com/RyanCodrai/turbovec" target="_blank" rel="noopener">⚡ RyanCodrai/turbovec</a><span class="stars">⭐ 1.5k</span></div><div class="card-why">基於 Google TurboQuant 嘅向量索引，Rust 寫 + Python bindings。比 FAISS 更快更細（16×壓縮），直接 drop-in 換入 LangChain/LlamaIndex。Fafa 做 RAG 嘅話呢個係 must-watch 🎯</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/pewdiepie-archdaemon/odysseus" target="_blank" rel="noopener">⚡ pewdiepie-archdaemon/odysseus</a><span class="stars">⭐ 2.4k</span></div><div class="card-why">Self-hosted AI workspace，43k⭐。Docker one-command 就起到個 ChatGPT/Claude 替代品，支援 Ollama/vLLM/llama.cpp、MCP tools、Deep Research、Email agent、memory。仲要係 MIT license。</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/microsoft/pg_durable" target="_blank" rel="noopener">⚡ microsoft/pg_durable</a><span class="stars">⭐ 314</span></div><div class="card-why">Microsoft 新開源：PostgreSQL in-database durable execution extension。將 agent workflow 嘅 state checkpoint 直接放入 PG，crash 咗都自動喺 checkpoint  resume，唔使 Redis/Temporal 做 sidecar。Agent state persistence 嘅 zero-infra solution。</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener">⚡ nexu-io/open-design</a></div><div class="card-why">Local-first 嘅 Claude Design 開源替代品。150 個 brand-grade DESIGN.md 系統、100+ skills、261 plugins。最正係支援 Hermes Agent 做 `od mcp install hermes`，即裝即用。出 prototype/deck/image/video 都得。</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener">⚡ alibaba/open-code-review</a></div><div class="card-why">阿里巴巴內部 battle-tested 嘅 AI code review CLI（Apache-2.0）。Hybrid deterministic pipeline + LLM agent，detect NPE、thread-safety、XSS、SQL injection。支援 Claude/GPT/Gemini 做 backend，仲可以裝做 agent skill。</div></div>
+</div><div class="section">
+<div class="section-title">🔬 Tech</div>
+<div class="card"><div class="card-title"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener">🔬 Apple WWDC 2026：Tim Cook 最後一次 keynote</a></div><div class="card-why">全新 Siri 由 custom 1.2T Gemini 模型驅動（每年 $1B 授權俾 Google）。iOS 27 嘅 AI Extension system 史上首次俾用戶揀 ChatGPT / Gemini / Claude 做 Apple Intelligence backend。Standalone Siri app 有 on-screen awareness + personal context access。iPhone 15 Pro 或更新先用到 AI features。</div></div>
+<div class="card"><div class="card-title"><a href="https://microsoft.ai/news/microsoft-build-2026-mai-keynote-transcript/" target="_blank" rel="noopener">🔬 Microsoft MAI-Thinking-1 & MAI-Code-1-Flash</a></div><div class="card-why">Microsoft 首個完全唔用 OpenAI 嘅自家模型系列，Build 2026 公佈。MAI-Thinking-1：1T params/35B active reasoning model，trained from scratch without distillation。MAI-Code-1-Flash：5B active coding model，專為 GitHub Copilot 而設，用少 60% tokens。同場加映 Claude in Excel Agent Mode for 750M users。</div></div>
+<div class="card"><div class="card-title"><a href="https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/" target="_blank" rel="noopener">🔬 NVIDIA Cosmos 3：Open-source 世界模型</a></div><div class="card-why">Computex 2026 公佈，結合 physical reasoning、world generation、action generation 嘅 omnimodal foundation model。Robotics 同 autonomous systems 嘅 game changer。HF paper 今日 trending #1。</div></div>
+</div><div class="section">
+<div class="section-title">📰 General</div>
+<div class="card"><div class="card-title"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener">📰 Claude 正式成為 iPhone AI 選項</a></div><div class="card-why">Apple Intelligence 喺 iOS 27 支援 Claude 做可選 AI model。~2.2B active Apple devices，即使 5% adoption = 100M+ new Claude users（Anthropic 目前 base 嘅 double）。Revenue structure 未公開，Apple 控制 PCC infrastructure。</div></div>
+<div class="card"><div class="card-title"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener">📰 AI Chatbot 市佔率 June 2026</a></div><div class="card-why">ChatGPT 54.7%（由 76.5% 高位回落）、Gemini 27.4%（半年 +104%）、Claude 8.2%（一季 +306% 由 203M→824M visits）。U.S. only：ChatGPT 58.9%、Gemini 19.2%、Claude 12.5%。留意呢度只計 web visits，唔包 mobile app / API consumption / enterprise revenue。</div></div>
+</div><div class="section">
+<div class="section-title">📄 Research</div>
+<div class="card"><div class="card-title"><a href="https://huggingface.co/papers/2606.03503" target="_blank" rel="noopener">📄 ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning</a></div><div class="card-why">Shanghai AI Lab 新 reasoning 方法，透過 introspective preference learning 摺疊 reasoning chains，提升 LLM 推理效率。12 upvotes on HF，有 practical implications 用於改善 agent reasoning。</div></div>
+</div><div class="summary-box"><div class="label">📝 總結</div>今日係 WWDC 大日，Apple 放咗個大炸彈出嚟 — Siri 換 Gemini engine ＋ 開放 Claude/ChatGPT 上 iPhone，成個 AI 生態圈嘅權力平衡會變。Microsoft 亦趁 Build 嘅 momentum 推出自家 MAI 模型系列正式脫離 OpenAI 依賴。GitHub 方面 turbovec 係 RAG 人必睇，pg_durable 係 agent infrastructure 嘅新 approach。今日呢 round coverage 好足，應該冇漏到重要嘢 💪</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

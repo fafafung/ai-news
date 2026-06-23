@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 2026-06-19</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-19</h1>
+  <div class="sub">星期五 · 2026-06-19</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">11</span><span class="label">總計</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 General</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 Research</span></div>
+</div><div class="section">
+<div class="section-title">⚡ GitHub</div>
+<div class="card"><div class="card-title"><a href="https://github.com/NVIDIA/SkillSpector" target="_blank" rel="noopener">⚡ NVIDIA/SkillSpector</a><span class="stars">⭐ 8.0k</span></div><div class="card-why">NVIDIA 出嘅 AI agent skills security scanner，scan 到 26% 嘅 public skills 有 vulnerability。Skills ecosystem 正式進入 security governance phase</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank" rel="noopener">⚡ DeusData/codebase-memory-mcp</a><span class="stars">⭐ 7.1k</span></div><div class="card-why">MCP server 將 codebase 變成 persistent knowledge graph。Coding agent 可以 sub-ms 查 function/class/call chain，比逐個 file 讀慳 120x tokens。Single static binary，zero dependencies</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">⚡ DietrichGebert/ponytail</a><span class="stars">⭐ 37.0k</span></div><div class="card-why">令你嘅 AI agent 用「最懶 senior dev」嘅思維方式寫 code。Universal rule set，支援 Claude Code / Codex / Cursor / Cline 全部 agent。呢排 viral 到癲，好多人裝</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/shadcn/improve" target="_blank" rel="noopener">⚡ shadcn/improve</a><span class="stars">⭐ 5.5k</span></div><div class="card-why">由 shadcn（shadcn/ui 作者）出嘅 agent skill：用你最勁嘅模型 audit codebase + 寫 plan，然後用平價 model 執行。Plan 就係 product，唔直接改 code — 好優雅嘅 workflow pattern</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener">⚡ google-gemini/gemini-cli</a><span class="stars">⭐ 105.0k</span></div><div class="card-why">Google Gemini 官方 CLI agent，open source。2 個鐘頭前仲有新 commit，生態極活躍。你用開 Google Agent Dev Kit 的話呢個直接 related</div></div>
+</div><div class="section">
+<div class="section-title">🔬 Tech</div>
+<div class="card"><div class="card-title"><a href="https://openrouter.ai/google/gemini-3-pro-image" target="_blank" rel="noopener">🔬 Google 推出 Gemini 3 Pro Image & Gemini 3.1 Flash Image</a></div><div class="card-why">全新 image-native vision models，唔係 text model 加 vision adapter。Pro $2/$12 per k token，Flash $0.50/$3.00。直接 rival GPT-5.5 vision</div></div>
+<div class="card"><div class="card-title"><a href="https://z.ai/blog/glm-5.2" target="_blank" rel="noopener">🔬 Zhipu AI 推出 GLM-5.2</a></div><div class="card-why">MIT license 開放權重，744B MoE，1M token context。被評為 top frontend coding model，可以免費經 OpenRouter 試</div></div>
+<div class="card"><div class="card-title"><a href="https://cohere.com/blog/north-mini-code" target="_blank" rel="noopener">🔬 Cohere 推出 North Mini Code</a></div><div class="card-why">30B MoE（3B active params）open-source coding model。專為 sovereign developers 設計，強調 agentic coding capability</div></div>
+</div><div class="section">
+<div class="section-title">📰 General</div>
+<div class="card"><div class="card-title"><a href="https://www.artificialintelligence-news.com/" target="_blank" rel="noopener">📰 Microsoft 在中國大量銷售 OpenAI models，OpenAI 同 Anthropic 則拒絕進入中國市場</a></div><div class="card-why">引發 AI geopolitics 爭議</div></div>
+<div class="card"><div class="card-title"><a href="https://www.artificialintelligence-news.com/" target="_blank" rel="noopener">📰 EU 公佈 AI content labelling playbook，為 8 月 AI Act 死線做準備</a></div><div class="card-why">所有 AI-generated content 需要標籤</div></div>
+</div><div class="section">
+<div class="section-title">📄 Research</div>
+<div class="card"><div class="card-title"><a href="https://huggingface.co/papers/2606.18543" target="_blank" rel="noopener">📄 CEO-Bench: Can Agents Play the Long Game?</a></div><div class="card-why">新 benchmark 專門測試 agent 嘅 long-horizon task 能力。直接影響 agent framework 設計，值得留意</div></div>
+</div><div class="summary-box"><div class="label">📝 總結</div>今日係大新聞日，出咗 11 條！Google image models、GLM-5.2、Cohere North Mini Code、NVIDIA SkillSpector 全部撞埋同一日，完全冇漏人 👍</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

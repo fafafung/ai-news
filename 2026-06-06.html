@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 2026-06-06</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-06</h1>
+  <div class="sub">星期六 · 2026-06-06</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">11</span><span class="label">總計</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub</span></div>
+<div class="stat-box"><span class="num">3</span><span class="label">🔬 Tech</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 General</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 Research</span></div>
+</div><div class="section">
+<div class="section-title">⚡ GitHub</div>
+<div class="card"><div class="card-title"><a href="https://github.com/chopratejas/headroom" target="_blank" rel="noopener">⚡ chopratejas/headroom</a><span class="stars">⭐ 14.5k</span></div><div class="card-why">Compress tool outputs、logs、RAG chunks 60-95% 先入 LLM，同一個答案但 token 少一大截。Library + proxy + MCP server 三合一，直接用喺你條 RAG pipeline 度</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener">⚡ anomalyco/opencode</a><span class="stars">⭐ 55.3k</span></div><div class="card-why">Open-source coding agent，GitHub AI 類別 28 日增長 #1。同 Claude Code / Codex 正面競爭，Agent 生態嘅重要 player</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/lfnovo/open-notebook" target="_blank" rel="noopener">⚡ lfnovo/open-notebook</a><span class="stars">⭐ 26.0k</span></div><div class="card-why">Open-source NotebookLM 實作，將任何文件變成 RAG notebook。比 Google 原版更靈活、可 self-host</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener">⚡ Panniantong/Agent-Reach</a><span class="stars">⭐ 21.5k</span></div><div class="card-why">一個 CLI 搜晒 Twitter、Reddit、YouTube、GitHub、Bilibili、小紅書，**零 API 費用**。俾你嘅 agent 可以直接睇晒成個互聯網</div></div>
+<div class="card"><div class="card-title"><a href="https://github.com/MemPalace/mempalace" target="_blank" rel="noopener">⚡ MemPalace/mempalace</a><span class="stars">⭐ 53.9k</span></div><div class="card-why">Best-benchmarked open-source AI memory system，免費。Mem0 同 Zep 以外嘅新選擇，如果你搵 agent memory solution 值得 benchmark 下</div></div>
+</div><div class="section">
+<div class="section-title">🔬 Tech</div>
+<div class="card"><div class="card-title"><a href="https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/" target="_blank" rel="noopener">🔬 Microsoft 發佈 MAI-Thinking-1 + 6 個 in-house AI 模型</a></div><div class="card-why">Build 2026 嘅重頭戲。MAI-Thinking-1 係 Microsoft 首個 reasoning model（1T params, 35B active），仲有 MAI-Code-1-Flash、MAI-Image-2.5。Arena 上 MAI Image 2.5 已經 #3，逐步降低對 OpenAI 嘅依賴</div></div>
+<div class="card"><div class="card-title"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/" target="_blank" rel="noopener">🔬 Google Gemma 4 QAT 模型全面公開</a></div><div class="card-why">QAT（Quantization-Aware Training）版 Gemma 4，記憶體需求降低 ~3 倍，消費級 GPU 行到同等大小模型。你用 ollama 做 local inference 嘅話直接受惠</div></div>
+<div class="card"><div class="card-title"><a href="https://openrouter.ai/minimax/minimax-m3" target="_blank" rel="noopener">🔬 MiniMax M3 開源輕量模型</a></div><div class="card-why">6月1日發佈，open-weight lightweight model。你以前用過 MiniMax，呢個係佢哋最新嘅細模型，值得試下</div></div>
+</div><div class="section">
+<div class="section-title">📰 General</div>
+<div class="card"><div class="card-title"><a href="https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/" target="_blank" rel="noopener">📰 Meta Business Agent 全球上線 WhatsApp</a></div><div class="card-why">AI 客服 agent 可以自動化日常營運，同客戶對話。企業 AI agent 大戰升溫，Microsoft、Meta、Anthropic 都落場</div></div>
+<div class="card"><div class="card-title"><a href="https://www.artificialintelligence-news.com/news/anthropic-ipo-filing-marks-ai-maturing-into-enterprise-utility/" target="_blank" rel="noopener">📰 Anthropic 提交 IPO 申請</a></div><div class="card-why">$965B Series H 後正式走向上市，AI 公司企業化嘅重要里程碑</div></div>
+</div><div class="section">
+<div class="section-title">📄 Research</div>
+<div class="card"><div class="card-title"><a href="https://huggingface.co/papers/2606.02800" target="_blank" rel="noopener">📄 NVIDIA Cosmos 3: Omnimodal World Models for Physical AI</a></div><div class="card-why">8.7k upvotes on HF。開放平台俾 robot、autonomous vehicle 嘅世界模型，Physical AI 嘅 foundation model。NVIDIA 最近仲 open source 咗 cosmos GitHub repo</div></div>
+</div><div class="summary-box"><div class="label">📝 總結</div>六仔少新聞日，主要係 Build 2026 嘅 MAI models 同 Gemma 4 QAT 延續。GitHub 反而好熱鬧，headroom 同 mempalace 都值得你即日睇下。冇乜嘢大漏人，聽日見！</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

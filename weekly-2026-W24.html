@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Archive — AI 新聞 · 第24週 (2026)</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --stat-bg: #0d1117;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --stat-bg: #ffffff;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.header .nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg2);
+  transition: background 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+}
+.stat-box .num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* Category sections */
+.section {
+  margin-bottom: 28px;
+}
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Cards */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-title a {
+  color: var(--text);
+}
+.card-title a:hover {
+  color: var(--link);
+}
+.card-why {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.badge-signal {
+  color: #fff;
+}
+
+/* Stars */
+.stars {
+  color: #e3b341;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Summary block */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.summary-box .label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+.footer a { color: var(--text2); }
+
+/* Weekly-specific */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  transition: background 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+}
+.week-entry .week-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .week-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .week-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+/* Daily item in weekly view */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  margin: 2px 4px 2px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  .header h1 { font-size: 1.3rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 12px; }
+  .stat-box .num { font-size: 1.1rem; }
+  .card { padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 第24週 (2026)</h1>
+  <div class="sub">2026-06-08 — 2026-06-14 · 7 天 · 77 條新聞</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">7</span><span class="label">天數</span></div>
+<div class="stat-box"><span class="num">77</span><span class="label">新聞總數</span></div>
+</div>
+<div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-14.html">📅 2026-06-14 星期日</a> <span style="color:var(--text2);font-size:0.8rem;">(12 條)</span></div><div class="card-why" style="margin-top:4px;">今日算大新聞日，出咗 12 條。SpaceX IPO 同 Anthropic Fable 5 係 headline，GitHub 方面小米入場 coding agent 同 leaked system prompts 合集都係必睇。冇乜甩漏…</div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-13.html">📅 2026-06-13 星期六</a> <span style="color:var(--text2);font-size:0.8rem;">(10 條)</span></div><div class="card-why" style="margin-top:4px;">今日好豐富 — Claude Fable 5、DiffusionGemma、Kimi K2.7 Code 三個重磅 model 同一週出，GitHub 方面 agent-skills 同 agentsview 都同你啱使，應該冇乜漏人 🤖</div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-12.html">📅 2026-06-12 星期星期五</a> <span style="color:var(--text2);font-size:0.8rem;">(12 條)</span></div><div class="card-why" style="margin-top:4px;">今日大新聞日，Google 嘅 DiffusionGemma 同 OpenAI x Oracle 係最重磅。GitHub 方面 NVIDIA Cosmos 同 OpenHands 值得睇實。冇漏人！🍵</div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-11.html">📅 2026-06-11 星期星期四</a> <span style="color:var(--text2);font-size:0.8rem;">(10 條)</span></div><div class="card-why" style="margin-top:4px;">今日係大新聞日，Anthropic出Fable 5 + Google出DiffusionGemma + Apple WWDC Siri AI，單係呢三單已經夠重磅。GitHub方面agent skill ecosystem繼續爆炸增長，冇乜…</div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-10.html">📅 2026-06-10 星期三</a> <span style="color:var(--text2);font-size:0.8rem;">(11 條)</span></div><div class="card-why" style="margin-top:4px;">今日係大新聞日，Anthropic Fable 5 同 Google Live Translate 搶晒 headline，GitHub 方面 agent skill ecosystem 繼續爆發。應該冇漏到人。</div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-09.html">📅 2026-06-09 星期星期二</a> <span style="color:var(--text2);font-size:0.8rem;">(11 條)</span></div><div class="card-why" style="margin-top:4px;">今日好熱鬧，Microsoft MAI 成個家族出齊 + Anthropic IPO + Dreaming V3 記憶升級，GitHub 方面 markitdown 同 codegraph 都係你直接用得著嘅 tools，冇乜漏人！</div></div><div class="week-entry" style="padding:12px 16px;"><div class="week-title" style="font-size:1rem;"><a href="2026-06-08.html">📅 2026-06-08 星期一</a> <span style="color:var(--text2);font-size:0.8rem;">(11 條)</span></div><div class="card-why" style="margin-top:4px;">今日係 WWDC 大日，Apple 放咗個大炸彈出嚟 — Siri 換 Gemini engine ＋ 開放 Claude/ChatGPT 上 iPhone，成個 AI 生態圈嘅權力平衡會變。Microsoft 亦趁 Build 嘅 mom…</div></div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/your-org/ai-news">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
