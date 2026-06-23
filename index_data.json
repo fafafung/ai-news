@@ -7,7 +7,7 @@
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 26,
-      "summary": "今日超級大新聞日！Fable 5 突然收費、SpaceX 買 Cursor、OpenAI 買 uv/ruff — 三個都係撼動生態嘅消息，冇漏人！\n\n✅ HTML archive 已生成 → `file:///opt/data/ai-new…"
+      "summary": "今日超級大新聞日！Fable 5 突然收費、SpaceX 買 Cursor、OpenAI 買 uv/ruff — 三個都係撼動生態嘅消息，冇漏人！\n"
     },
     {
       "date": "2026-06-21",
@@ -92,7 +92,7 @@
     },
     {
       "date": "2026-06-12",
-      "dow": "星期五",
+      "dow": "五",
       "title": "AI 新聞 · 2026-06-12",
       "item_count": 12,
       "iso_year": 2026,
@@ -101,7 +101,7 @@
     },
     {
       "date": "2026-06-11",
-      "dow": "星期四",
+      "dow": "四",
       "title": "AI 新聞 · 2026-06-11",
       "item_count": 10,
       "iso_year": 2026,
@@ -119,7 +119,7 @@
     },
     {
       "date": "2026-06-09",
-      "dow": "星期二",
+      "dow": "二",
       "title": "AI 新聞 · 2026-06-09",
       "item_count": 11,
       "iso_year": 2026,
