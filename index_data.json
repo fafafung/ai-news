@@ -7,8 +7,31 @@
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 26,
-      "summary": "今日爆多新聞！OpenAI Daybreak 自動 patch 開源漏洞、Sakana Fugu multi-agent routing benchmark 超 Fable 5、Samsung 全員 AI 導入。GitHub 方面 codi…",
-      "first_item_snippet": "openai/codex: OpenAI 官方 coding agent CLI，用 Codex models 做 code generation，支援 sandboxed execution、mul…"
+      "summary": "",
+      "first_item_snippet": "openai/codex: OpenAI 官方 coding agent CLI，用 Codex models 做 code generation，支援 sandboxed execution、multi-file ed…",
+      "cat_counts": {
+        "tech": 2,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "openai/codex",
+          "category": "general"
+        },
+        {
+          "title": "anthropics/claude-code",
+          "category": "general"
+        },
+        {
+          "title": "cline/cline",
+          "category": "general"
+        },
+        {
+          "title": "stablyai/orca",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-23",
@@ -17,8 +40,31 @@
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 26,
-      "summary": "今日超級大新聞日！Fable 5 突然收費、SpaceX 買 Cursor、OpenAI 買 uv/ruff — 三個都係撼動生態嘅消息，冇漏人！\n\n✅ HTML archive 已生成 → `file:///opt/data/ai-new…",
-      "first_item_snippet": "baidu/Unlimited-OCR: 百度推出 Unlimited OCR，基於 DeepSeek-OCR 做 one-shot long-horizon parsing，multi-page P…"
+      "summary": "",
+      "first_item_snippet": "baidu/Unlimited-OCR: 百度推出 Unlimited OCR，基於 DeepSeek-OCR 做 one-shot long-horizon parsing，multi-page PDF 一 pass …",
+      "cat_counts": {
+        "tech": 2,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "baidu/Unlimited-OCR",
+          "category": "general"
+        },
+        {
+          "title": "alibaba/page-agent",
+          "category": "general"
+        },
+        {
+          "title": "jamiepine/voicebox",
+          "category": "general"
+        },
+        {
+          "title": "Forward-Future/loop-library",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-21",
@@ -27,8 +73,31 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "今日星期日新聞量正常，但 GLM-5.2 + DiffusionGemma 同一星期出都幾癲，仲有 Fable 5 被 ban 嘅 geopolitics 餘波。GitHub 方面 flue、OpenMontage、PixelRAG 三個好…",
-      "first_item_snippet": "withastro/flue: Astro 團隊嘅 agent harness framework，用 TypeScript 寫 sandbox agent，支援子代理 / MCP / 持久化，仲有 …"
+      "summary": "",
+      "first_item_snippet": "withastro/flue: Astro 團隊嘅 agent harness framework，用 TypeScript 寫 sandbox agent，支援子代理 / MCP / 持久化，仲有 skills 系統用…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "withastro/flue",
+          "category": "general"
+        },
+        {
+          "title": "google-research/timesfm",
+          "category": "general"
+        },
+        {
+          "title": "calesthio/OpenMontage",
+          "category": "general"
+        },
+        {
+          "title": "StarTrail-org/PixelRAG",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-20",
@@ -37,8 +106,30 @@
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "星期六少啲人出 announcement，但 GLM-5.2 同 Fable 5 ban 夠撐場。GitHub 方面 anthropics/skills 同 chrome-devtools-mcp 值得你即時 bookmark，尤其你玩開 …",
-      "first_item_snippet": "anthropics/skills: Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code …"
+      "summary": "",
+      "first_item_snippet": "anthropics/skills: Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code 同 API 都食得，…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7
+      },
+      "headlines": [
+        {
+          "title": "anthropics/skills",
+          "category": "general"
+        },
+        {
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "category": "general"
+        },
+        {
+          "title": "bytedance/UI-TARS-desktop ~",
+          "category": "general"
+        },
+        {
+          "title": "google-research/timesfm",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-19",
@@ -47,8 +138,31 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "今日係大新聞日，出咗 11 條！Google image models、GLM-5.2、Cohere North Mini Code、NVIDIA SkillSpector 全部撞埋同一日，完全冇漏人 👍",
-      "first_item_snippet": "NVIDIA/SkillSpector: NVIDIA 出嘅 AI agent skills security scanner，scan 到 26% 嘅 public skills 有 vulnera…"
+      "summary": "",
+      "first_item_snippet": "Google 推出 Gemini 3 Pro Image & Gemini 3.1 Flash Image: 全新 image-native vision models，唔係 text model 加 vision ad…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Google 推出 Gemini 3 Pro Image & Gemini 3.1 Flash Image",
+          "category": "tech"
+        },
+        {
+          "title": "Zhipu AI 推出 GLM-5.2",
+          "category": "tech"
+        },
+        {
+          "title": "Cohere 推出 North Mini Code",
+          "category": "tech"
+        },
+        {
+          "title": "NVIDIA/SkillSpector",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-18",
@@ -57,8 +171,30 @@
       "item_count": 9,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "今日最爆係 Claude Fable 5 shutdown 嘅餘波同 Karpathy 嘅 autoresearch——以後可能有更多人用 AI agents 做 overnight 研究。GLM-5.2 同 Step 3.7 Flash …",
-      "first_item_snippet": "karpathy/autoresearch: Karpathy 新 project：AI agents 自動 overnight 做 LLM training 實驗，改 code→5分鐘 train→…"
+      "summary": "",
+      "first_item_snippet": "GLM-5.2（Zhipu AI, 6/16）: 開源 744B MoE，「top frontend coding model  in the world」，1M context window，支援 Claude Cod…",
+      "cat_counts": {
+        "tech": 2,
+        "general": 7
+      },
+      "headlines": [
+        {
+          "title": "GLM-5.2（Zhipu AI, 6/16）",
+          "category": "tech"
+        },
+        {
+          "title": "Step 3.7 Flash（StepFun, 6/17）",
+          "category": "tech"
+        },
+        {
+          "title": "karpathy/autoresearch",
+          "category": "general"
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-17",
@@ -67,8 +203,31 @@
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "今日算多料！SpaceX x Cursor $60B 係全城最爆，GLM-5.2 MIT license 開源都係大件事。GitHub discovery 方面 omnigent 同 trellis 對 agent workflow 好有用…",
-      "first_item_snippet": "omnigent-ai/omnigent: Databricks 推出嘅 meta-harness，將 Claude Code、Codex、Pi 同自訂 agent 統一管理，有 security p…"
+      "summary": "",
+      "first_item_snippet": "SpaceX 用 $60B all-stock 買起 Anysphere（Cursor母公司）: 發生喺 Cursor 完成 Nasdaq IPO 幾日之後，AI coding tool 正式成為科技巨頭嘅企業戰場",
+      "cat_counts": {
+        "tech": 3,
+        "general": 6,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "SpaceX 用 $60B all-stock 買起 Anysphere（Cursor母公司）",
+          "category": "tech"
+        },
+        {
+          "title": "Zhipu AI 推出 GLM-5.2",
+          "category": "tech"
+        },
+        {
+          "title": "Moonshot AI 推出 Kimi K2.7 Code",
+          "category": "tech"
+        },
+        {
+          "title": "omnigent-ai/omnigent",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-16",
@@ -77,8 +236,31 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "今日超多料 — DiffsuionGemma 係新 paradigm（text diffusion！）、Anthropic Fable/Mythos 被 ban 係年度級政治事件、GitHub 方面 bumblebee 同 cua 都值得睇…",
-      "first_item_snippet": "perplexityai/bumblebee: Perplexity AI 出嘅 supply chain scanner，掃 dependencies/MCP servers/browser ext…"
+      "summary": "",
+      "first_item_snippet": "Google DiffusionGemma 26B-A4B: Google 首個 open-weight text diffusion model！26B MoE，Apache 2.0。唔係 autoregressive…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Google DiffusionGemma 26B-A4B",
+          "category": "tech"
+        },
+        {
+          "title": "Moonshot AI Kimi K2.7 Code",
+          "category": "tech"
+        },
+        {
+          "title": "Decart Oasis 3 World Model",
+          "category": "tech"
+        },
+        {
+          "title": "perplexityai/bumblebee",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-15",
@@ -87,8 +269,31 @@
       "item_count": 12,
       "iso_year": 2026,
       "iso_week": 25,
-      "summary": "今日多料，DiffusionGemma 同 Kimi K2.7 Code 兩個 open-source release 都值得玩，Fable 5 同 Sora shutdown 就係 industry 層面嘅大新聞。GitHub 方面 ap…",
-      "first_item_snippet": "apple/container: Apple 出咗官方工具用 lightweight VM 喺 Mac 行 Linux containers，Swift 寫，36K stars 爆升中，大廠正式入場 …"
+      "summary": "",
+      "first_item_snippet": "Google DiffusionGemma 26B-A4B: Google 第一個 open-weight text diffusion model！MoE 26B (3.8B active)，生成文字似 image d…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 8,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Google DiffusionGemma 26B-A4B",
+          "category": "tech"
+        },
+        {
+          "title": "Kimi K2.7 Code",
+          "category": "tech"
+        },
+        {
+          "title": "Microsoft MAI 系列",
+          "category": "tech"
+        },
+        {
+          "title": "apple/container",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-14",
@@ -97,8 +302,31 @@
       "item_count": 12,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日算大新聞日，出咗 12 條。SpaceX IPO 同 Anthropic Fable 5 係 headline，GitHub 方面小米入場 coding agent 同 leaked system prompts 合集都係必睇。冇乜甩漏…",
-      "first_item_snippet": "elder-plinius/CL4R1T4S: 被外洩嘅 ChatGPT/Claude/Gemini/Grok/Perplexity/Cursor 等 system prompts 大合集。AI tr…"
+      "summary": "",
+      "first_item_snippet": "Anthropic Claude Fable 5 & Mythos 5 正式推出: Frontier model，1M context，128K output tokens，$10/$50 per M tokens。Fa…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 8,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Anthropic Claude Fable 5 & Mythos 5 正式推出",
+          "category": "tech"
+        },
+        {
+          "title": "Microsoft MAI-Thinking-1 發布",
+          "category": "tech"
+        },
+        {
+          "title": "Moonshot AI 開源 Kimi K2.7 Code",
+          "category": "tech"
+        },
+        {
+          "title": "elder-plinius/CL4R1T4S",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-13",
@@ -107,28 +335,96 @@
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日好豐富 — Claude Fable 5、DiffusionGemma、Kimi K2.7 Code 三個重磅 model 同一週出，GitHub 方面 agent-skills 同 agentsview 都同你啱使，應該冇乜漏人 🤖",
-      "first_item_snippet": "addyosmani/agent-skills: Production-grade engineering skills for AI coding agents，24 個 lifecycle ski…"
+      "summary": "",
+      "first_item_snippet": "Anthropic Claude Fable 5 + Mythos 5 正式推出（Jun 9）: Anthropic 史上最強 public model，1M context，$10/$50 per M tokens。M…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7
+      },
+      "headlines": [
+        {
+          "title": "Anthropic Claude Fable 5 + Mythos 5 正式推出（Jun 9）",
+          "category": "tech"
+        },
+        {
+          "title": "Google DiffusionGemma 26B-A4B 開源（Jun 10）",
+          "category": "tech"
+        },
+        {
+          "title": "Moonshot AI Kimi K2.7 Code 開源（Jun 12）",
+          "category": "tech"
+        },
+        {
+          "title": "addyosmani/agent-skills",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-12",
-      "dow": "星期五",
+      "dow": "五",
       "title": "AI 新聞 · 2026-06-12",
       "item_count": 12,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日大新聞日，Google 嘅 DiffusionGemma 同 OpenAI x Oracle 係最重磅。GitHub 方面 NVIDIA Cosmos 同 OpenHands 值得睇實。冇漏人！🍵",
-      "first_item_snippet": "NVIDIA/cosmos +⭐: NVIDIA 開源世界模型平台 Cosmos，專攻 Physical AI（機械人、自動駕駛），open platform 用 Apache 2.0，呢個係 Phy…"
+      "summary": "",
+      "first_item_snippet": "Google 開源 DiffusionGemma 26B: 用 text diffusion 代替 autoregressive，單張 H100 跑 >1000 tok/s（4x 快），但 benchmark 有 tra…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 8,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Google 開源 DiffusionGemma 26B",
+          "category": "tech"
+        },
+        {
+          "title": "Visa 整合 ChatGPT 做 AI agent 自動購物",
+          "category": "tech"
+        },
+        {
+          "title": "Anthropic Claude Corps",
+          "category": "tech"
+        },
+        {
+          "title": "NVIDIA/cosmos +⭐",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-11",
-      "dow": "星期四",
+      "dow": "四",
       "title": "AI 新聞 · 2026-06-11",
       "item_count": 10,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日係大新聞日，Anthropic出Fable 5 + Google出DiffusionGemma + Apple WWDC Siri AI，單係呢三單已經夠重磅。GitHub方面agent skill ecosystem繼續爆炸增長，冇乜…",
-      "first_item_snippet": "pbakaus/impeccable ~: 前Google開發者Paul Bakaus整嘅設計語言skill for AI harnesses，23個commands + 41條anti-patter…"
+      "summary": "",
+      "first_item_snippet": "Anthropic Claude Fable 5 正式推出: 第一個公開嘅Mythos-class模型，$10/$50 per M tokens，SWE-Bench Pro 80.3%，一鍵生成video game。Ju…",
+      "cat_counts": {
+        "tech": 2,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Anthropic Claude Fable 5 正式推出",
+          "category": "tech"
+        },
+        {
+          "title": "Google DiffusionGemma 26B-A4B 開源",
+          "category": "tech"
+        },
+        {
+          "title": "pbakaus/impeccable ~",
+          "category": "general"
+        },
+        {
+          "title": "revfactory/harness",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-10",
@@ -137,18 +433,64 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日係大新聞日，Anthropic Fable 5 同 Google Live Translate 搶晒 headline，GitHub 方面 agent skill ecosystem 繼續爆發。應該冇漏到人。",
-      "first_item_snippet": "mvanhorn/last30days-skill: AI agent skill 自動爬 Reddit/X/YouTube/HN/Polymarket 再合成 grounded summary，直接…"
+      "summary": "",
+      "first_item_snippet": "Claude Fable 5 & Mythos 5 正式發佈: Anthropic 首個 Mythos-class 公開模型。Fable 5 有 guardrails（<5% sessions fallback to O…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Claude Fable 5 & Mythos 5 正式發佈",
+          "category": "tech"
+        },
+        {
+          "title": "Gemini 3.5 Live Translate 推出",
+          "category": "tech"
+        },
+        {
+          "title": "MiniMax M3 開源",
+          "category": "tech"
+        },
+        {
+          "title": "mvanhorn/last30days-skill",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-09",
-      "dow": "星期二",
+      "dow": "二",
       "title": "AI 新聞 · 2026-06-09",
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日好熱鬧，Microsoft MAI 成個家族出齊 + Anthropic IPO + Dreaming V3 記憶升級，GitHub 方面 markitdown 同 codegraph 都係你直接用得著嘅 tools，冇乜漏人！",
-      "first_item_snippet": "microsoft/markitdown: Microsoft 官方 file-to-Markdown 轉換器，支援 PDF/DOCX/PPTX/Excel/圖片 OCR。你用 Docling 做 R…"
+      "summary": "",
+      "first_item_snippet": "OpenAI Dreaming V3: ChatGPT 記憶系統大升級。自動 background synthesize 用戶偏好、constraints、時間敏感 context，唔使再講「記住呢句」。Compute …",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "OpenAI Dreaming V3",
+          "category": "tech"
+        },
+        {
+          "title": "Microsoft 一口氣出 7 個 MAI 模型",
+          "category": "tech"
+        },
+        {
+          "title": "Google Gemma 4 QAT 推出",
+          "category": "tech"
+        },
+        {
+          "title": "microsoft/markitdown",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-08",
@@ -157,8 +499,31 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 24,
-      "summary": "今日係 WWDC 大日，Apple 放咗個大炸彈出嚟 — Siri 換 Gemini engine ＋ 開放 Claude/ChatGPT 上 iPhone，成個 AI 生態圈嘅權力平衡會變。Microsoft 亦趁 Build 嘅 mom…",
-      "first_item_snippet": "RyanCodrai/turbovec: 基於 Google TurboQuant 嘅向量索引，Rust 寫 + Python bindings。比 FAISS 更快更細（16×壓縮），直接 drop…"
+      "summary": "",
+      "first_item_snippet": "Apple WWDC 2026：Tim Cook 最後一次 keynote: 全新 Siri 由 custom 1.2T Gemini 模型驅動（每年 $1B 授權俾 Google）。iOS 27 嘅 AI Extens…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Apple WWDC 2026：Tim Cook 最後一次 keynote",
+          "category": "tech"
+        },
+        {
+          "title": "Microsoft MAI-Thinking-1 & MAI-Code-1-Flash",
+          "category": "tech"
+        },
+        {
+          "title": "NVIDIA Cosmos 3：Open-source 世界模型",
+          "category": "tech"
+        },
+        {
+          "title": "RyanCodrai/turbovec",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-07",
@@ -167,8 +532,31 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 23,
-      "summary": "今日星期日新聞相對靜，不過微軟 MAI、NVIDIA Nemotron 3 Ultra、Anthropic IPO 呢幾單都仲有餘溫。GitHub 方面 VoxCPM（廣東話 TTS！）同 liteparse 對你應該最直接有用。冇乜嘢大嘢…",
-      "first_item_snippet": "OpenBMB/VoxCPM: VoxCPM2：Tokenizer-free TTS，支援 30 種語言包括粵語，Voice Design（文字描述直接生成聲線）、True-to-Life Cloni…"
+      "summary": "",
+      "first_item_snippet": "Microsoft Build 2026：MAI-Thinking-1 + MAI-Code-1-Flash: 微軟首批完全不靠 OpenAI 嘅自研模型。MAI-Thinking-1 係推理模型，MAI-Code-1-…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Microsoft Build 2026：MAI-Thinking-1 + MAI-Code-1-Flash",
+          "category": "tech"
+        },
+        {
+          "title": "NVIDIA Nemotron 3 Ultra (550B MoE)",
+          "category": "tech"
+        },
+        {
+          "title": "MiniMax M3",
+          "category": "tech"
+        },
+        {
+          "title": "OpenBMB/VoxCPM",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-06",
@@ -177,8 +565,31 @@
       "item_count": 11,
       "iso_year": 2026,
       "iso_week": 23,
-      "summary": "六仔少新聞日，主要係 Build 2026 嘅 MAI models 同 Gemma 4 QAT 延續。GitHub 反而好熱鬧，headroom 同 mempalace 都值得你即日睇下。冇乜嘢大漏人，聽日見！",
-      "first_item_snippet": "chopratejas/headroom: Compress tool outputs、logs、RAG chunks 60-95% 先入 LLM，同一個答案但 token 少一大截。Library …"
+      "summary": "",
+      "first_item_snippet": "Microsoft 發佈 MAI-Thinking-1 + 6 個 in-house AI 模型: Build 2026 嘅重頭戲。MAI-Thinking-1 係 Microsoft 首個 reasoning mode…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 7,
+        "research": 1
+      },
+      "headlines": [
+        {
+          "title": "Microsoft 發佈 MAI-Thinking-1 + 6 個 in-house AI 模型",
+          "category": "tech"
+        },
+        {
+          "title": "Google Gemma 4 QAT 模型全面公開",
+          "category": "tech"
+        },
+        {
+          "title": "MiniMax M3 開源輕量模型",
+          "category": "tech"
+        },
+        {
+          "title": "chopratejas/headroom",
+          "category": "general"
+        }
+      ]
     },
     {
       "date": "2026-06-05",
@@ -187,8 +598,37 @@
       "item_count": 12,
       "iso_year": 2026,
       "iso_week": 23,
-      "summary": "今期重點：Claude Opus 4.8 + Anthropic IPO 雙響炮，SubQ 用 12M context 證明 architecture 先係下一個戰場，而 opencode 夾 codex 嘅 coding agent 大戰…",
-      "first_item_snippet": "Claude Opus 4.8 正式推出: Anthropic 最新旗艦，4× 更少放過 code flaws，新增 Dynamic Workflows 可 spawn 幾百個 parallel su…"
+      "summary": "",
+      "first_item_snippet": "Claude Opus 4.8 正式推出: Anthropic 最新旗艦，4× 更少放過 code flaws，新增 Dynamic Workflows 可 spawn 幾百個 parallel subagents 做 …",
+      "cat_counts": {
+        "tech": 4,
+        "general": 6,
+        "research": 2
+      },
+      "headlines": [
+        {
+          "title": "Claude Opus 4.8 正式推出",
+          "category": "tech"
+        },
+        {
+          "title": "SubQ 1M-Preview",
+          "category": "tech"
+        },
+        {
+          "title": "ZAYA1-8B 開源 MoE",
+          "category": "tech"
+        },
+        {
+          "title": "GPT-5.5 Instant 成為 ChatGPT 默認 model",
+          "category": "tech"
+        }
+      ]
     }
-  ]
+  ],
+  "week_summaries": {
+    "2026-W26": "本週 coding agent 三巨頭 codex/claude-code/cline 齊齊登上 GitHub 榜首，OpenAI Daybreak 自動 patch 開源漏洞係里程碑事件。Orca ADE 開創 agent orchestration 新範式。Fable 5 突然收費震動業界，SpaceX 收購 Cursor、OpenAI 收購 uv/ruff 顯示大廠兵家必爭。",
+    "2026-W25": "Sakana AI Fugu multi-agent routing 超 Fable 5 係本週最大 technical news。GLM-5.2 MIT 開源、Cohere North Mini Code、Anthropic skills 公開 repo 全部集中喺 agent ecosystem。NVIDIA SkillSpector 同 karpathy/autoresearch 分別係 security 同 automation 方向嘅重要信號。Apple container 36K stars 爆升係意外驚喜。",
+    "2026-W24": "Anthropic Fable 5 + Mythos 5 同 Google DiffusionGemma 26B 同日出街係年度級撞期。Fable 5 被 ban 嘅 geopolitics 同 Apple WWDC Siri 換 Gemini engine 改寫行業權力版圖。NVIDIA Cosmos 開源世界模型平台係 Physical AI 重要一步。GitHub 上 agent skill ecosystem 持續爆炸，addyosmani/agent-skills、impeccable、harness 等相繼出現。",
+    "2026-W23": "三日短週以 Claude Opus 4.8 + Anthropic IPO 雙響炮開局。SubQ 1M-Preview 用 12M context 證明 subquadratic architecture 先係下一個戰場。opencode/codex 兩個 coding agent CLI 同日上榜顯示 agent 工具化趨勢。VoxCPM 廣東話 TTS 對 Fafa 直接有用。"
+  }
 }
