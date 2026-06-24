@@ -8,7 +8,7 @@
       "iso_year": 2026,
       "iso_week": 26,
       "summary": "",
-      "first_item_snippet": "openai/codex: OpenAI 官方 coding agent CLI，用 Codex models 做 code generation，支援 sandboxed execution、multi-file ed…",
+      "first_item_snippet": "OpenAI Daybreak 自動化安全修補系統: OpenAI 聯同 Trail of Bits 推出 Daybreak Initiative，用 AI 做自動化 security research。Codex Se…",
       "cat_counts": {
         "tech": 2,
         "general": 7,
@@ -31,6 +31,118 @@
           "title": "stablyai/orca",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "OpenAI Daybreak 自動化安全修補系統",
+          "link": "https://openai.com/daybreak",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "OpenAI 聯同 Trail of Bits 推出 Daybreak Initiative，用 AI 做自動化 …",
+          "description": "OpenAI 聯同 Trail of Bits 推出 Daybreak Initiative，用 AI 做自動化 security research。Codex Security + GPT-5.5-Cyber 達 85.6% CyberGym 成績。已經喺 cURL、Python、Linux Kernel 發現數百個漏洞並自動 patch。對 open-source 生態安全有深遠影響。",
+          "image": ""
+        },
+        {
+          "title": "Sakana AI Fugu Multi-Agent 模型路由平台",
+          "link": "https://sakana.ai/fugu",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "sakana.ai",
+          "why": "東京 AI startup Sakana 推出 Fugu 平台，用 multi-agent routing 將 t…",
+          "description": "東京 AI startup Sakana 推出 Fugu 平台，用 multi-agent routing 將 tasks 分配去不同模型，避免 vendor lock-in。Fugu Ultra 喺科學/工程 benchmark 超越 Claude Fable 5 同 Mythos Preview。對同時用多個 provider 嘅企業同 developer 好有用。",
+          "image": "https://sakana.ai/assets/fugu_lp/ogp.png"
+        },
+        {
+          "title": "openai/codex",
+          "link": "https://github.com/openai/codex",
+          "category": "github",
+          "stars": 44700,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "OpenAI 官方 coding agent CLI，用 Codex models 做 code generati…",
+          "description": "OpenAI 官方 coding agent CLI，用 Codex models 做 code generation，支援 sandboxed execution、multi-file editing、Git-aware context management。Fafa 用開 Hermes Agent，了解主流 coding agent 生態對佢揀工具好重要。",
+          "image": "https://opengraph.githubassets.com/1169c123e43cfe82be2071154e261c26155da191d045a8ac65530174c3f1c26d/openai/codex"
+        },
+        {
+          "title": "anthropics/claude-code",
+          "link": "https://github.com/anthropics/claude-code",
+          "category": "github",
+          "stars": 44700,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Anthropic 官方 coding agent CLI，深度整合 Claude models。",
+          "description": "Anthropic 官方 coding agent CLI，深度整合 Claude models。支援 terminal-based agent 模式、plan-and-execute workflow、multi-file refactoring。Fafa 係 Claude Max 用家，知道 Claude Code 嘅架構同限制有 direct 幫助。",
+          "image": "https://opengraph.githubassets.com/e8d6cb585560c43651250379515e60848feeb07cbbe6d9b0d5eb99665c9f968c/anthropics/claude-code"
+        },
+        {
+          "title": "cline/cline",
+          "link": "https://github.com/cline/cline",
+          "category": "github",
+          "stars": 49000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "最多人用嘅 open-source coding agent VS Code extension。",
+          "description": "最多人用嘅 open-source coding agent VS Code extension。plan-and-execute 架構，自由揀 model provider。有 terminal 存取、browser 控制、MCP 整合。如果 Fafa 想揀開源替代方案同自組 agent toolchain，cline 係重要參考。",
+          "image": "https://opengraph.githubassets.com/d8d46efd96f4ba70184ee3a3b416685f3eeb465f02b7c52f8edd9d39f468867c/cline/cline"
+        },
+        {
+          "title": "stablyai/orca",
+          "link": "https://github.com/stablyai/orca",
+          "category": "github",
+          "stars": 6300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "全新 Agent Development Environment (ADE)，專門俾運行 fleet of par…",
+          "description": "全新 Agent Development Environment (ADE)，專門俾運行 fleet of parallel agents 用。Desktop 同 mobile app，用自己的 API subscription 跑任何 coding agent。Fafa 對 agent orchestration 同 parallel execution 有興趣，呢個係 agent infrastructure 嘅新 category。",
+          "image": "https://opengraph.githubassets.com/stablyai/orca"
+        },
+        {
+          "title": "open-webui/open-webui",
+          "link": "https://github.com/open-webui/open-webui",
+          "category": "github",
+          "stars": 106000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "最 popular 嘅 local LLM web UI，106K stars。",
+          "description": "最 popular 嘅 local LLM web UI，106K stars。支援 ollama 開箱即用、OpenAI-compatible API、RAG pipeline、tool calling、multi-user。Fafa 用開 ollama 做 local inference，open-webui 係佢一定會用到嘅 companion tool。",
+          "image": "https://repository-images.githubusercontent.com/701547123/275da62f-2139-4d2b-bcac-57c82872dd30"
+        },
+        {
+          "title": "Samsung 全員導入 ChatGPT + Codex",
+          "link": "https://openai.com/index/samsung-chatgpt-codex",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "Samsung 成為歷來最大 enterprise AI deployment — 韓國全體員工及全球 DX 團隊…",
+          "description": "Samsung 成為歷來最大 enterprise AI deployment — 韓國全體員工及全球 DX 團隊全面使用 ChatGPT 同 Codex。覆蓋 R&D、manufacturing、marketing、corporate functions。證明企業級 AI adoption 正式進入主流。",
+          "image": ""
+        },
+        {
+          "title": "NVIDIA Vera CPU + Rubin GPU 登陸 Los Alamos",
+          "link": "https://www.nvidia.com/en-us/data-center/vera",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "nvidia.com",
+          "why": "新 HPE-NVIDIA supercomputers (Mission/Vision/Veritas) 用 Ve…",
+          "description": "新 HPE-NVIDIA supercomputers (Mission/Vision/Veritas) 用 Vera CPU 配合 Rubin GPU。Vera 對 agentic AI workload 快 7 倍，simulation 比 x86 快 3 倍。Agentic AI hardware 層面嘅重大 leap，對自建 inference infra 嘅 developer 有長遠影響。",
+          "image": ""
+        },
+        {
+          "title": "Kairos: Native World Model Stack for Physical AI",
+          "link": "https://huggingface.co/papers/2606.16533",
+          "category": "research",
+          "stars": 712,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "24 位作者提出嘅原生世界模型架構，專為 Physical AI / robotics 設計。",
+          "description": "24 位作者提出嘅原生世界模型架構，專為 Physical AI / robotics 設計。Unified world model 整合 perception、prediction、planning。712 GitHub stars，有完整 video demo。對 Agent 未來要同 physical world 互動有直接啟發。",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.16533/gradient.png"
+        }
       ]
     },
     {
@@ -41,7 +153,7 @@
       "iso_year": 2026,
       "iso_week": 26,
       "summary": "",
-      "first_item_snippet": "baidu/Unlimited-OCR: 百度推出 Unlimited OCR，基於 DeepSeek-OCR 做 one-shot long-horizon parsing，multi-page PDF 一 pass …",
+      "first_item_snippet": "Fable 5 今日起移出訂閱，要用 Credits 買: Fable 5 唔再包喺 Pro/Max/Team/Enterprise 入面，要用 credits 按 API 價 $10/M in $50/M out",
       "cat_counts": {
         "tech": 2,
         "general": 7,
@@ -64,6 +176,118 @@
           "title": "Forward-Future/loop-library",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Fable 5 今日起移出訂閱，要用 Credits 買",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Fable 5 唔再包喺 Pro/Max/Team/Enterprise 入面，要用 credits 按 API …",
+          "description": "Fable 5 唔再包喺 Pro/Max/Team/Enterprise 入面，要用 credits 按 API 價 $10/M in $50/M out",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/95d2a1a5-9682-45f4-b908-8f47da87d20d.png"
+        },
+        {
+          "title": "Gemini 3.5 Pro GA Window 今日開閘",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Google 2M context model 嘅 GA window June 23-30，Deep Think…",
+          "description": "Google 2M context model 嘅 GA window June 23-30，Deep Think reasoning mode 限 Ultra tier",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/95d2a1a5-9682-45f4-b908-8f47da87d20d.png"
+        },
+        {
+          "title": "baidu/Unlimited-OCR",
+          "link": "https://github.com/baidu/Unlimited-OCR",
+          "category": "github",
+          "stars": 83,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "百度推出 Unlimited OCR，基於 DeepSeek-OCR 做 one-shot long-horizo…",
+          "description": "百度推出 Unlimited OCR，基於 DeepSeek-OCR 做 one-shot long-horizon parsing，multi-page PDF 一 pass 過處理",
+          "image": "https://opengraph.githubassets.com/baidu/Unlimited-OCR"
+        },
+        {
+          "title": "alibaba/page-agent",
+          "link": "https://github.com/alibaba/page-agent",
+          "category": "github",
+          "stars": 18900,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "阿里 JS in-page GUI agent，自然語言控制網頁界面，支援 browser extension +…",
+          "description": "阿里 JS in-page GUI agent，自然語言控制網頁界面，支援 browser extension + headless + Python",
+          "image": "https://repository-images.githubusercontent.com/1062458369/4f9a1671-3953-4f45-8a8e-b010e33520bc"
+        },
+        {
+          "title": "jamiepine/voicebox",
+          "link": "https://github.com/jamiepine/voicebox",
+          "category": "github",
+          "stars": 31600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "開源 AI voice studio，7 個 TTS engine + voice cloning + 23 la…",
+          "description": "開源 AI voice studio，7 個 TTS engine + voice cloning + 23 languages dictation，local-first 替代 ElevenLabs",
+          "image": "https://opengraph.githubassets.com/0e9b6ae151f9c449c62d5da0fe39fed7480361efd83fae63a5abfaee2e089187/jamiepine/voicebox"
+        },
+        {
+          "title": "Forward-Future/loop-library",
+          "link": "https://github.com/Forward-Future/loop-library",
+          "category": "github",
+          "stars": 1100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "AI agent workflow loop library，將 one-shot prompt 變 bounde…",
+          "description": "AI agent workflow loop library，將 one-shot prompt 變 bounded iterative workflow，有 feedback + termination condition",
+          "image": "https://opengraph.githubassets.com/40a194919f4a579a774a990333d3fa07cbf461ed6c9c916bb05e6513d096c8c4/Forward-Future/loop-library"
+        },
+        {
+          "title": "zhaoxuya520/reverse-skill",
+          "link": "https://github.com/zhaoxuya520/reverse-skill",
+          "category": "github",
+          "stars": 3200,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "AI 自動路由安全技能包，支援 Claude Code/Cursor/Cline 做逆向/滲透測試，自動自舉 to…",
+          "description": "AI 自動路由安全技能包，支援 Claude Code/Cursor/Cline 做逆向/滲透測試，自動自舉 toolchain",
+          "image": "https://opengraph.githubassets.com/1c02a7ca529515470cd31df709b5ef583445b8d544b0d849522925a8b70fa7ff/zhaoxuya520/reverse-skill"
+        },
+        {
+          "title": "SpaceX 以 $60B 收購 Cursor (Anysphere)",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "史上最大 VC-backed startup acquisition，Cursor ~$4B ARR、50k+ e…",
+          "description": "史上最大 VC-backed startup acquisition，Cursor ~$4B ARR、50k+ enterprise clients，xAI/Grok 整合",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/95d2a1a5-9682-45f4-b908-8f47da87d20d.png"
+        },
+        {
+          "title": "OpenAI 收購 Astral (uv, ruff)",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "OpenAI 控制咗 Python package installer/resolver + linter，整合入…",
+          "description": "OpenAI 控制咗 Python package installer/resolver + linter，整合入 Codex stack，open source licensing 未明",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/95d2a1a5-9682-45f4-b908-8f47da87d20d.png"
+        },
+        {
+          "title": "GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents",
+          "link": "https://huggingface.co/papers/2606.18829",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "agent memory governance benchmark，直接關係 Fafa 用緊嘅 Mem0/Zep …",
+          "description": "agent memory governance benchmark，直接關係 Fafa 用緊嘅 Mem0/Zep 嘅 shared memory 問題",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.18829/gradient.png"
+        }
       ]
     },
     {
@@ -74,7 +298,7 @@
       "iso_year": 2026,
       "iso_week": 25,
       "summary": "",
-      "first_item_snippet": "withastro/flue: Astro 團隊嘅 agent harness framework，用 TypeScript 寫 sandbox agent，支援子代理 / MCP / 持久化，仲有 skills 系統用…",
+      "first_item_snippet": "US government 強制 Anthropic 停用 Claude Fable 5 同 Mythos 5: 商務部用出口管制名義直接落閘，全球 AI sovereignty scramble 開始。Anthropi…",
       "cat_counts": {
         "tech": 3,
         "general": 7,
@@ -97,6 +321,129 @@
           "title": "StarTrail-org/PixelRAG",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "US government 強制 Anthropic 停用 Claude Fable 5 同 Mythos 5",
+          "link": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "fortune.com",
+          "why": "商務部用出口管制名義直接落閘，全球 AI sovereignty scramble 開始。",
+          "description": "商務部用出口管制名義直接落閘，全球 AI sovereignty scramble 開始。Anthropic 被迫 suspend access for all users，係目前最大嘅 geopolitics AI 事件",
+          "image": "https://fortune.com/img-assets/wp-content/uploads/2026/06/GettyImages-2280291188_ea181b-e1781323258530.jpg?resize=1200,600"
+        },
+        {
+          "title": "GLM-5.2 正式 release",
+          "link": "https://z.ai/blog/glm-5.2",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "z.ai",
+          "why": "Zhipu AI 嘅 MIT license open-weight coding model，1M contex…",
+          "description": "Zhipu AI 嘅 MIT license open-weight coding model，1M context window，Code Arena 排第二（僅次於已被 ban 嘅 Fable 5）。Agent-first design，本地 infer 可以做",
+          "image": ""
+        },
+        {
+          "title": "Google 出 DiffusionGemma 26B-A4B",
+          "link": "https://blog.google/technology/developers/diffusiongemma/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "用 text diffusion 取代 autoregressive token-by-token generat…",
+          "description": "用 text diffusion 取代 autoregressive token-by-token generation，速度快 4 倍。Open weights，multimodal（text/image/video in → text out）。雖然 benchmark 未及 Gemma 4，但 architecture paradigm 值得留意",
+          "image": ""
+        },
+        {
+          "title": "withastro/flue",
+          "link": "https://github.com/withastro/flue",
+          "category": "github",
+          "stars": 6100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Astro 團隊嘅 agent harness framework，用 TypeScript 寫 sandbox …",
+          "description": "Astro 團隊嘅 agent harness framework，用 TypeScript 寫 sandbox agent，支援子代理 / MCP / 持久化，仲有 skills 系統用 Markdown 定義。Fafa 玩 Hermes Agent 嘅一定要睇",
+          "image": "https://opengraph.githubassets.com/2dfb685fea2002992ebe6a5475216def2a5c6246a271765eb969cda69fe6823b/withastro/flue"
+        },
+        {
+          "title": "google-research/timesfm",
+          "link": "https://github.com/google-research/timesfm",
+          "category": "github",
+          "stars": 24600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Google Research 嘅 Time Series Foundation Model v2.5，仲加咗 A…",
+          "description": "Google Research 嘅 Time Series Foundation Model v2.5，仲加咗 AGENTS.md + SKILL.md 支援 AI coding agent 操作。Fafa 有 ML cert + xgboost background，time series 係實用 discovery",
+          "image": "https://opengraph.githubassets.com/google-research/timesfm"
+        },
+        {
+          "title": "calesthio/OpenMontage",
+          "link": "https://github.com/calesthio/OpenMontage",
+          "category": "github",
+          "stars": 7100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "第一個 open-source agentic video production system：12 pipeli…",
+          "description": "第一個 open-source agentic video production system：12 pipelines、52 tools、500+ agent skills。用 coding assistant 描述就得，做一條 Pixar-style 動畫成本 $0.15。Fafa 玩 ComfyUI/SD 應該有興趣",
+          "image": "https://opengraph.githubassets.com/calesthio/OpenMontage"
+        },
+        {
+          "title": "StarTrail-org/PixelRAG",
+          "link": "https://github.com/StarTrail-org/PixelRAG",
+          "category": "github",
+          "stars": 1300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "顛覆 RAG 嘅新 paradigm：唔 parsing HTML，直接 screenshot 網頁做 retri…",
+          "description": "顛覆 RAG 嘅新 paradigm：唔 parsing HTML，直接 screenshot 網頁做 retrieval。保留表格/圖表/chart layout。Berkeley SkyLab 出品，有 free hosted API + Claude Code plugin",
+          "image": "https://opengraph.githubassets.com/99389b3e8041f04bb541af12e414f02e40f916b9dc03cfa8210353f39214b9f0/StarTrail-org/PixelRAG"
+        },
+        {
+          "title": "mattpocock/skills",
+          "link": "https://github.com/mattpocock/skills",
+          "category": "github",
+          "stars": 138000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "TypeScript 大神 Matt Pocock 出嘅 skills for real engineers，解決…",
+          "description": "TypeScript 大神 Matt Pocock 出嘅 skills for real engineers，解決 coding agent 四大死穴（misalignment / 廢話多 / 盲飛 / 屎山）。/grill-me /tdd /diagnose 等實戰 skills，Fafa 玩 Hermes skills 必睇",
+          "image": "https://opengraph.githubassets.com/mattpocock/skills"
+        },
+        {
+          "title": "EU 公佈 AI content labelling playbook",
+          "link": "https://www.artificialintelligence-news.com/news/ai-content-labelling-eu-code-of-practice/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "為 August AI Act deadline 做準備，要求所有 AI 生成內容要標籤。",
+          "description": "為 August AI Act deadline 做準備，要求所有 AI 生成內容要標籤。直接影響所有喺 EU 營運嘅 AI 產品",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2025/09/Resham-Kotecha-Open-Data-Institute_How-the-EU-can-lead-in-AI-scaled-e1756964222915.jpg"
+        },
+        {
+          "title": "Microsoft 繼續喺中國賣 OpenAI models",
+          "link": "https://www.artificialintelligence-news.com/news/microsoft-sells-openai-models-china/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "而 OpenAI 同 Anthropic 自己就唔入中國。",
+          "description": "而 OpenAI 同 Anthropic 自己就唔入中國。HarmonyOS 7 填補 Apple 留低嘅 AI 缺口。中美 AI 分化加速",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/06/dima-solomin-nM3243N4sSY-unsplash-scaled.jpg"
+        },
+        {
+          "title": "PixelRAG: Web Screenshots Beat Text for RAG",
+          "link": "https://huggingface.co/papers/2606.18363",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Berkeley SkyLab 論文證明 screenshot-based retrieval 喺 tables/…",
+          "description": "Berkeley SkyLab 論文證明 screenshot-based retrieval 喺 tables/charts/infographics 上大幅勝過 text parsing。同 repo 同名，有 pre-built 8.28M Wikipedia index",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.18363/gradient.png"
+        }
       ]
     },
     {
@@ -107,7 +454,7 @@
       "iso_year": 2026,
       "iso_week": 25,
       "summary": "",
-      "first_item_snippet": "anthropics/skills: Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code 同 API 都食得，…",
+      "first_item_snippet": "GLM-5.2 開放權重 753B: 以 MIT license 開源，SWE-bench Pro 62.1 贏 GPT-5.5 嘅 58.6，價錢只係 1/6（$5.80 vs $35.00 /M tokens）。In…",
       "cat_counts": {
         "tech": 3,
         "general": 7
@@ -128,6 +475,118 @@
         {
           "title": "google-research/timesfm",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "GLM-5.2 開放權重 753B",
+          "link": "https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "venturebeat.com",
+          "why": "以 MIT license 開源，SWE-bench Pro 62.1 贏 GPT-5.5 嘅 58.6，價錢只係…",
+          "description": "以 MIT license 開源，SWE-bench Pro 62.1 贏 GPT-5.5 嘅 58.6，價錢只係 1/6（$5.80 vs $35.00 /M tokens）。IndexShare 注意力優化 + Multi-Token Prediction，1M context window。Z.ai 呢腳好大",
+          "image": ""
+        },
+        {
+          "title": "Claude Fable 5 被 US govt 封殺",
+          "link": "https://www.bbc.com/news/articles/c932g3v3e13o",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "bbc.com",
+          "why": "推出 72 小時後美國出口管制令 Anthropic 暫停服務，但仍然可以經 API access。",
+          "description": "推出 72 小時後美國出口管制令 Anthropic 暫停服務，但仍然可以經 API access。Cybersecurity 憂慮做 trigger。Anthropic 同時 raise 咗 $65B Series H @ $965B valuation，史上最大 AI funding",
+          "image": "https://ichef.bbci.co.uk/news/1024/branded_news/54a1/live/35ba2f90-66c9-11f1-b891-a117aef409ef.jpg"
+        },
+        {
+          "title": "Google 推出 Gemini 3 Pro Image & 3.1 Flash Image",
+          "link": "https://pricepertoken.com/news/model-releases",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "pricepertoken.com",
+          "why": "Jun 18 發佈，multi-modal image understanding model。",
+          "description": "Jun 18 發佈，multi-modal image understanding model。Gemini 3 Pro Image $2/$12 per M tokens，Flash 版 $0.50/$3。同場加映 DiffusionGemma 26B-A4B 開源",
+          "image": ""
+        },
+        {
+          "title": "anthropics/skills",
+          "link": "https://github.com/anthropics/skills",
+          "category": "github",
+          "stars": 153000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Anthropic 官方放出 agent skills 公開 repo！",
+          "description": "Anthropic 官方放出 agent skills 公開 repo！Fafa 用 skills 玩 Hermes 嘅話呢個係聖經 — Claude Code 同 API 都食得，仲有 docx/pdf/pptx skill 做 reference",
+          "image": "https://opengraph.githubassets.com/4d0117141b1ebec4b4c02fa9e76cec2337588c37f1a15f12f59aa4d4cf5d6963/anthropics/skills"
+        },
+        {
+          "title": "ChromeDevTools/chrome-devtools-mcp",
+          "link": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "category": "github",
+          "stars": 44000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Chrome DevTools 變 MCP server！",
+          "description": "Chrome DevTools 變 MCP server！coding agent 可以直接開 browser 做 performance trace、network inspect、Lighthouse audit — 慳返人手 debug 時間",
+          "image": "https://opengraph.githubassets.com/edfd2912378e19bb3b7bdb80a9a0610aa1bd063000dd398c6b42dfb4852c2f4f/ChromeDevTools/chrome-devtools-mcp"
+        },
+        {
+          "title": "bytedance/UI-TARS-desktop",
+          "link": "https://github.com/bytedance/UI-TARS-desktop",
+          "category": "github",
+          "stars": 30000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "ByteDance 出嘅 open-source multimodal GUI agent stack。",
+          "description": "ByteDance 出嘅 open-source multimodal GUI agent stack。Agent TARS + UI-TARS Desktop，可以操控 browser / desktop / terminal，支援 MCP tools。大廠入 desktop agent 賽道",
+          "image": "https://opengraph.githubassets.com/64e327b20ff20c7bec9702169f6ef8105f682e2bfac36111a8087d3040fb6209/bytedance/UI-TARS-desktop"
+        },
+        {
+          "title": "google-research/timesfm",
+          "link": "https://github.com/google-research/timesfm",
+          "category": "github",
+          "stars": 24100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Google Research 嘅 time-series foundation model v2.5，Apach…",
+          "description": "Google Research 嘅 time-series foundation model v2.5，Apache 2.0。你玩開 xgboost 嘅話呢個係新 paradigm — pretrained forecasting model，仲有 LoRA fine-tuning example",
+          "image": "https://opengraph.githubassets.com/2509abd9538ce57e56f0d6fe42bed064179fa980e4f5f3c847b3e74c9c3681fd/google-research/timesfm"
+        },
+        {
+          "title": "asgeirtj/system_prompts_leaks",
+          "link": "https://github.com/asgeirtj/system_prompts_leaks",
+          "category": "github",
+          "stars": 43600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "各大 AI 公司 system prompt 收集庫：Claude Fable 5 / Opus 4.8、GPT …",
+          "description": "各大 AI 公司 system prompt 收集庫：Claude Fable 5 / Opus 4.8、GPT 5.5、Gemini 3.5 Flash、Grok、Cursor、Copilot 全部有齊，更新頻密。Prompt engineering 必睇",
+          "image": "https://repository-images.githubusercontent.com/976921297/555f151b-8242-4590-932f-ccdf7b549cd6"
+        },
+        {
+          "title": "Microsoft 在中國賣 OpenAI models",
+          "link": "https://www.artificialintelligence-news.com/news/microsoft-sells-openai-models-china/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "而 OpenAI 同 Anthropic 自己唔入中國。",
+          "description": "而 OpenAI 同 Anthropic 自己唔入中國。Microsoft 透過 Azure China 賣 GPT 系列，地緣政治嘅 AI 銷售策略好微妙",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/06/dima-solomin-nM3243N4sSY-unsplash-scaled.jpg"
+        },
+        {
+          "title": "EU 公佈 AI content labelling playbook",
+          "link": "https://www.artificialintelligence-news.com/news/ai-content-labelling-eu-code-of-practice/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "為 August 嘅 AI Act deadline 做準備。",
+          "description": "為 August 嘅 AI Act deadline 做準備。內容標籤框架出爐，影響所有喺 EU 營運嘅 AI product",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2025/09/Resham-Kotecha-Open-Data-Institute_How-the-EU-can-lead-in-AI-scaled-e1756964222915.jpg"
         }
       ]
     },
@@ -162,6 +621,129 @@
           "title": "NVIDIA/SkillSpector",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Google 推出 Gemini 3 Pro Image & Gemini 3.1 Flash Image",
+          "link": "https://openrouter.ai/google/gemini-3-pro-image",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openrouter.ai",
+          "why": "全新 image-native vision models，唔係 text model 加 vision adap…",
+          "description": "全新 image-native vision models，唔係 text model 加 vision adapter。Pro $2/$12 per k token，Flash $0.50/$3.00。直接 rival GPT-5.5 vision",
+          "image": "https://openrouter.ai/google/gemini-3-pro-image/opengraph-image-1oizug?6fdbbf65fb5a15d5"
+        },
+        {
+          "title": "Zhipu AI 推出 GLM-5.2",
+          "link": "https://z.ai/blog/glm-5.2",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "z.ai",
+          "why": "MIT license 開放權重，744B MoE，1M token context。",
+          "description": "MIT license 開放權重，744B MoE，1M token context。被評為 top frontend coding model，可以免費經 OpenRouter 試",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/zai-org/GLM-5.2.png"
+        },
+        {
+          "title": "Cohere 推出 North Mini Code",
+          "link": "https://cohere.com/blog/north-mini-code",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "cohere.com",
+          "why": "30B MoE（3B active params）open-source coding model。",
+          "description": "30B MoE（3B active params）open-source coding model。專為 sovereign developers 設計，強調 agentic coding capability",
+          "image": "https://cdn.sanity.io/images/rjtqmwfu/web3-prod/824d32875c1faf5d7048cb18d83e006e46c9b869-3840x2160.png?rect=0,72,3840,2016&amp;w=1200&amp;h=630"
+        },
+        {
+          "title": "NVIDIA/SkillSpector",
+          "link": "https://github.com/NVIDIA/SkillSpector",
+          "category": "github",
+          "stars": 8000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "NVIDIA 出嘅 AI agent skills security scanner，scan 到 26% 嘅 p…",
+          "description": "NVIDIA 出嘅 AI agent skills security scanner，scan 到 26% 嘅 public skills 有 vulnerability。Skills ecosystem 正式進入 security governance phase",
+          "image": "https://opengraph.githubassets.com/ad9f0ab584bbfef9bce02f6348955e7dcabc293603b995a27a46b1f76f5f7c59/NVIDIA/SkillSpector"
+        },
+        {
+          "title": "DeusData/codebase-memory-mcp",
+          "link": "https://github.com/DeusData/codebase-memory-mcp",
+          "category": "github",
+          "stars": 7100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "MCP server 將 codebase 變成 persistent knowledge graph。",
+          "description": "MCP server 將 codebase 變成 persistent knowledge graph。Coding agent 可以 sub-ms 查 function/class/call chain，比逐個 file 讀慳 120x tokens。Single static binary，zero dependencies",
+          "image": "https://repository-images.githubusercontent.com/1166102148/c6b6a073-5cad-4f9a-81c4-16018827c144"
+        },
+        {
+          "title": "DietrichGebert/ponytail",
+          "link": "https://github.com/DietrichGebert/ponytail",
+          "category": "github",
+          "stars": 37000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "令你嘅 AI agent 用「最懶 senior dev」嘅思維方式寫 code。",
+          "description": "令你嘅 AI agent 用「最懶 senior dev」嘅思維方式寫 code。Universal rule set，支援 Claude Code / Codex / Cursor / Cline 全部 agent。呢排 viral 到癲，好多人裝",
+          "image": "https://repository-images.githubusercontent.com/1266797999/b20d9cb8-11f0-4db8-965a-7e22ab2b6bb6"
+        },
+        {
+          "title": "shadcn/improve",
+          "link": "https://github.com/shadcn/improve",
+          "category": "github",
+          "stars": 5500,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "由 shadcn（shadcn/ui 作者）出嘅 agent skill：用你最勁嘅模型 audit codeba…",
+          "description": "由 shadcn（shadcn/ui 作者）出嘅 agent skill：用你最勁嘅模型 audit codebase + 寫 plan，然後用平價 model 執行。Plan 就係 product，唔直接改 code — 好優雅嘅 workflow pattern",
+          "image": "https://opengraph.githubassets.com/29f17288ac8350998173329995c55502af3f50ae60352568f7c3366a0b818eb3/shadcn/improve"
+        },
+        {
+          "title": "google-gemini/gemini-cli",
+          "link": "https://github.com/google-gemini/gemini-cli",
+          "category": "github",
+          "stars": 105000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Google Gemini 官方 CLI agent，open source。",
+          "description": "Google Gemini 官方 CLI agent，open source。2 個鐘頭前仲有新 commit，生態極活躍。你用開 Google Agent Dev Kit 的話呢個直接 related",
+          "image": "https://repository-images.githubusercontent.com/968197216/8522a757-5632-4fa4-8d01-fcc121390cb1"
+        },
+        {
+          "title": "Microsoft 在中國大量銷售 OpenAI models，OpenAI 同 Anthropic 則拒絕進入中國市場",
+          "link": "https://www.artificialintelligence-news.com/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "引發 AI geopolitics 爭議",
+          "description": "引發 AI geopolitics 爭議",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2025/01/New-site-SEO-social-banner-1200x600-1.jpg"
+        },
+        {
+          "title": "EU 公佈 AI content labelling playbook，為 8 月 AI Act 死線做準備",
+          "link": "https://www.artificialintelligence-news.com/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "所有 AI-generated content 需要標籤",
+          "description": "所有 AI-generated content 需要標籤",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2025/01/New-site-SEO-social-banner-1200x600-1.jpg"
+        },
+        {
+          "title": "CEO-Bench: Can Agents Play the Long Game?",
+          "link": "https://huggingface.co/papers/2606.18543",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "新 benchmark 專門測試 agent 嘅 long-horizon task 能力。",
+          "description": "新 benchmark 專門測試 agent 嘅 long-horizon task 能力。直接影響 agent framework 設計，值得留意",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.18543/gradient.png"
+        }
       ]
     },
     {
@@ -193,6 +775,107 @@
         {
           "title": "rohitg00/agentmemory",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "GLM-5.2（Zhipu AI, 6/16）",
+          "link": "https://openrouter.ai/z-ai",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openrouter.ai",
+          "why": "開源 744B MoE，「top frontend coding model  in the world」，1M …",
+          "description": "開源 744B MoE，「top frontend coding model  in the world」，1M context window，支援 Claude Code/Cline/OpenClaw 整合。OpenRouter 上架 $1.40/$4.40 per M tokens",
+          "image": "https://openrouter.ai/dynamic-og?title=Z.ai+API+and+Models&amp;description=Access+13+Z.ai+models+through+the+OpenRouter+unified+API+including+GLM+5.2%2C+GLM+5.1%2C+and+GLM+5V+Turbo.+Compare+pricing%2C+context+windows%2C+benchmarks%2C+and+capabilities+between+different+Z.ai+models."
+        },
+        {
+          "title": "Step 3.7 Flash（StepFun, 6/17）",
+          "link": "https://github.com/stepfun-ai/Step-3.7-Flash",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "198B MoE vision-language model，Apache 2.0 開源，256K context…",
+          "description": "198B MoE vision-language model，Apache 2.0 開源，256K context，ClawEval SOTA 67.1（next best 59.8），11B active params，400 tok/s。8k tok/s 用 NVFP4+MTP",
+          "image": "https://opengraph.githubassets.com/a1972e1c6c8f209cad68f007c07c1ffbd2c786a7e07fe44d31dd5b9f90ba0b8f/stepfun-ai/Step-3.7-Flash"
+        },
+        {
+          "title": "karpathy/autoresearch",
+          "link": "https://github.com/karpathy/autoresearch",
+          "category": "github",
+          "stars": 87400,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Karpathy 新 project：AI agents 自動 overnight 做 LLM training …",
+          "description": "Karpathy 新 project：AI agents 自動 overnight 做 LLM training 實驗，改 code→5分鐘 train→check val_bpb→keep/discard，醒來就見結果",
+          "image": "https://opengraph.githubassets.com/48c7a6ea0ecd2b736e54fc59a8c469e21a9b700a5d249900520bc017a6c4f9ed/karpathy/autoresearch"
+        },
+        {
+          "title": "rohitg00/agentmemory",
+          "link": "https://github.com/rohitg00/agentmemory",
+          "category": "github",
+          "stars": 22400,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "#1 persistent memory for coding agents，95.2% R@5 recall，5…",
+          "description": "#1 persistent memory for coding agents，95.2% R@5 recall，53 MCP tools，0 external DBs。Fafa 用 agent memory（Zep/Mem0）一定要知",
+          "image": "https://opengraph.githubassets.com/e0808a89b544ebcb931cdfa6d1b97196d70c617d5f993552825295f8cce083e8/rohitg00/agentmemory"
+        },
+        {
+          "title": "alibaba/zvec",
+          "link": "https://github.com/alibaba/zvec",
+          "category": "github",
+          "stars": 10700,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "「SQLite of Vector Databases」，阿里巴巴開源 in-process vector DB，…",
+          "description": "「SQLite of Vector Databases」，阿里巴巴開源 in-process vector DB，Apache 2.0，v0.5.0 剛出 MultiQuery。Fafa 玩 RAG 嘅完美 local vector DB",
+          "image": "https://opengraph.githubassets.com/b4648520697b068ecb48bbe103f3f0a4c24c2fa36fed8b11f52b35a341d83410/alibaba/zvec"
+        },
+        {
+          "title": "microsoft/fara",
+          "link": "https://github.com/microsoft/fara",
+          "category": "github",
+          "stars": 5800,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Fara-7B：Microsoft 首個 agentic SLM for computer use，7B 參數 o…",
+          "description": "Fara-7B：Microsoft 首個 agentic SLM for computer use，7B 參數 outperforms 所有同級 model（WebVoyager 73.5%），用 mouse+keyboard 做 multi-step web tasks",
+          "image": "https://opengraph.githubassets.com/a65d52027ba62b5b1a640b64162b9d09e2dcc175bbff2fd69de80f5faae29609/microsoft/fara"
+        },
+        {
+          "title": "github/gh-aw",
+          "link": "https://github.com/github/gh-aw",
+          "category": "github",
+          "stars": 4600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "GitHub 自家 agentic workflow toolkit：用 natural language mar…",
+          "description": "GitHub 自家 agentic workflow toolkit：用 natural language markdown 寫 workflow，喺 GitHub Actions 行。支援 Claude/Codex/Gemini/Copilot",
+          "image": "https://opengraph.githubassets.com/393955605c9deac0795e49d0e1e7879528ade0f2f37393268ceb5255973d6480/github/gh-aw"
+        },
+        {
+          "title": "Claude Fable 5 被美國政府強制 shutdown",
+          "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "6/12 收到出口管制指令，僅上市 72 小時就被關閉全球 access。",
+          "description": "6/12 收到出口管制指令，僅上市 72 小時就被關閉全球 access。Anthropic 公開反駁指 GPT-5.5 都可以做到同樣 tasks，正努力 restore",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png"
+        },
+        {
+          "title": "EU 發布 AI content labelling 實務守則",
+          "link": "https://www.artificialintelligence-news.com/news/ai-content-labelling-eu-code-of-practice/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "為 8 月 AI Act 透明度 deadline 做準備，要求所有 AI 生成內容需標記。",
+          "description": "為 8 月 AI Act 透明度 deadline 做準備，要求所有 AI 生成內容需標記。自願性 compliance playbook",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2025/09/Resham-Kotecha-Open-Data-Institute_How-the-EU-can-lead-in-AI-scaled-e1756964222915.jpg"
         }
       ]
     },
@@ -227,6 +910,118 @@
           "title": "omnigent-ai/omnigent",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "SpaceX 用 $60B all-stock 買起 Anysphere（Cursor母公司）",
+          "link": "https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "reuters.com",
+          "why": "發生喺 Cursor 完成 Nasdaq IPO 幾日之後，AI coding tool 正式成為科技巨頭嘅企業戰場",
+          "description": "發生喺 Cursor 完成 Nasdaq IPO 幾日之後，AI coding tool 正式成為科技巨頭嘅企業戰場",
+          "image": ""
+        },
+        {
+          "title": "Zhipu AI 推出 GLM-5.2",
+          "link": "https://www.scmp.com/tech/tech-trends/article/3357115/zhipu-ais-stock-rockets-after-chinese-firm-makes-glm-52-open-source",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "scmp.com",
+          "why": "開源 MIT license，1M context window，定價比 Claude/GPT-5 平約 10 倍…",
+          "description": "開源 MIT license，1M context window，定價比 Claude/GPT-5 平約 10 倍，Zhipu 股價即日暴升。用兩個 reasoning modes（High/Max），可以 self-host",
+          "image": "https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2026/06/15/3b0ac7f9-35c2-4c07-aad2-657d50e5f017_0f6a89c7.jpg?itok=X94XSh0U&amp;v=1781499086"
+        },
+        {
+          "title": "Moonshot AI 推出 Kimi K2.7 Code",
+          "link": "https://llm-stats.com/models/kimi-k2.7-code",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "llm-stats.com",
+          "why": "開源 coding-focused model，經 OpenRouter 可用，平價 coding AI 選擇又多咗一個",
+          "description": "開源 coding-focused model，經 OpenRouter 可用，平價 coding AI 選擇又多咗一個",
+          "image": "https://llm-stats.com/api/og/model/kimi-k2.7-code"
+        },
+        {
+          "title": "omnigent-ai/omnigent",
+          "link": "https://github.com/omnigent-ai/omnigent",
+          "category": "github",
+          "stars": 862,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Databricks 推出嘅 meta-harness，將 Claude Code、Codex、Pi 同自訂 ag…",
+          "description": "Databricks 推出嘅 meta-harness，將 Claude Code、Codex、Pi 同自訂 agent 統一管理，有 security policies、cost control、跨 device collaboration，一個命令起 server + web UI",
+          "image": "https://opengraph.githubassets.com/1e7ecb2f1240c271d40e09d6186db2449ab51e32cd117c49ab3096f2415e0427/omnigent-ai/omnigent"
+        },
+        {
+          "title": "mindfold-ai/trellis",
+          "link": "https://github.com/mindfold-ai/trellis",
+          "category": "github",
+          "stars": 10100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "In-repo agent memory framework：將 specs、tasks、workspace jo…",
+          "description": "In-repo agent memory framework：將 specs、tasks、workspace journal 直接 commit 入 git repo，任何 coding agent 跨 session 都有完整 context，解決「每次重置」嘅永恆問題",
+          "image": "https://opengraph.githubassets.com/8e7f7b2ac0c3f7571724dc287844857337d5b69c5e821b518df9b93f138726b2/mindfold-ai/Trellis"
+        },
+        {
+          "title": "microsoft/SkillOpt",
+          "link": "https://github.com/microsoft/SkillOpt",
+          "category": "github",
+          "stars": 3000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Microsoft 發表嘅 text-space optimizer，將 natural-language ski…",
+          "description": "Microsoft 發表嘅 text-space optimizer，將 natural-language skill documents 當 trainable parameters 咁訓練，deploy 出 300-2000 tokens 嘅 `best_skill.md`，對 Hermes Agent skill 用家極度相關",
+          "image": "https://opengraph.githubassets.com/aebaf24fe278f07271554ca9d4d796d3632c1e4d3c1043e82e73dfd9eaa77e0c/microsoft/SkillOpt"
+        },
+        {
+          "title": "Michael-A-Kuykendall/shimmy",
+          "link": "https://github.com/Michael-A-Kuykendall/shimmy",
+          "category": "github",
+          "stars": 5300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Pure Rust 嘅 WebGPU inference engine，single binary 行 GGUF，…",
+          "description": "Pure Rust 嘅 WebGPU inference engine，single binary 行 GGUF，no Python、no llama.cpp、no CUDA，行 Vulkan/D3D12/Metal，INT4 KV cache quant 省 7x VRAM",
+          "image": "https://opengraph.githubassets.com/28ea8818e950a2381909d53f6be2e31fdd4cab2e8fea5002d4fe91026af6c0b9/Michael-A-Kuykendall/shimmy"
+        },
+        {
+          "title": "supertone-inc/supertonic",
+          "link": "https://github.com/supertone-inc/supertonic",
+          "category": "github",
+          "stars": 11300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "On-device TTS 經 ONNX Runtime，99M params 就可以 CPU/RPi/brows…",
+          "description": "On-device TTS 經 ONNX Runtime，99M params 就可以 CPU/RPi/browser 即時出聲，31 語言，OpenAI-compatible endpoint，Fafa 搞粵語 TTS 嘅話呢個值得試",
+          "image": "https://opengraph.githubassets.com/e757ba65e1a257131b0ec8b08948beb6d2244b3276f0a5f00e030818f15272e3/supertone-inc/supertonic"
+        },
+        {
+          "title": "AI Chatbot market share 大洗牌",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "ChatGPT 由 76.5% 跌到 54.7%，Google Gemini 升到 27.4%（+104%），Cl…",
+          "description": "ChatGPT 由 76.5% 跌到 54.7%，Google Gemini 升到 27.4%（+104%），Claude 最癲升 306%（203M → 824M monthly visits），DeepSeek 4.1%，Grok 2.8%",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/b5f45e55-886b-4de9-89ed-1155c3dacd3b.png"
+        },
+        {
+          "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents (NUS)",
+          "link": "https://huggingface.co/papers/2606.06036",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "挑戰傳統「retrieve-then-read」RAG，提出 agent 記憶係 dynamic reconstr…",
+          "description": "挑戰傳統「retrieve-then-read」RAG，提出 agent 記憶係 dynamic reconstruction，用 graph memory 結構改善長期記憶同推理，Fafa 用 Zep/Mem0 嘅話值得睇",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.06036/gradient.png"
+        }
       ]
     },
     {
@@ -259,6 +1054,129 @@
         {
           "title": "perplexityai/bumblebee",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "Google DiffusionGemma 26B-A4B",
+          "link": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "Google 首個 open-weight text diffusion model！",
+          "description": "Google 首個 open-weight text diffusion model！26B MoE，Apache 2.0。唔係 autoregressive，而係 256-token blocks parallel generation，single H100 已經出到 1000+ tok/s，快 autoregressive 4倍",
+          "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Diffusion_Gemma_Social.width-1300.png"
+        },
+        {
+          "title": "Moonshot AI Kimi K2.7 Code",
+          "link": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Open-weight 1T MoE coding model，built on K2.6。",
+          "description": "Open-weight 1T MoE coding model，built on K2.6。Agentic coding 大幅改善，reasoning token 用少 30%。Hugging Face 有得 download",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K2.7-Code.png"
+        },
+        {
+          "title": "Decart Oasis 3 World Model",
+          "link": "https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "techcrunch.com",
+          "why": "Real-time photorealistic driving simulation，generate 幾個鐘嘅…",
+          "description": "Real-time photorealistic driving simulation，generate 幾個鐘嘅 driving environments。Autonomous vehicle testing 用，但 world model 呢個方向對 AI 整體 impact 好大",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/06/Oasis-a.png?resize=1200,677"
+        },
+        {
+          "title": "perplexityai/bumblebee",
+          "link": "https://github.com/perplexityai/bumblebee",
+          "category": "github",
+          "stars": 2600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Perplexity AI 出嘅 supply chain scanner，掃 dependencies/MCP …",
+          "description": "Perplexity AI 出嘅 supply chain scanner，掃 dependencies/MCP servers/browser extensions 有無可疑 packages。Read-only by design，Go 寫，zero external deps。AI tooling 攻擊面大增嘅時候好有用",
+          "image": "https://opengraph.githubassets.com/b2224bf76f7cb476ad66a7932293d17474a8cc75d080dc18d9a49cab748d3873/perplexityai/bumblebee"
+        },
+        {
+          "title": "firecrawl/firecrawl",
+          "link": "https://github.com/firecrawl/firecrawl",
+          "category": "github",
+          "stars": 130000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Web context API for AI agents，Search/Scrape/Parse/Crawl/I…",
+          "description": "Web context API for AI agents，Search/Scrape/Parse/Crawl/Interact 一條 stack。有 MCP server、CLI、skills integration。Agent 要拎 web context 嘅 standard layer",
+          "image": "https://repository-images.githubusercontent.com/787076358/f9616c09-3701-41ef-b5a6-fdf912ffb15b"
+        },
+        {
+          "title": "trycua/cua",
+          "link": "https://github.com/trycua/cua",
+          "category": "github",
+          "stars": 18000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Open-source infrastructure for Computer-Use Agents。",
+          "description": "Open-source infrastructure for Computer-Use Agents。Sandboxes + SDKs + benchmarks 俾 AI agents 控制完整桌面（macOS/Linux/Windows）。新 paradigm — desktop agents 嘅 infra layer",
+          "image": "https://opengraph.githubassets.com/6a5e072ca9f25f606592cda0ea92cb8759a3d539825f4b57ba48eceaaf5c82bd/trycua/cua"
+        },
+        {
+          "title": "rohitg00/ai-engineering-from-scratch",
+          "link": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "category": "github",
+          "stars": 33000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "AI engineering 由零學到出嘢：learn it → build it → ship it。",
+          "description": "AI engineering 由零學到出嘢：learn it → build it → ship it。今日 +562⭐，好 popular 嘅 learning resource",
+          "image": "https://opengraph.githubassets.com/0f4cc80050105ec31b4e75b6bdfe1caed0387c12f03c85f4cd406dc4fac31bb2/rohitg00/ai-engineering-from-scratch"
+        },
+        {
+          "title": "karpathy/nanochat",
+          "link": "https://github.com/karpathy/nanochat",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Karpathy 新作，full LLM training stack 濃縮到一個 readable repo。",
+          "description": "Karpathy 新作，full LLM training stack 濃縮到一個 readable repo。Chat 介面 + training loop，適合想理解 LLM 由頭到尾嘅人",
+          "image": "https://opengraph.githubassets.com/4769880d0a163ab136569805df49d920122e462be6bb737664be8509996b075a/karpathy/nanochat"
+        },
+        {
+          "title": "[大件事] US Government 強制 Anthropic 停用 Fable 5 & Mythos 5",
+          "link": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "fortune.com",
+          "why": "Commerce Dept 用 national security export controls 落禁令，Ant…",
+          "description": "Commerce Dept 用 national security export controls 落禁令，Anthropic 要全面 disable 兩個 model。Anthropic 話個 jailbreak 係「narrow」、同樣 apply 到 GPT-5.5 但 OpenAI 無被 ban。Trump admin 一直針對 Anthropic（二月已禁聯邦用、三月列 supply chain risk），而 Anthropic 啱啱 file 咗 $965B IPO...",
+          "image": "https://fortune.com/img-assets/wp-content/uploads/2026/06/GettyImages-2280291188_ea181b-e1781323258530.jpg?resize=1200,600"
+        },
+        {
+          "title": "Apple WWDC 2026",
+          "link": "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "apple.com",
+          "why": "Siri AI 終於出場！Apple Intelligence 加持，deeply integrated acro…",
+          "description": "Siri AI 終於出場！Apple Intelligence 加持，deeply integrated across iOS/iPadOS/macOS。Apple 喺 AI 助手戰線嘅 comeback attempt",
+          "image": "https://www.apple.com/newsroom/images/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/tile/Apple-Siri-AI-hero-260608-lp.jpg.og.jpg?202606181501"
+        },
+        {
+          "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+          "link": "https://huggingface.co/papers/2606.06036",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "NUS 論文，agent memory 唔應該係 simple retrieval，而係 graph-based …",
+          "description": "NUS 論文，agent memory 唔應該係 simple retrieval，而係 graph-based reconstruction。你用緊 Mem0 / Zep，呢篇可以直接影響你點 design agent memory",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.06036/gradient.png"
         }
       ]
     },
@@ -293,6 +1211,140 @@
           "title": "apple/container",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Google DiffusionGemma 26B-A4B",
+          "link": "https://blog.google/... (via marktechpost) https://www.marktechpost.com/2026/06/10/google-ai-releases-diffusiongemma-a-26b-moe-open-model-using-text-diffusion-for-up-to-4x-faster-generation/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "Google 第一個 open-weight text diffusion model！",
+          "description": "Google 第一個 open-weight text diffusion model！MoE 26B (3.8B active)，生成文字似 image diffusion 成個 block 出，4x 快 (1000+ tokens/sec on H100)。Apache 2.0，可以 local run",
+          "image": "https://www.marktechpost.com/wp-content/uploads/2026/06/blog15-8.png"
+        },
+        {
+          "title": "Kimi K2.7 Code",
+          "link": "https://www.kimi.com/resources/kimi-k2-7-code",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "kimi.com",
+          "why": "Moonshot AI 開源咗 1T MoE coding model (32B active)，256K con…",
+          "description": "Moonshot AI 開源咗 1T MoE coding model (32B active)，256K context，Modified MIT license。Agentic coding 專用，real-world long-horizon coding tasks 大幅提升，同類最強 open-source coding model",
+          "image": "https://kimi-file.moonshot.cn/prod-chat-kimi/kfs/4/2/2026-06-12/1d8luv9t3v89kkel0m0v0?x-tos-process=image%2Fauto-orient%2C1%2Fstrip%2Fignore-error%2C1"
+        },
+        {
+          "title": "Microsoft MAI 系列",
+          "link": "https://llm-stats.com/llm-updates",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "llm-stats.com",
+          "why": "Microsoft Build 公佈自家 AI models：MAI-Thinking-1 (reasoning)…",
+          "description": "Microsoft Build 公佈自家 AI models：MAI-Thinking-1 (reasoning) + MAI-Code-1-Flash (fast coding)，正式脫離對 OpenAI 嘅 dependency。OpenAI 同時流失 Microsoft 呢個最大客戶",
+          "image": "https://llm-stats.com/og/main.png"
+        },
+        {
+          "title": "apple/container",
+          "link": "https://github.com/apple/container",
+          "category": "github",
+          "stars": 9200,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Apple 出咗官方工具用 lightweight VM 喺 Mac 行 Linux containers，Swi…",
+          "description": "Apple 出咗官方工具用 lightweight VM 喺 Mac 行 Linux containers，Swift 寫，36K stars 爆升中，大廠正式入場 container space",
+          "image": "https://repository-images.githubusercontent.com/993475914/123bf50d-9ae2-48d9-94f7-7a345bf82c15"
+        },
+        {
+          "title": "obra/superpowers",
+          "link": "https://github.com/obra/superpowers",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "225K⭐ agentic skills framework + software dev methodology…",
+          "description": "225K⭐ agentic skills framework + software dev methodology，支援 Claude Code / Codex / Gemini CLI / Cursor 全部 coding agent，同 Hermes skills approach 似但更完整",
+          "image": "https://opengraph.githubassets.com/ad0f6d5fbdd8f2e85940b42da9073efe8015f4378cbb69e46b82e63a404d8f5b/obra/superpowers"
+        },
+        {
+          "title": "andrewyng/aisuite",
+          "link": "https://github.com/andrewyng/aisuite",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Andrew Ng 嘅 unified Python interface 俾多個 LLM providers，一個…",
+          "description": "Andrew Ng 嘅 unified Python interface 俾多個 LLM providers，一個 API call 轉 provider，Fafa 用開 Claude/GPT/Gemini/DeepSeek 正路啱使",
+          "image": "https://opengraph.githubassets.com/7c9825a8b35f1123db6321f39aa28a0e0d7fc02fd8c474f02641eee599e5eb15/andrewyng/aisuite"
+        },
+        {
+          "title": "roboflow/supervision",
+          "link": "https://github.com/roboflow/supervision",
+          "category": "github",
+          "stars": 4000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Reusable computer vision tools，44K⭐，同 ComfyUI/SD pipeline…",
+          "description": "Reusable computer vision tools，44K⭐，同 ComfyUI/SD pipeline 可以 crossover，Fafa 未玩過 CV 嘅話係個好嘅 discovery 切入點",
+          "image": "https://opengraph.githubassets.com/0d84994f5cfb1419f4524f56d7fc90878fb6c1b46ba30a7f673d8e388e8796ab/roboflow/supervision"
+        },
+        {
+          "title": "NVIDIA/cosmos",
+          "link": "https://github.com/NVIDIA/cosmos",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "NVIDIA 開源咗 world models platform for Physical AI（robots, …",
+          "description": "NVIDIA 開源咗 world models platform for Physical AI（robots, autonomous vehicles, smart infra），10K⭐，大廠入場全新 paradigm",
+          "image": "https://opengraph.githubassets.com/08e3c651510a5436e15103e2edc4b56d7fe25e896f57610eb5256041640354f0/NVIDIA/cosmos"
+        },
+        {
+          "title": "Claude Fable 5 + Anthropic IPO",
+          "link": "https://dentro.de/ai/news/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "dentro.de",
+          "why": "Anthropic 推出「世上最強公開 LLM」Claude Fable 5（Mythos-class），同時 f…",
+          "description": "Anthropic 推出「世上最強公開 LLM」Claude Fable 5（Mythos-class），同時 file 咗 IPO（Series H 後估值 $965B）。Fable 5 有 visible safety classifiers 同 hidden safeguards，cybersecurity community 不滿 guardrails 太緊",
+          "image": "https://dentro.de/ai/assets/images/social/news/index.png"
+        },
+        {
+          "title": "OpenAI 殺咗 Sora",
+          "link": "https://unrot.co/blogs/ai-news-today-june-15-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "unrot.co",
+          "why": "每日燒 $15M compute，lifetime revenue 得 $2.1M，由 1M+ 首週下載跌到 <5…",
+          "description": "每日燒 $15M compute，lifetime revenue 得 $2.1M，由 1M+ 首週下載跌到 <500K active users。Redirect compute 去下一代語言模型 \"Spud\"。Disney licensing deal 都爛咗。Google Veo 3.1 / Runway Gen-4.5 / Kling 2.5 係最大贏家",
+          "image": "https://buildfastwithai.s3.eu-north-1.amazonaws.com/unrot-blog-images/6102f591-55e3-4609-8460-031158d0f9eb-e141664b-d9ed-4a77-a0b5-488d5afb8313.png"
+        },
+        {
+          "title": "OpenAI DeployCo",
+          "link": "https://openai.com/index/openai-launches-the-deployment-company/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "OpenAI 成立 $4B consulting subsidiary DeployCo，同 Bain / McK…",
+          "description": "OpenAI 成立 $4B consulting subsidiary DeployCo，同 Bain / McKinsey / Capgemini 合作幫企業 deploy AI。仲收購咗 AI consultancy Tomoro。OpenAI 正式變 consulting firm",
+          "image": "https://images.ctfassets.net/kftzwdyauwt9/31rjlet3neWRz6pY1AzuTd/b48667a68f2e86d0fa1f7a890060bbbe/Frame__7_.png?w=1600&amp;h=900&amp;fit=fill"
+        },
+        {
+          "title": "MiniMax Sparse Attention",
+          "link": "https://huggingface.co/papers/2606.13392",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "MiniMax 公開咗 M3 背後嘅 sparse attention 機制 paper。",
+          "description": "MiniMax 公開咗 M3 背後嘅 sparse attention 機制 paper。直接影響 inference efficiency，practical implications 高",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.13392/gradient.png"
+        }
       ]
     },
     {
@@ -326,6 +1378,140 @@
           "title": "elder-plinius/CL4R1T4S",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Anthropic Claude Fable 5 & Mythos 5 正式推出",
+          "link": "https://anthropic.com/news/claude-fable-5-mythos-5",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "Frontier model，1M context，128K output tokens，$10/$50 per …",
+          "description": "Frontier model，1M context，128K output tokens，$10/$50 per M tokens。Fable 5 可以做 video games，但 cybersecurity 研究者話 guardrails 太弱。同時 Claude Opus 4.8 繼續驅動 Anthropic 收入",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png"
+        },
+        {
+          "title": "Microsoft MAI-Thinking-1 發布",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Mustafa Suleyman 喺 Build Day 2 公開嘅 in-house reasoning mod…",
+          "description": "Mustafa Suleyman 喺 Build Day 2 公開嘅 in-house reasoning model，性能 ~Claude Sonnet 4.6。Microsoft 逐步減低對 OpenAI 嘅 strategic dependence",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/de37a11d-6b88-48f0-bad5-c4ddaf9cf1dd.png"
+        },
+        {
+          "title": "Moonshot AI 開源 Kimi K2.7 Code",
+          "link": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Coding-focused agentic model，基於 K2.6 大幅改進 real-world codi…",
+          "description": "Coding-focused agentic model，基於 K2.6 大幅改進 real-world coding tasks。Open source，可 self-host",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K2.7-Code.png"
+        },
+        {
+          "title": "elder-plinius/CL4R1T4S",
+          "link": "https://github.com/elder-plinius/CL4R1T4S",
+          "category": "github",
+          "stars": 751,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "被外洩嘅 ChatGPT/Claude/Gemini/Grok/Perplexity/Cursor 等 syste…",
+          "description": "被外洩嘅 ChatGPT/Claude/Gemini/Grok/Perplexity/Cursor 等 system prompts 大合集。AI transparency 界嘅維基解密，極具參考價值",
+          "image": "https://opengraph.githubassets.com/a49e72814c400dbf3ad1130c2c88a71c934e8e8328dc36b0e7e9c2e25e56cca6/elder-plinius/CL4R1T4S"
+        },
+        {
+          "title": "XiaomiMiMo/MiMo-Code",
+          "link": "https://github.com/XiaomiMiMo",
+          "category": "github",
+          "stars": 550,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "小米正式進軍 AI coding agent！",
+          "description": "小米正式進軍 AI coding agent！MiMo-V2-Flash 係 309B MoE (15B active) 嘅 terminal-native coding assistant，有 persistent memory system。大廠入場 signal",
+          "image": "https://avatars.githubusercontent.com/u/208276378?s=280&amp;v=4"
+        },
+        {
+          "title": "DanMcInerney/architect-loop",
+          "link": "https://github.com/DanMcInerney/architect-loop",
+          "category": "github",
+          "stars": 166,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Claude Fable 5 做 architect 設計 + 審查，GPT-5.5 Codex 做 builde…",
+          "description": "Claude Fable 5 做 architect 設計 + 審查，GPT-5.5 Codex 做 builder 執行。Cross-vendor agent loop，可以 reduction 80% Fable tokens。Fafa 玩 multi-model agent 必睇",
+          "image": "https://opengraph.githubassets.com/16ee509e9815089c9b5c6263cbff9cfec89518bfd6990c3a926192632d099d2a/DanMcInerney/architect-loop"
+        },
+        {
+          "title": "LMCache/LMCache",
+          "link": "https://github.com/LMCache/LMCache",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "最快嘅 KV cache layer for LLM inference。",
+          "description": "最快嘅 KV cache layer for LLM inference。支援 multi-node P2P CPU memory sharing，直接影響 vLLM/ollama 呢類 local inference 嘅 latency。開咗新 paradigm",
+          "image": "https://opengraph.githubassets.com/389cabf88fbf82e83f8639403c1ada33a90f949b4227eeb73597ce755704ea3b/LMCache/LMCache"
+        },
+        {
+          "title": "MiniMax-AI/MiniMax-M3",
+          "link": "https://github.com/MiniMax-AI/MiniMax-M3",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "MiniMax M3 開源！Frontier-level coding + agentic，1M context …",
+          "description": "MiniMax M3 開源！Frontier-level coding + agentic，1M context window，$0.30/$1.20 per M tokens 超抵。Fafa 用開 MiniMax 更加要留意",
+          "image": "https://opengraph.githubassets.com/10c762befd1d323e411253c405af71cb877667a84f11f579ece64e7d7dc350fb/MiniMax-AI/MiniMax-M3"
+        },
+        {
+          "title": "SpaceX 創史上最大 IPO",
+          "link": "https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "cnbc.com",
+          "why": "以 SPCX 登陸 Nasdaq，集資 $75B，市值 ~$1.77T。",
+          "description": "以 SPCX 登陸 Nasdaq，集資 $75B，市值 ~$1.77T。本質係 AI infrastructure play — 資金直接 funding xAI 嘅 Colossus 超算同 compute buildout",
+          "image": "https://image.cnbcfm.com/api/v1/image/108321514-1781302718607-108321514-1781302640004-gettyimages-2280590160-SPACEX_IPO.jpg?v=1781302745&amp;w=1920&amp;h=1080"
+        },
+        {
+          "title": "Anthropic 喺美國企業採用率首超 OpenAI",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-13-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Ramp AI Index: Anthropic 34.4% vs OpenAI 32.3%。",
+          "description": "Ramp AI Index: Anthropic 34.4% vs OpenAI 32.3%。Claude Code 係最大 driver — 估計 4% 嘅 public GitHub commits 由 Claude Code 寫",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/de37a11d-6b88-48f0-bad5-c4ddaf9cf1dd.png"
+        },
+        {
+          "title": "Mistral AI 尋求 $3B 融資，估值 $20B",
+          "link": "https://promptailearning.com/ai-news/daily/top-5-ai-news-june-14-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "promptailearning.com",
+          "why": "定位做 EU-friendly sovereign AI alternative。",
+          "description": "定位做 EU-friendly sovereign AI alternative。Fafa 可以留意下 Mistral 啲 model 做 workflow 多樣化",
+          "image": "https://bpsyiqirusnhppwywvgi.supabase.co/storage/v1/object/public/blogs/cover-image/0.0030896606254607883.jpeg"
+        },
+        {
+          "title": "MiniMax Sparse Attention (MSA)",
+          "link": "https://huggingface.co/papers/2606.13392",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "MiniMax 新 attention architecture，係 M3 1M context 嘅核心技術。",
+          "description": "MiniMax 新 attention architecture，係 M3 1M context 嘅核心技術。直接影響 agent 同 RAG 嘅 long-context performance",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.13392/gradient.png"
+        }
       ]
     },
     {
@@ -357,6 +1543,118 @@
         {
           "title": "addyosmani/agent-skills",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "Anthropic Claude Fable 5 + Mythos 5 正式推出（Jun 9）",
+          "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "Anthropic 史上最強 public model，1M context，$10/$50 per M tokens。",
+          "description": "Anthropic 史上最強 public model，1M context，$10/$50 per M tokens。Mythos 5 係冇 safety guard 版。Simon Willison 實測話「感覺比 Opus 4.8 大好多」",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png"
+        },
+        {
+          "title": "Google DiffusionGemma 26B-A4B 開源（Jun 10）",
+          "link": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "全球第一個 open-weight text diffusion model，用 diffusion 取代 aut…",
+          "description": "全球第一個 open-weight text diffusion model，用 diffusion 取代 autoregressive generation，4x 快過傳統 LLM，Apache 2.0 授權。可以用 ollama 本地行",
+          "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Diffusion_Gemma_Social.width-1300.png"
+        },
+        {
+          "title": "Moonshot AI Kimi K2.7 Code 開源（Jun 12）",
+          "link": "https://github.com/moonshotai/kimi-k2",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "1T MoE / 32B activated 嘅 coding specialist，improved agent…",
+          "description": "1T MoE / 32B activated 嘅 coding specialist，improved agentic capabilities over K2.5，已上 Cloudflare Workers AI。即日 open-weight",
+          "image": "https://opengraph.githubassets.com/5cda83ea5341b64e1ce4e9bcfe2a14bb1c03d0ce6917676eb05869a7c5ea0961/MoonshotAI/Kimi-K2"
+        },
+        {
+          "title": "addyosmani/agent-skills",
+          "link": "https://github.com/addyosmani/agent-skills",
+          "category": "github",
+          "stars": 56000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Production-grade engineering skills for AI coding agents，…",
+          "description": "Production-grade engineering skills for AI coding agents，24 個 lifecycle skills，由 Google Chrome team 嘅 Addy Osmani 整，同你嘅 Hermes skills  workflow 完美 complement",
+          "image": "https://opengraph.githubassets.com/ca0daa3bed2d94a3cda7078ec389262e536883148337d0b8518a05fa1509cace/addyosmani/agent-skills"
+        },
+        {
+          "title": "kenn-io/agentsview ⭐NEW⭐",
+          "link": "https://github.com/kenn-io/agentsview",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Local-first session intelligence for Claude Code、Codex、20…",
+          "description": "Local-first session intelligence for Claude Code、Codex、20+ 款 coding agents，追蹤 token consumption 同 cost，100x 快過 ccusage。你 multi-agent 一定用得著",
+          "image": "https://opengraph.githubassets.com/446ddb954595f0af106aa5d9266b97f03a0680ec9a9ee42f8ec2b4bbcb63b475/kenn-io/agentsview"
+        },
+        {
+          "title": "NVIDIA/SkillSpector ⭐NEW⭐",
+          "link": "https://github.com/nvidia/skillspector",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Security scanner for AI agent skills，detect vulnerabiliti…",
+          "description": "Security scanner for AI agent skills，detect vulnerabilities、malicious patterns。NVIDIA 入 agent security 領域，裝 skill 前 scan 下就知安唔安全",
+          "image": "https://opengraph.githubassets.com/ad9f0ab584bbfef9bce02f6348955e7dcabc293603b995a27a46b1f76f5f7c59/NVIDIA/SkillSpector"
+        },
+        {
+          "title": "microsoft/playwright-mcp",
+          "link": "https://github.com/microsoft/playwright-mcp",
+          "category": "github",
+          "stars": 18900,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Microsoft 官方 MCP server 俾 browser automation via Playwright。",
+          "description": "Microsoft 官方 MCP server 俾 browser automation via Playwright。你個 Hermes Agent 有 native MCP client，直接用得",
+          "image": "https://opengraph.githubassets.com/fab6c43ed7da2832d6fd065b8bcc4d176b3b33c1832a1dd53def1fbda4c8a1c7/microsoft/playwright-mcp"
+        },
+        {
+          "title": "hexo-ai/sia ⭐NEW⭐",
+          "link": "https://github.com/hexo-ai/sia",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Self-Improving AI framework，可以 autonomously improve 任何 AI…",
+          "description": "Self-Improving AI framework，可以 autonomously improve 任何 AI system/agent 嘅 benchmark performance。新 paradigm — AI 自己 improve 自己",
+          "image": "https://opengraph.githubassets.com/aed861426a3922e46310de1abbc22526db31c48fdea5d19e7b08e57e6806b4ac/hexo-ai/sia"
+        },
+        {
+          "title": "Apple WWDC 2026",
+          "link": "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "apple.com",
+          "why": "Siri AI 14 年嚟最大更新，powered by Google Gemini。",
+          "description": "Siri AI 14 年嚟最大更新，powered by Google Gemini。全新 Siri app、personal context understanding、on-screen awareness。iOS 27 今年 fall 出",
+          "image": "https://www.apple.com/newsroom/images/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/tile/Apple-OS-27-updates-260608-lp.jpg.og.jpg?202606181459"
+        },
+        {
+          "title": "Microsoft Build 2026",
+          "link": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "microsoft.ai",
+          "why": "MAI-Thinking-1（自家 reasoning model）+ MAI-Code-1-Flash 正式推出…",
+          "description": "MAI-Thinking-1（自家 reasoning model）+ MAI-Code-1-Flash 正式推出，Microsoft 逐步減少對 OpenAI 依賴。仲有 Scout agentic Autopilot 跨 M365",
+          "image": "https://microsoft.ai/wp-content/themes/wp-base-theme/images/social.jpg"
         }
       ]
     },
@@ -391,6 +1689,140 @@
           "title": "NVIDIA/cosmos +⭐",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Google 開源 DiffusionGemma 26B",
+          "link": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "用 text diffusion 代替 autoregressive，單張 H100 跑 >1000 tok/s（…",
+          "description": "用 text diffusion 代替 autoregressive，單張 H100 跑 >1000 tok/s（4x 快），但 benchmark 有 tradeoff（AIME 跌19分）。Apache 2.0 授權，對 local inference 好大衝擊",
+          "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Diffusion_Gemma_Social.width-1300.png"
+        },
+        {
+          "title": "Visa 整合 ChatGPT 做 AI agent 自動購物",
+          "link": "https://apnews.com/article/visa-chatgpt-openai-shopping-mastercard-d769dec86344cb4977c98789e8ec492f",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "apnews.com",
+          "why": "Visa 將支付網絡嵌入 ChatGPT，AI agent 可以獨立幫用戶 shopping 同完成交易，agen…",
+          "description": "Visa 將支付網絡嵌入 ChatGPT，AI agent 可以獨立幫用戶 shopping 同完成交易，agentic commerce 嘅關鍵基建",
+          "image": "https://dims.apnews.com/dims4/default/a98a3ec/2147483647/strip/true/crop/2143x1428+0+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb7%2Fc8%2F09f7100d3c9004c617c924f0f605%2F5a8d1ca8489949d891727af371c482f8"
+        },
+        {
+          "title": "Anthropic Claude Corps",
+          "link": "https://www.anthropic.com/news/claude-corps",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "$150M AI 獎學金計劃** — 訓練 1,000 名早期 career 人員放入美國非牟利組織，幫 nonp…",
+          "description": "$150M AI 獎學金計劃** — 訓練 1,000 名早期 career 人員放入美國非牟利組織，幫 nonprofits 有效用 AI。同日 Anthropic 亦開咗 Claude Fable 5 俾 Microsoft Foundry",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/eb5d94573805e24cb381cd0676527cfada75c177-3840x2160.jpg"
+        },
+        {
+          "title": "NVIDIA/cosmos",
+          "link": "https://github.com/NVIDIA/cosmos",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "NVIDIA 開源世界模型平台 Cosmos，專攻 Physical AI（機械人、自動駕駛），open plat…",
+          "description": "NVIDIA 開源世界模型平台 Cosmos，專攻 Physical AI（機械人、自動駕駛），open platform 用 Apache 2.0，呢個係 Physical AI 領域嘅大廠入場 signal",
+          "image": "https://opengraph.githubassets.com/08e3c651510a5436e15103e2edc4b56d7fe25e896f57610eb5256041640354f0/NVIDIA/cosmos"
+        },
+        {
+          "title": "All-Hands-AI/OpenHands",
+          "link": "https://github.com/All-Hands-AI/OpenHands",
+          "category": "github",
+          "stars": 176,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "60k stars 嘅開源 coding agent，之前叫 OpenDevin，支援多種 LLM backend…",
+          "description": "60k stars 嘅開源 coding agent，之前叫 OpenDevin，支援多種 LLM backend，係 Claude Code / Codex 嘅開源替代",
+          "image": "https://opengraph.githubassets.com/cf74c6f756491858f69281d9ce92a69ce118c07867d5ace472c6e6dbc7a6def4/OpenHands/OpenHands"
+        },
+        {
+          "title": "open-webui/open-webui",
+          "link": "https://github.com/open-webui/open-webui",
+          "category": "github",
+          "stars": 207,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "105k stars，最 popular 嘅 LLM web UI，同 ollama 完美整合，Fafa 玩 lo…",
+          "description": "105k stars，最 popular 嘅 LLM web UI，同 ollama 完美整合，Fafa 玩 local inference 一定用得著",
+          "image": "https://repository-images.githubusercontent.com/701547123/275da62f-2139-4d2b-bcac-57c82872dd30"
+        },
+        {
+          "title": "phuryn/pm-skills",
+          "link": "https://github.com/phuryn/pm-skills",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Agent skills marketplace，超過100個 agentic skills 同 plugins，…",
+          "description": "Agent skills marketplace，超過100個 agentic skills 同 plugins，係 agent 生態系統嘅新範式 — skills 可以 marketplace 交易",
+          "image": "https://opengraph.githubassets.com/e81e2572c0d438356f6192951c2f003f43d18f66e1cfd7c551368e090e5965c9/phuryn/pm-skills"
+        },
+        {
+          "title": "openai/plugins",
+          "link": "https://github.com/openai/plugins",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "OpenAI 官方 plugins repository，代表 OpenAI 正式推 plugin 生態，同 MC…",
+          "description": "OpenAI 官方 plugins repository，代表 OpenAI 正式推 plugin 生態，同 MCP 競爭嘅 agents ecosystem 方向",
+          "image": "https://opengraph.githubassets.com/d69ca2a6ac5539ef8b5386e47496c07e26ffbd0c8e3597863bc6543cca5590e7/openai/plugins"
+        },
+        {
+          "title": "OpenAI 登陸 Oracle Cloud",
+          "link": "https://openai.com/index/openai-on-oracle-cloud/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "OpenAI 同 Oracle 合作，企業可以用現有 Oracle Universal Credits 直接用 O…",
+          "description": "OpenAI 同 Oracle 合作，企業可以用現有 Oracle Universal Credits 直接用 OpenAI 模型 + Codex，唔使另開 budget，對 enterprise adoption 好大推動",
+          "image": "https://images.ctfassets.net/kftzwdyauwt9/5YxRwes6xIOtUirJPj9Tqq/2897a1a8061bf93e016c0c12385b3f55/OAI_Oracle_Partnership_16x9_Art_Card.png?w=1600&amp;h=900&amp;fit=fill"
+        },
+        {
+          "title": "Siri AI 正式登場但全球大部分地區鎖區",
+          "link": "https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "apple.com",
+          "why": "WWDC 2026 最大驚喜：Siri 由 Google Gemini 驅動，但只有英文 beta，中國/歐盟等地…",
+          "description": "WWDC 2026 最大驚喜：Siri 由 Google Gemini 驅動，但只有英文 beta，中國/歐盟等地暫時用唔到。Apple 嘅 AI catch-up 策略",
+          "image": "https://www.apple.com/newsroom/images/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences/tile/Apple-Intelligence-hero-260608-lp.jpg.og.jpg?202606181502"
+        },
+        {
+          "title": "Decart 推出 Oasis 3 世界模型",
+          "link": "https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "techcrunch.com",
+          "why": "即時生成 photorealistic 駕駛環境，可以 simulate 幾個鐘嘅 autonomous driv…",
+          "description": "即時生成 photorealistic 駕駛環境，可以 simulate 幾個鐘嘅 autonomous driving scenarios。World model 領域越嚟越成熟",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/06/Oasis-a.png?resize=1200,677"
+        },
+        {
+          "title": "FlashMemory-DeepSeek-V4",
+          "link": "https://huggingface.co/papers/2606.09079",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Tencent 提出 lookahead sparse attention，解決 ultra-long conte…",
+          "description": "Tencent 提出 lookahead sparse attention，解決 ultra-long context 嘅推理效率問題。對 production inference 有 direct impact",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.09079/gradient.png"
+        }
       ]
     },
     {
@@ -423,6 +1855,118 @@
         {
           "title": "revfactory/harness",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "Anthropic Claude Fable 5 正式推出",
+          "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "第一個公開嘅Mythos-class模型，$10/$50 per M tokens，SWE-Bench Pro 8…",
+          "description": "第一個公開嘅Mythos-class模型，$10/$50 per M tokens，SWE-Bench Pro 80.3%，一鍵生成video game。June 22前Pro/Max plan免費用到",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png"
+        },
+        {
+          "title": "Google DiffusionGemma 26B-A4B 開源",
+          "link": "https://developers.googleblog.com/diffusiongemma-the-developer-guide/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "developers.googleblog.com",
+          "why": "Text diffusion model用parallel decoding，比傳統autoregressive快4倍。",
+          "description": "Text diffusion model用parallel decoding，比傳統autoregressive快4倍。新paradigm：唔係逐個token生成，而係256-token block一次過。雖然benchmark略遜Gemma 4，但速度取勝",
+          "image": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/diffusion_banner.2e16d0ba.fill-1200x600.png"
+        },
+        {
+          "title": "pbakaus/impeccable",
+          "link": "https://github.com/pbakaus/impeccable",
+          "category": "github",
+          "stars": 2000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "前Google開發者Paul Bakaus整嘅設計語言skill for AI harnesses，23個comm…",
+          "description": "前Google開發者Paul Bakaus整嘅設計語言skill for AI harnesses，23個commands + 41條anti-pattern detector。Fafa用Hermes Agent可以直接裝，告別千篇一律嘅AI UI",
+          "image": "https://opengraph.githubassets.com/bf24f853fc97b92b69dea472703075f510def804dd273aec993f422881b221b3/pbakaus/impeccable"
+        },
+        {
+          "title": "revfactory/harness",
+          "link": "https://github.com/revfactory/harness",
+          "category": "github",
+          "stars": 5600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Meta-skill自動設計agent team架構，6種pattern（Pipeline、Fan-out、Exp…",
+          "description": "Meta-skill自動設計agent team架構，6種pattern（Pipeline、Fan-out、Expert Pool等），一句prompt幫你generate晒成隊agents + skills config",
+          "image": "https://opengraph.githubassets.com/f21aa36df8aa9aedfd3eb5b4d1fc8bb070599ced12c2162f55f7bc974c87e2e8/revfactory/harness"
+        },
+        {
+          "title": "Leonxlnx/taste-skill",
+          "link": "https://github.com/Leonxlnx/taste-skill",
+          "category": "github",
+          "stars": 37400,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "「AI品味救星」，防止Claude Code/Codex/Cursor生成generic slop。",
+          "description": "「AI品味救星」，防止Claude Code/Codex/Cursor生成generic slop。v2有三個dial（VARIANCE/MOTION/DENSITY）tune output風格",
+          "image": "https://repository-images.githubusercontent.com/1162099055/0a968964-fdca-4781-853b-84afc2bc2d31"
+        },
+        {
+          "title": "CopilotKit/CopilotKit",
+          "link": "https://github.com/CopilotKit/CopilotKit",
+          "category": "github",
+          "stars": 57000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Multi-platform agent frontend stack，一個agent可以同時行React/Rea…",
+          "description": "Multi-platform agent frontend stack，一個agent可以同時行React/React Native/Slack/MS Teams。AG-UI Protocol已被Google、AWS、LangChain採用",
+          "image": "https://repository-images.githubusercontent.com/655515393/3299a492-753a-4726-ad71-ea5d268c6e79"
+        },
+        {
+          "title": "infiniflow/ragflow",
+          "link": "https://github.com/infiniflow/ragflow",
+          "category": "github",
+          "stars": 61000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "最active嘅open-source RAG engine，融合Agent capabilities。",
+          "description": "最active嘅open-source RAG engine，融合Agent capabilities。Fafa你用LangChain+Docling做RAG，呢個係direct competitor值得睇",
+          "image": "https://opengraph.githubassets.com/f79bc6599f6bca6212efd675a955acfdf989ae06e005c5f0317b9af0456cdbc7/infiniflow/ragflow"
+        },
+        {
+          "title": "Apple WWDC 2026：Siri AI 用Google Gemini",
+          "link": "https://techcrunch.com/2026/06/08/apple-plays-catch-up-at-wwdc/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "techcrunch.com",
+          "why": "$1B/year licensing deal，Claude同ChatGPT都係可選provider。",
+          "description": "$1B/year licensing deal，Claude同ChatGPT都係可選provider。2.2B devices嘅AI platform shift。Tim Cook最後一次keynote，9月交捧俾John Ternus",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/06/tim-cook-wwdc-2026.jpeg?resize=1200,677"
+        },
+        {
+          "title": "AI Chatbot Market Share大洗牌",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Claude 306%季度增長（203M→824M web visits），全球8.2%佔有率。",
+          "description": "Claude 306%季度增長（203M→824M web visits），全球8.2%佔有率。ChatGPT跌到54.7%（from 76.5% Feb '25），Gemini升到27.4%。Claude喺US已佔12.5%",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/b5f45e55-886b-4de9-89ed-1155c3dacd3b.png"
+        },
+        {
+          "title": "FlashMemory-DeepSeek-V4 (Tencent)",
+          "link": "https://huggingface.co/papers/2606.09079",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Lookahead Sparse Attention實現ultra-long context推理，Tencent出…",
+          "description": "Lookahead Sparse Attention實現ultra-long context推理，Tencent出嘅practical inference optimization paper。直接影響LLM production deployment",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.09079/gradient.png"
         }
       ]
     },
@@ -457,6 +2001,129 @@
           "title": "mvanhorn/last30days-skill",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Claude Fable 5 & Mythos 5 正式發佈",
+          "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "Anthropic 首個 Mythos-class 公開模型。",
+          "description": "Anthropic 首個 Mythos-class 公開模型。Fable 5 有 guardrails（<5% sessions fallback to Opus 4.8），Mythos 5 冇限制但只俾 approved orgs。$10/$50 per M tokens。可用喺 AWS Bedrock、GitHub Copilot。Beat Pokémon FireRed 只用 raw screenshots、一日 rewrite 50M-line Ruby codebase",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png"
+        },
+        {
+          "title": "Gemini 3.5 Live Translate 推出",
+          "link": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "deepmind.google",
+          "why": "Google speech-to-speech 即時翻譯，支援 70+ 語言自動偵測，rollout 到 Goog…",
+          "description": "Google speech-to-speech 即時翻譯，支援 70+ 語言自動偵測，rollout 到 Google Meet",
+          "image": "https://lh3.googleusercontent.com/_sbUZOBpK1plF-lrMGsYCsMWmXSIsH5b57L-tTbs_HgkbbItbcKnoTH5uPRjJP25A-IJFAa0Eld_qO67Xyc4Re_3Bp6B5_-MErL20Lh5CNT4kaAzkQ=w1200-h630-n-nu-rw"
+        },
+        {
+          "title": "MiniMax M3 開源",
+          "link": "https://www.minimax.io/blog/minimax-m3",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "minimax.io",
+          "why": "首個 open-weight 同時做到 frontier coding + 1M context + native…",
+          "description": "首個 open-weight 同時做到 frontier coding + 1M context + native multimodality，SWE-Bench Pro 59.0% 超越 Kimi K2.6",
+          "image": "https://file.cdn.minimax.io/public/11649e5b-3f76-477e-a73d-2abc4882211c.png"
+        },
+        {
+          "title": "mvanhorn/last30days-skill",
+          "link": "https://github.com/mvanhorn/last30days-skill",
+          "category": "github",
+          "stars": 2800,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "AI agent skill 自動爬 Reddit/X/YouTube/HN/Polymarket 再合成 gro…",
+          "description": "AI agent skill 自動爬 Reddit/X/YouTube/HN/Polymarket 再合成 grounded summary，直接適用於 Hermes Agent",
+          "image": "https://opengraph.githubassets.com/7b591abecd1bc490f62ea23d4ada751bd9bda4808147c78a374c20c43af68dbf/mvanhorn/last30days-skill"
+        },
+        {
+          "title": "Andyyyy64/whichllm",
+          "link": "https://github.com/Andyyyy64/whichllm",
+          "category": "github",
+          "stars": 4100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "入你 hardware spec 就推薦最夾嘅 local LLM，ranked by real benchmar…",
+          "description": "入你 hardware spec 就推薦最夾嘅 local LLM，ranked by real benchmarks，ollama 用家必睇",
+          "image": "https://opengraph.githubassets.com/a7c12362febdcf6bffc3918dd1fc616a23d72cb0f59122be30a049a65844039d/Andyyyy64/whichllm"
+        },
+        {
+          "title": "can1357/oh-my-pi",
+          "link": "https://github.com/can1357/oh-my-pi",
+          "category": "github",
+          "stars": 10900,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "新 terminal AI coding agent，hash-anchored edits + optimize…",
+          "description": "新 terminal AI coding agent，hash-anchored edits + optimized tool harness + LSP/subagents，同 Codex/Claude Code 直接競爭",
+          "image": "https://opengraph.githubassets.com/1b332ed8145a352550d028ca0f6ec05b9f6617047c4641f9dc54590a93f76244/can1357/oh-my-pi"
+        },
+        {
+          "title": "diffusionstudio/lottie",
+          "link": "https://github.com/diffusionstudio/lottie",
+          "category": "github",
+          "stars": 967,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "用 Claude Code/Codex 生成 production-ready Lottie animation，…",
+          "description": "用 Claude Code/Codex 生成 production-ready Lottie animation，creative 用家啱玩",
+          "image": "https://opengraph.githubassets.com/012b624d17e53368bddc311063d89535c876c43a8772bed45100e1b9a401f030/diffusionstudio/lottie"
+        },
+        {
+          "title": "hardikpandya/stop-slop",
+          "link": "https://github.com/hardikpandya/stop-slop",
+          "category": "github",
+          "stars": 9300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Skill file 幫你铲走 AI 文章啲 predictable 廢話，simple but effective",
+          "description": "Skill file 幫你铲走 AI 文章啲 predictable 廢話，simple but effective",
+          "image": "https://opengraph.githubassets.com/477804c80a27f9fd378ceb946a663b9b80646eefbe6369cd91886fad2e81a083/hardikpandya/stop-slop"
+        },
+        {
+          "title": "Microsoft 推出 MAI-Thinking-1",
+          "link": "https://microsoft.ai/news/introducing-mai-thinking-1/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "microsoft.ai",
+          "why": "自家首個 reasoning model，仲有 MAI-Code-1-Flash，Build 2026 上公佈。",
+          "description": "自家首個 reasoning model，仲有 MAI-Code-1-Flash，Build 2026 上公佈。Microsoft 逐步減少對 OpenAI 依賴",
+          "image": "https://microsoft.ai/wp-content/themes/wp-base-theme/images/social.jpg"
+        },
+        {
+          "title": "Apple WWDC Siri 大翻新",
+          "link": "https://techcrunch.com/2026/06/08/apples-long-awaited-ai-siri-overhaul-is-finally-here/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "techcrunch.com",
+          "why": "拖咗好耐嘅 AI Siri overhaul 終於出到，跟 ChatGPT/Gemini 之爭",
+          "description": "拖咗好耐嘅 AI Siri overhaul 終於出到，跟 ChatGPT/Gemini 之爭",
+          "image": "https://techcrunch.com/wp-content/uploads/2024/10/apple-siri-header.jpg?resize=1200,800"
+        },
+        {
+          "title": "SWE-Explore",
+          "link": "https://huggingface.co/papers/2606.07297",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "上海交大 benchmark 測試 coding agent 點樣 explore codebase，而唔係淨睇最…",
+          "description": "上海交大 benchmark 測試 coding agent 點樣 explore codebase，而唔係淨睇最終 patch 啱唔啱。Fafa 用 Agent 做 coding 會關心呢個方向",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.07297/gradient.png"
+        }
       ]
     },
     {
@@ -489,6 +2156,129 @@
         {
           "title": "microsoft/markitdown",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "OpenAI Dreaming V3",
+          "link": "https://openai.com/index/dreaming-v3/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "ChatGPT 記憶系統大升級。自動 background synthesize 用戶偏好、constraints…",
+          "description": "ChatGPT 記憶系統大升級。自動 background synthesize 用戶偏好、constraints、時間敏感 context，唔使再講「記住呢句」。Compute efficiency 提升 ~5x，Plus/Pro 用戶 June 4 已推送",
+          "image": ""
+        },
+        {
+          "title": "Microsoft 一口氣出 7 個 MAI 模型",
+          "link": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "microsoft.ai",
+          "why": "MAI-Thinking-1（1T params / 35B active reasoning model，pre…",
+          "description": "MAI-Thinking-1（1T params / 35B active reasoning model，preferred over Sonnet 4.6 in blind eval）、MAI-Code-1-Flash（5B active coding agent model，GitHub Copilot 已整合）、MAI-Transcribe-1.5（SOTA 語音辨識 43 語言，5x faster than competitors）。全部從頭 train，冇 distill 其他 lab",
+          "image": "https://microsoft.ai/wp-content/themes/wp-base-theme/images/social.jpg"
+        },
+        {
+          "title": "Google Gemma 4 QAT 推出",
+          "link": "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "Quantization-Aware Training 版本，target Q4，memory 大減適合 mobi…",
+          "description": "Quantization-Aware Training 版本，target Q4，memory 大減適合 mobile/laptop local inference。你用 ollama 做 local inference 可以留意，GGUF 版就快有",
+          "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_Visual_Blog.width-1300.png"
+        },
+        {
+          "title": "microsoft/markitdown",
+          "link": "https://github.com/microsoft/markitdown",
+          "category": "github",
+          "stars": 148000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Microsoft 官方 file-to-Markdown 轉換器，支援 PDF/DOCX/PPTX/Excel/…",
+          "description": "Microsoft 官方 file-to-Markdown 轉換器，支援 PDF/DOCX/PPTX/Excel/圖片 OCR。你用 Docling 做 RAG preprocessing，呢個係另一個強力選擇，仲有 MCP server 可以直接俾 agent 用",
+          "image": "https://opengraph.githubassets.com/ec4a6e3cf2b90b729f3fe4cbacb027af4bda356913757674f5d9371cd5d26a11/microsoft/markitdown"
+        },
+        {
+          "title": "affaan-m/ECC",
+          "link": "https://github.com/affaan-m/ECC",
+          "category": "github",
+          "stars": 7300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Agent harness performance optimization system。",
+          "description": "Agent harness performance optimization system。Skills、instincts、memory、security 全部包，支援 Claude Code / Codex / OpenCode / Cursor。你玩咁多 agent framework 一定啱睇",
+          "image": "https://opengraph.githubassets.com/8f96c7328023d7692d92de8011da606d738f65f27f3c9e9187db5cca0582ebab/affaan-m/ECC"
+        },
+        {
+          "title": "colbymchenry/codegraph",
+          "link": "https://github.com/colbymchenry/codegraph",
+          "category": "github",
+          "stars": 6100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Pre-indexed code knowledge graph for Claude Code。",
+          "description": "Pre-indexed code knowledge graph for Claude Code。比 Claude Code 讀你成個 codebase 之前已經 build 好 dependency graph，大幅減少 tokens 同 tool calls，100% local",
+          "image": "https://opengraph.githubassets.com/b2ba0e4fecbaa24b3b02facab79cdfa1510d9667eb5d78e52223033bdb882515/colbymchenry/codegraph"
+        },
+        {
+          "title": "multica-ai/andrej-karpathy-skills",
+          "link": "https://github.com/multica-ai/andrej-karpathy-skills",
+          "category": "github",
+          "stars": 4800,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Karpathy 將佢對 LLM coding pitfalls 嘅觀察整理成一份 CLAUDE.md，直接 im…",
+          "description": "Karpathy 將佢對 LLM coding pitfalls 嘅觀察整理成一份 CLAUDE.md，直接 improve Claude Code 嘅 output quality。如果你用 Claude Code 寫 code 一定要睇",
+          "image": "https://opengraph.githubassets.com/ec1e06643d12076a408b24377d2dfe2112d63dfa06b4118ca89d05b5b69d53e6/multica-ai/andrej-karpathy-skills"
+        },
+        {
+          "title": "nesquena/hermes-webui",
+          "link": "https://github.com/nesquena/hermes-webui",
+          "category": "github",
+          "stars": 3600,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Hermes Agent 嘅 Web UI！",
+          "description": "Hermes Agent 嘅 Web UI！一個 container 搞掂，可以喺 browser 或手機用 Hermes。你係 Hermes Agent users，呢個可以直接提升你嘅 workflow",
+          "image": "https://opengraph.githubassets.com/87dd67fa46485d729760d35e78f10dd91196fe5fc6e7201597da67d036ef9bc6/nesquena/hermes-webui"
+        },
+        {
+          "title": "Anthropic 入紙 IPO",
+          "link": "https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "nytimes.com",
+          "why": "6月1日 confidential S-1，估值 $965B，revenue run-rate ~$47B（YoY…",
+          "description": "6月1日 confidential S-1，估值 $965B，revenue run-rate ~$47B（YoY 5x growth）。同 OpenAI / SpaceX 爭今年最大 IPO",
+          "image": ""
+        },
+        {
+          "title": "NVIDIA RTX Spark 亮相 Computex",
+          "link": "https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "nvidianews.nvidia.com",
+          "why": "Arm-based superchip 將 AI agent 效能帶去 PC，Adobe Photoshop / …",
+          "description": "Arm-based superchip 將 AI agent 效能帶去 PC，Adobe Photoshop / Premiere Pro 已原生支援。Consumer laptop 預計秋季上市，AMD/Intel/Qualcomm 股價即插",
+          "image": "https://iprsoftwaremedia.com/219/files/202605/154ea89a7177c7d568f2f4916c7fd53a/6a1c9d873d6332761e1d64a8_nvidia-rtx-spark/nvidia-rtx-spark_597f009e-8bc6-4bfb-bdf4-04317ae69806-prv.png"
+        },
+        {
+          "title": "NVIDIA Cosmos 3",
+          "link": "https://huggingface.co/papers/2606.02800",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Omnimodal world models for physical AI，8.68k upvotes on HF。",
+          "description": "Omnimodal world models for physical AI，8.68k upvotes on HF。NVIDIA 嘅世界模型，將 vision / language / action 統一，for robotics 同 autonomous systems",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.02800/gradient.png"
         }
       ]
     },
@@ -523,6 +2313,129 @@
           "title": "RyanCodrai/turbovec",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Apple WWDC 2026：Tim Cook 最後一次 keynote",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "全新 Siri 由 custom 1.2T Gemini 模型驅動（每年 $1B 授權俾 Google）。",
+          "description": "全新 Siri 由 custom 1.2T Gemini 模型驅動（每年 $1B 授權俾 Google）。iOS 27 嘅 AI Extension system 史上首次俾用戶揀 ChatGPT / Gemini / Claude 做 Apple Intelligence backend。Standalone Siri app 有 on-screen awareness + personal context access。iPhone 15 Pro 或更新先用到 AI features。",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/b5f45e55-886b-4de9-89ed-1155c3dacd3b.png"
+        },
+        {
+          "title": "Microsoft MAI-Thinking-1 & MAI-Code-1-Flash",
+          "link": "https://microsoft.ai/news/microsoft-build-2026-mai-keynote-transcript/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "microsoft.ai",
+          "why": "Microsoft 首個完全唔用 OpenAI 嘅自家模型系列，Build 2026 公佈。",
+          "description": "Microsoft 首個完全唔用 OpenAI 嘅自家模型系列，Build 2026 公佈。MAI-Thinking-1：1T params/35B active reasoning model，trained from scratch without distillation。MAI-Code-1-Flash：5B active coding model，專為 GitHub Copilot 而設，用少 60% tokens。同場加映 Claude in Excel Agent Mode for 750M users。",
+          "image": "https://microsoft.ai/wp-content/themes/wp-base-theme/images/social.jpg"
+        },
+        {
+          "title": "NVIDIA Cosmos 3：Open-source 世界模型",
+          "link": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "developer.nvidia.com",
+          "why": "Computex 2026 公佈，結合 physical reasoning、world generation、a…",
+          "description": "Computex 2026 公佈，結合 physical reasoning、world generation、action generation 嘅 omnimodal foundation model。Robotics 同 autonomous systems 嘅 game changer。HF paper 今日 trending #1。",
+          "image": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/05/Hammer-Robot.gif"
+        },
+        {
+          "title": "RyanCodrai/turbovec",
+          "link": "https://github.com/RyanCodrai/turbovec",
+          "category": "github",
+          "stars": 1500,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "基於 Google TurboQuant 嘅向量索引，Rust 寫 + Python bindings。",
+          "description": "基於 Google TurboQuant 嘅向量索引，Rust 寫 + Python bindings。比 FAISS 更快更細（16×壓縮），直接 drop-in 換入 LangChain/LlamaIndex。Fafa 做 RAG 嘅話呢個係 must-watch 🎯",
+          "image": "https://repository-images.githubusercontent.com/1192555574/c9d82d4e-1a88-4201-a548-615cfbb0b16a"
+        },
+        {
+          "title": "pewdiepie-archdaemon/odysseus",
+          "link": "https://github.com/pewdiepie-archdaemon/odysseus",
+          "category": "github",
+          "stars": 2400,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Self-hosted AI workspace，43k⭐。",
+          "description": "Self-hosted AI workspace，43k⭐。Docker one-command 就起到個 ChatGPT/Claude 替代品，支援 Ollama/vLLM/llama.cpp、MCP tools、Deep Research、Email agent、memory。仲要係 MIT license。",
+          "image": "https://opengraph.githubassets.com/388c59f47f1f682cddb229e743eb0a37ef84c02aad2aeb14efa65a6597746d99/pewdiepie-archdaemon/odysseus"
+        },
+        {
+          "title": "microsoft/pg_durable",
+          "link": "https://github.com/microsoft/pg_durable",
+          "category": "github",
+          "stars": 314,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Microsoft 新開源：PostgreSQL in-database durable execution ex…",
+          "description": "Microsoft 新開源：PostgreSQL in-database durable execution extension。將 agent workflow 嘅 state checkpoint 直接放入 PG，crash 咗都自動喺 checkpoint  resume，唔使 Redis/Temporal 做 sidecar。Agent state persistence 嘅 zero-infra solution。",
+          "image": "https://opengraph.githubassets.com/6285f97518a1483661131e362a208a6febecf091958639b97fcf992a24ae25b0/microsoft/pg_durable"
+        },
+        {
+          "title": "nexu-io/open-design",
+          "link": "https://github.com/nexu-io/open-design",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Local-first 嘅 Claude Design 開源替代品。",
+          "description": "Local-first 嘅 Claude Design 開源替代品。150 個 brand-grade DESIGN.md 系統、100+ skills、261 plugins。最正係支援 Hermes Agent 做 `od mcp install hermes`，即裝即用。出 prototype/deck/image/video 都得。",
+          "image": "https://repository-images.githubusercontent.com/1223170290/5eec4959-c821-4927-83fb-e904b5cbc396"
+        },
+        {
+          "title": "alibaba/open-code-review",
+          "link": "https://github.com/alibaba/open-code-review",
+          "category": "github",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "阿里巴巴內部 battle-tested 嘅 AI code review CLI（Apache-2.0）。",
+          "description": "阿里巴巴內部 battle-tested 嘅 AI code review CLI（Apache-2.0）。Hybrid deterministic pipeline + LLM agent，detect NPE、thread-safety、XSS、SQL injection。支援 Claude/GPT/Gemini 做 backend，仲可以裝做 agent skill。",
+          "image": "https://repository-images.githubusercontent.com/1241960226/8541014e-8216-42c3-871f-804d16d348a4"
+        },
+        {
+          "title": "Claude 正式成為 iPhone AI 選項",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Apple Intelligence 喺 iOS 27 支援 Claude 做可選 AI model。",
+          "description": "Apple Intelligence 喺 iOS 27 支援 Claude 做可選 AI model。~2.2B active Apple devices，即使 5% adoption = 100M+ new Claude users（Anthropic 目前 base 嘅 double）。Revenue structure 未公開，Apple 控制 PCC infrastructure。",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/b5f45e55-886b-4de9-89ed-1155c3dacd3b.png"
+        },
+        {
+          "title": "AI Chatbot 市佔率 June 2026",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "ChatGPT 54.7%（由 76.5% 高位回落）、Gemini 27.4%（半年 +104%）、Claude…",
+          "description": "ChatGPT 54.7%（由 76.5% 高位回落）、Gemini 27.4%（半年 +104%）、Claude 8.2%（一季 +306% 由 203M→824M visits）。U.S. only：ChatGPT 58.9%、Gemini 19.2%、Claude 12.5%。留意呢度只計 web visits，唔包 mobile app / API consumption / enterprise revenue。",
+          "image": "https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/b5f45e55-886b-4de9-89ed-1155c3dacd3b.png"
+        },
+        {
+          "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning",
+          "link": "https://huggingface.co/papers/2606.03503",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Shanghai AI Lab 新 reasoning 方法，透過 introspective preferenc…",
+          "description": "Shanghai AI Lab 新 reasoning 方法，透過 introspective preference learning 摺疊 reasoning chains，提升 LLM 推理效率。12 upvotes on HF，有 practical implications 用於改善 agent reasoning。",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.03503/gradient.png"
+        }
       ]
     },
     {
@@ -555,6 +2468,129 @@
         {
           "title": "OpenBMB/VoxCPM",
           "category": "general"
+        }
+      ],
+      "items": [
+        {
+          "title": "Microsoft Build 2026：MAI-Thinking-1 + MAI-Code-1-Flash",
+          "link": "https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "theverge.com",
+          "why": "微軟首批完全不靠 OpenAI 嘅自研模型。",
+          "description": "微軟首批完全不靠 OpenAI 嘅自研模型。MAI-Thinking-1 係推理模型，MAI-Code-1-Flash 內建 GitHub Copilot，輸入 $0.15/M tokens。Microsoft 正式成為獨立 model provider",
+          "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25832912/STK095_MICROSOFT_2_CVirginia_A.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200"
+        },
+        {
+          "title": "NVIDIA Nemotron 3 Ultra (550B MoE)",
+          "link": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "research.nvidia.com",
+          "why": "免費開放權重，OpenRouter 免費用。",
+          "description": "免費開放權重，OpenRouter 免費用。MoE hybrid Mamba 架構，55B active parameters，美國最強開源模型之一。啱晒 local inference（ollama 可能未來支援）",
+          "image": ""
+        },
+        {
+          "title": "MiniMax M3",
+          "link": "https://www.minimax.io/blog/minimax-m3",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "minimax.io",
+          "why": "Open-weight 開源，1M context window，SWE-Bench Pro 59.0% 超越 G…",
+          "description": "Open-weight 開源，1M context window，SWE-Bench Pro 59.0% 超越 GPT-5.5。輸入 $0.30/M tokens 超平。Fafa 用過 MiniMax，呢代 M3 係 coding + agentic 嘅 frontier 級數",
+          "image": "https://file.cdn.minimax.io/public/11649e5b-3f76-477e-a73d-2abc4882211c.png"
+        },
+        {
+          "title": "OpenBMB/VoxCPM",
+          "link": "https://github.com/OpenBMB/VoxCPM",
+          "category": "github",
+          "stars": 26800,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "VoxCPM2：Tokenizer-free TTS，支援 30 種語言包括粵語，Voice Design（文字描…",
+          "description": "VoxCPM2：Tokenizer-free TTS，支援 30 種語言包括粵語，Voice Design（文字描述直接生成聲線）、True-to-Life Cloning，Apache-2.0 開源。Fafa 幫同事搞廣東話 STT/TTS，呢個可以直接用！",
+          "image": "https://opengraph.githubassets.com/2830f010f42e8504a99ca1e6f7def0f87946c5de2a322075f9d74cc98e857c3a/OpenBMB/VoxCPM"
+        },
+        {
+          "title": "supermemoryai/supermemory",
+          "link": "https://github.com/supermemoryai/supermemory",
+          "category": "github",
+          "stars": 24900,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "快速 scalable 嘅 Memory Engine + API for AI agents，MIT 開源。",
+          "description": "快速 scalable 嘅 Memory Engine + API for AI agents，MIT 開源。Fafa 用緊 Mem0/Zep，呢個係另一條 agent memory 路線，值得比較下",
+          "image": "https://opengraph.githubassets.com/2a246d5795d947d8a1001de28024fa864001c8491ef3533f1cf1b1a140a00416/supermemoryai/supermemory"
+        },
+        {
+          "title": "EveryInc/compound-engineering-plugin",
+          "link": "https://github.com/EveryInc/compound-engineering-plugin",
+          "category": "github",
+          "stars": 20100,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Official Compound Engineering plugin for Claude Code, Cod…",
+          "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor。CE（複合工程）係新興開發 paradigm — 拆大 task 做細步、iterate、test-driven，同 Fafa 用緊嘅 agent tooling 好夾",
+          "image": "https://opengraph.githubassets.com/9bf94033ed91dbbb96c289136c6129e6b808abea37cf6e2d839b527358fb25e0/EveryInc/compound-engineering-plugin"
+        },
+        {
+          "title": "Open-LLM-VTuber/Open-LLM-VTuber",
+          "link": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+          "category": "github",
+          "stars": 8300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Voice-interactive AI companion 配 Live2D avatar，fully offl…",
+          "description": "Voice-interactive AI companion 配 Live2D avatar，fully offline 跨平台。支援 voice interruption、visual perception、桌面寵物 mode。Fafa 搞 voice + agent，呢個係 neuro-sama 開源版",
+          "image": "https://repository-images.githubusercontent.com/722844356/70b58869-a621-4db9-a371-387e6cdf9dcf"
+        },
+        {
+          "title": "run-llama/liteparse",
+          "link": "https://github.com/run-llama/liteparse",
+          "category": "github",
+          "stars": 8000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "LlamaIndex 出品嘅 fast open-source PDF parser，純本地、spatial te…",
+          "description": "LlamaIndex 出品嘅 fast open-source PDF parser，純本地、spatial text parsing + OCR、Rust 核心（Python/Node.js bindings）。Fafa RAG 用 Docling，呢個係 lightweight alternative",
+          "image": "https://opengraph.githubassets.com/796fdf76a28bb39b87ee352126df42bfed0df2746557d741e2f6aede69ef296c/run-llama/liteparse"
+        },
+        {
+          "title": "Anthropic 機密提交 S-1，啟動 IPO 流程",
+          "link": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "與 SpaceX 等並列 2026 年三大 IPO。",
+          "description": "與 SpaceX 等並列 2026 年三大 IPO。Claude Opus 4.8 之後嘅重大里程碑，AI 正式邁向 enterprise utility 階段",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg"
+        },
+        {
+          "title": "Meta 三度延期 Muse Spark AI model API",
+          "link": "https://www.reuters.com/technology/meta-repeatedly-pushes-back-new-ai-model-release-developers-wsj-says-2026-06-04/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "reuters.com",
+          "why": "原定 4 月出，因 bugs + infrastructure 問題推到冇 schedule。",
+          "description": "原定 4 月出，因 bugs + infrastructure 問題推到冇 schedule。WSJ 爆料，反映 Meta AI execution 有暗湧",
+          "image": ""
+        },
+        {
+          "title": "NVIDIA Cosmos 3: Omnimodal World Models for Physical AI",
+          "link": "https://huggingface.co/papers/2606.02800",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "HF 8.68k upvotes，open world foundation model 統一處理 languag…",
+          "description": "HF 8.68k upvotes，open world foundation model 統一處理 language/image/video/audio。Physical AI（robot、autonomous vehicle）嘅基礎模型，可能改變 robotics 開發方式",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.02800/gradient.png"
         }
       ]
     },
@@ -589,6 +2625,129 @@
           "title": "chopratejas/headroom",
           "category": "general"
         }
+      ],
+      "items": [
+        {
+          "title": "Microsoft 發佈 MAI-Thinking-1 + 6 個 in-house AI 模型",
+          "link": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "microsoft.ai",
+          "why": "Build 2026 嘅重頭戲。MAI-Thinking-1 係 Microsoft 首個 reasoning m…",
+          "description": "Build 2026 嘅重頭戲。MAI-Thinking-1 係 Microsoft 首個 reasoning model（1T params, 35B active），仲有 MAI-Code-1-Flash、MAI-Image-2.5。Arena 上 MAI Image 2.5 已經 #3，逐步降低對 OpenAI 嘅依賴",
+          "image": "https://microsoft.ai/wp-content/themes/wp-base-theme/images/social.jpg"
+        },
+        {
+          "title": "Google Gemma 4 QAT 模型全面公開",
+          "link": "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "QAT（Quantization-Aware Training）版 Gemma 4，記憶體需求降低 ~3 倍，消費…",
+          "description": "QAT（Quantization-Aware Training）版 Gemma 4，記憶體需求降低 ~3 倍，消費級 GPU 行到同等大小模型。你用 ollama 做 local inference 嘅話直接受惠",
+          "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_Visual_Blog.width-1300.png"
+        },
+        {
+          "title": "MiniMax M3 開源輕量模型",
+          "link": "https://openrouter.ai/minimax/minimax-m3",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openrouter.ai",
+          "why": "6月1日發佈，open-weight lightweight model。",
+          "description": "6月1日發佈，open-weight lightweight model。你以前用過 MiniMax，呢個係佢哋最新嘅細模型，值得試下",
+          "image": "https://openrouter.ai/minimax/minimax-m3/opengraph-image-1oizug?6fdbbf65fb5a15d5"
+        },
+        {
+          "title": "chopratejas/headroom",
+          "link": "https://github.com/chopratejas/headroom",
+          "category": "github",
+          "stars": 14500,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Compress tool outputs、logs、RAG chunks 60-95% 先入 LLM，同一個答案…",
+          "description": "Compress tool outputs、logs、RAG chunks 60-95% 先入 LLM，同一個答案但 token 少一大截。Library + proxy + MCP server 三合一，直接用喺你條 RAG pipeline 度",
+          "image": "https://opengraph.githubassets.com/1cbe8cae1da3a7994987ca593a702c267fb47c1ca5d3aef926f58bddd6b9f96c/headroomlabs-ai/headroom"
+        },
+        {
+          "title": "anomalyco/opencode",
+          "link": "https://github.com/anomalyco/opencode",
+          "category": "github",
+          "stars": 55300,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Open-source coding agent，GitHub AI 類別 28 日增長 #1。",
+          "description": "Open-source coding agent，GitHub AI 類別 28 日增長 #1。同 Claude Code / Codex 正面競爭，Agent 生態嘅重要 player",
+          "image": "https://repository-images.githubusercontent.com/975734319/2c2c3389-c647-405c-a499-f80e4d521277"
+        },
+        {
+          "title": "lfnovo/open-notebook",
+          "link": "https://github.com/lfnovo/open-notebook",
+          "category": "github",
+          "stars": 26000,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Open-source NotebookLM 實作，將任何文件變成 RAG notebook。",
+          "description": "Open-source NotebookLM 實作，將任何文件變成 RAG notebook。比 Google 原版更靈活、可 self-host",
+          "image": "https://repository-images.githubusercontent.com/876286167/a086d43b-112b-4c10-91f5-5c3fd71c9af9"
+        },
+        {
+          "title": "Panniantong/Agent-Reach",
+          "link": "https://github.com/Panniantong/Agent-Reach",
+          "category": "github",
+          "stars": 21500,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "一個 CLI 搜晒 Twitter、Reddit、YouTube、GitHub、Bilibili、小紅書，**零 …",
+          "description": "一個 CLI 搜晒 Twitter、Reddit、YouTube、GitHub、Bilibili、小紅書，**零 API 費用**。俾你嘅 agent 可以直接睇晒成個互聯網",
+          "image": "https://opengraph.githubassets.com/b4648520697b068ecb48bbe103f3f0a4c24c2fa36fed8b11f52b35a341d83410/Panniantong/Agent-Reach"
+        },
+        {
+          "title": "MemPalace/mempalace",
+          "link": "https://github.com/MemPalace/mempalace",
+          "category": "github",
+          "stars": 53900,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Best-benchmarked open-source AI memory system，免費。",
+          "description": "Best-benchmarked open-source AI memory system，免費。Mem0 同 Zep 以外嘅新選擇，如果你搵 agent memory solution 值得 benchmark 下",
+          "image": "https://opengraph.githubassets.com/2a246d5795d947d8a1001de28024fa864001c8491ef3533f1cf1b1a140a00416/MemPalace/mempalace"
+        },
+        {
+          "title": "Meta Business Agent 全球上線 WhatsApp",
+          "link": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "techcrunch.com",
+          "why": "AI 客服 agent 可以自動化日常營運，同客戶對話。",
+          "description": "AI 客服 agent 可以自動化日常營運，同客戶對話。企業 AI agent 大戰升溫，Microsoft、Meta、Anthropic 都落場",
+          "image": "https://techcrunch.com/wp-content/uploads/2026/02/whatsapp-iphone-icon.jpg?resize=1200,800"
+        },
+        {
+          "title": "Anthropic 提交 IPO 申請",
+          "link": "https://www.artificialintelligence-news.com/news/anthropic-ipo-filing-marks-ai-maturing-into-enterprise-utility/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "$965B Series H 後正式走向上市，AI 公司企業化嘅重要里程碑",
+          "description": "$965B Series H 後正式走向上市，AI 公司企業化嘅重要里程碑",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/06/anthropic-ipo-ai-claude-enterprise-funding-investment-business-strategy-artificial-intelligence.jpg"
+        },
+        {
+          "title": "NVIDIA Cosmos 3: Omnimodal World Models for Physical AI",
+          "link": "https://huggingface.co/papers/2606.02800",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "8.7k upvotes on HF。",
+          "description": "8.7k upvotes on HF。開放平台俾 robot、autonomous vehicle 嘅世界模型，Physical AI 嘅 foundation model。NVIDIA 最近仲 open source 咗 cosmos GitHub repo",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.02800/gradient.png"
+        }
       ]
     },
     {
@@ -621,6 +2780,140 @@
         {
           "title": "GPT-5.5 Instant 成為 ChatGPT 默認 model",
           "category": "tech"
+        }
+      ],
+      "items": [
+        {
+          "title": "Claude Opus 4.8 正式推出",
+          "link": "https://www.anthropic.com/news/claude-opus-4-8",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "Anthropic 最新旗艦，4× 更少放過 code flaws，新增 Dynamic Workflows 可 …",
+          "description": "Anthropic 最新旗艦，4× 更少放過 code flaws，新增 Dynamic Workflows 可 spawn 幾百個 parallel subagents 做 codebase-scale migration",
+          "image": "https://cdn.sanity.io/images/4zrzovbb/website/0eaa0ed2dce9810169112e1c77de2585fcf1f5c2-2880x1620.jpg"
+        },
+        {
+          "title": "SubQ 1M-Preview",
+          "link": "https://thenewstack.io/subquadratic-12-million-context-window/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "thenewstack.io",
+          "why": "首個商用 subquadratic LLM，12M token context window，1M tokens …",
+          "description": "首個商用 subquadratic LLM，12M token context window，1M tokens 下 attention 快 52×，Needle-in-haystack 92.1%，得 $29M seed 嘅 Miami startup",
+          "image": "https://cdn.thenewstack.io/media/2026/05/d2090430-screenshot-2026-05-05-at-10.02.53.png"
+        },
+        {
+          "title": "ZAYA1-8B 開源 MoE",
+          "link": "https://huggingface.co/zyphra",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Apache 2.0，760M active params 就打到 open-weight 大模型，成個訓練喺 A…",
+          "description": "Apache 2.0，760M active params 就打到 open-weight 大模型，成個訓練喺 AMD Instinct 上做晒，HF 免費拎",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/Zyphra.png"
+        },
+        {
+          "title": "GPT-5.5 Instant 成為 ChatGPT 默認 model",
+          "link": "https://llm-stats.com/llm-updates",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "llm-stats.com",
+          "why": "主打 less hallucination 喺法律/醫學/金融領域，唔係靠高分 benchmarks，而係靠 trust",
+          "description": "主打 less hallucination 喺法律/醫學/金融領域，唔係靠高分 benchmarks，而係靠 trust",
+          "image": "https://llm-stats.com/og/main.png"
+        },
+        {
+          "title": "anomalyco/opencode",
+          "link": "https://github.com/anomalyco/opencode",
+          "category": "github",
+          "stars": 970,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "Coding agents 類別成長最快，正在追趕 Claude Code / Codex",
+          "description": "Coding agents 類別成長最快，正在追趕 Claude Code / Codex",
+          "image": "https://repository-images.githubusercontent.com/975734319/2c2c3389-c647-405c-a499-f80e4d521277"
+        },
+        {
+          "title": "openai/codex",
+          "link": "https://github.com/openai/codex",
+          "category": "github",
+          "stars": 575,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "OpenAI 官方 coding CLI agent，44.5k stars 持續上升",
+          "description": "OpenAI 官方 coding CLI agent，44.5k stars 持續上升",
+          "image": "https://opengraph.githubassets.com/87b7a075e2b05419198186300606cd095461de454342ab06d8c89edb5b16382c/openai/codex"
+        },
+        {
+          "title": "open-webui/open-webui",
+          "link": "https://github.com/open-webui/open-webui",
+          "category": "github",
+          "stars": 311,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "282M+ downloads，自托管 ChatGPT 替代品，而家支援 voice/video calls",
+          "description": "282M+ downloads，自托管 ChatGPT 替代品，而家支援 voice/video calls",
+          "image": "https://repository-images.githubusercontent.com/701547123/275da62f-2139-4d2b-bcac-57c82872dd30"
+        },
+        {
+          "title": "upstash/context7",
+          "link": "https://github.com/upstash/context7",
+          "category": "github",
+          "stars": 147,
+          "signal": "",
+          "source_domain": "github.com",
+          "why": "MCP server 新星，context optimization layer for LLM apps",
+          "description": "MCP server 新星，context optimization layer for LLM apps",
+          "image": "https://opengraph.githubassets.com/0e30738dd4037e9bf75a8dfd1d4a0085bac5fb467ef8ffe3be9d946e0db09cc9/upstash/context7"
+        },
+        {
+          "title": "Anthropic 機密提交 IPO 申請",
+          "link": "https://www.reuters.com/business/ai-giant-anthropic-confidentially-files-us-ipo-2026-06-01/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "reuters.com",
+          "why": "6月1日 confidential S-1 filing，傳估值 ~$1 trillion，Series H 剛拎…",
+          "description": "6月1日 confidential S-1 filing，傳估值 ~$1 trillion，Series H 剛拎 $65B，領先 OpenAI 上市 race",
+          "image": ""
+        },
+        {
+          "title": "Meta Business Agent 推出",
+          "link": "https://www.artificialintelligence-news.com/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "AI-powered conversational commerce，畀品牌自動做客服 + 銷售",
+          "description": "AI-powered conversational commerce，畀品牌自動做客服 + 銷售",
+          "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2025/01/New-site-SEO-social-banner-1200x600-1.jpg"
+        },
+        {
+          "title": "NVIDIA Cosmos 3",
+          "link": "https://huggingface.co/papers/2606.02800",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Omnimodal world models for physical AI，HuggingFace 8.68k …",
+          "description": "Omnimodal world models for physical AI，HuggingFace 8.68k upvotes 今日最高，video generation + 物理世界理解",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.02800/gradient.png"
+        },
+        {
+          "title": "ThoughtFold",
+          "link": "https://huggingface.co/papers/2606.03503",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "上海 AI Lab 新作，用 introspective preference learning 摺疊 reaso…",
+          "description": "上海 AI Lab 新作，用 introspective preference learning 摺疊 reasoning chains，提升多步推理質量",
+          "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2606.03503/gradient.png"
         }
       ]
     }
