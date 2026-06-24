@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "date": "2026-06-24",
+      "dow": "三",
+      "title": "AI 新聞 · 2026-06-24",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 26,
+      "summary": "今日爆多新聞！OpenAI Daybreak 自動 patch 開源漏洞、Sakana Fugu multi-agent routing benchmark 超 Fable 5、Samsung 全員 AI 導入。GitHub 方面 codi…",
+      "first_item_snippet": "openai/codex: OpenAI 官方 coding agent CLI，用 Codex models 做 code generation，支援 sandboxed execution、mul…"
+    },
+    {
       "date": "2026-06-23",
       "dow": "二",
       "title": "AI 新聞 · 2026-06-23",

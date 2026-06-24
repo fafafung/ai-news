@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 新聞 · 2026-06-24</title>
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #1c2333;
+  --bg4: #21262d;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #58a6ff;
+  --border: #30363d;
+  --border2: #3d444d;
+  --accent: #58a6ff;
+  --card-hover: #1c2333;
+  --link: #58a6ff;
+  --badge-text: #ffffff;
+  --shadow: rgba(0,0,0,0.3);
+  --featured-bg: linear-gradient(135deg, #161b22 0%, #1c2333 100%);
+  --featured-border: #58a6ff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eef1f5;
+    --bg4: #e8ecf0;
+    --text: #1f2328;
+    --text2: #656d76;
+    --text3: #0969da;
+    --border: #d0d7de;
+    --border2: #d8dee4;
+    --accent: #0969da;
+    --card-hover: #f3f4f6;
+    --link: #0969da;
+    --badge-text: #ffffff;
+    --shadow: rgba(0,0,0,0.08);
+    --featured-border: #0969da;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Layout ── */
+.container { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+
+/* ── Header ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.header h1 .date-weekday {
+  font-weight: 400;
+  color: var(--text2);
+  font-size: 0.9em;
+}
+.header .sub {
+  color: var(--text2);
+  font-size: 0.92rem;
+  margin-top: 2px;
+}
+.header .nav {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+}
+.header .nav a {
+  color: var(--text2);
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.header .nav a:hover {
+  background: var(--bg3);
+  border-color: var(--text3);
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* ── Stats Bar ── */
+.stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.stat-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 76px;
+}
+.stat-box .num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.stat-box .label {
+  color: var(--text2);
+  font-size: 0.72rem;
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Day-of-week stat box ── */
+.stat-box.dow-box .num {
+  font-size: 1.1rem;
+}
+
+/* ── Section (Category Group) ── */
+.section {
+  margin-bottom: 36px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.section-header .section-icon {
+  font-size: 1.3rem;
+}
+.section-header .section-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.section-header .section-count {
+  font-size: 0.78rem;
+  color: var(--text2);
+  background: var(--bg3);
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+/* ── News Card ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+  position: relative;
+}
+.card:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+.card-accent-border {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: calc(100% - 16px);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Title row */
+.card-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.card-title-link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
+}
+.card-title-link:hover {
+  color: var(--link);
+}
+.card-title-link .emoji-prefix {
+  margin-right: 4px;
+}
+
+/* Badges */
+.badge-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+.badge-signal {
+  color: var(--badge-text);
+}
+.badge-source {
+  background: var(--bg3);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.badge-stars {
+  background: rgba(227, 179, 65, 0.15);
+  color: #e3b341;
+  border: 1px solid rgba(227, 179, 65, 0.3);
+}
+
+/* Description — the main readable content */
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* Why (short one-liner) — metadata fallback */
+.card-why {
+  font-size: 0.82rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+/* Metadata bar */
+.card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 4px;
+}
+.card-meta .meta-item {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+/* ── Summary Box ── */
+.summary-box {
+  background: linear-gradient(135deg, var(--bg2), var(--bg3));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.summary-box .summary-label {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Featured Section (Index) ── */
+.featured-section {
+  margin-bottom: 36px;
+}
+.featured-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.featured-card {
+  background: var(--featured-bg);
+  border: 1px solid var(--featured-border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: all 0.2s;
+}
+.featured-card:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.featured-card .fc-date {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.featured-card .fc-date a {
+  color: var(--text);
+}
+.featured-card .fc-date a:hover {
+  color: var(--link);
+}
+.featured-card .fc-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.featured-card .fc-summary {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* ── History Entry (Index) ── */
+.history-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: all 0.15s;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+.history-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.history-entry .he-date {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.history-entry .he-date a {
+  color: var(--text);
+}
+.history-entry .he-date a:hover {
+  color: var(--link);
+}
+.history-entry .he-badge {
+  font-size: 0.72rem;
+  background: var(--bg3);
+  color: var(--text2);
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+.history-entry .he-snippet {
+  font-size: 0.85rem;
+  color: var(--text2);
+  flex-basis: 100%;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ── Week Entry (Index & Weekly page) ── */
+.week-entry {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  transition: all 0.15s;
+}
+.week-entry:hover {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.week-entry .we-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.week-entry .we-title a { color: var(--text); }
+.week-entry .we-title a:hover { color: var(--link); }
+.week-entry .we-meta {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.week-entry .we-stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+.week-entry .we-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Daily Mini (for weekly page day list) ── */
+.daily-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  margin: 3px 5px 3px 0;
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 48px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+.footer a { color: var(--text2); }
+.footer a:hover { color: var(--link); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container { padding: 20px 14px; }
+  .header h1 { font-size: 1.35rem; }
+  .stats { gap: 8px; }
+  .stat-box { min-width: 60px; padding: 8px 14px; }
+  .stat-box .num { font-size: 1.15rem; }
+  .card { padding: 14px 16px; }
+  .card-title-link { font-size: 0.95rem; }
+  .card-description { font-size: 0.88rem; }
+  .featured-card { padding: 18px 20px; }
+  .featured-card .fc-date { font-size: 1.15rem; }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 14px 10px; }
+  .header h1 { font-size: 1.15rem; }
+  .stat-box { min-width: 50px; padding: 6px 10px; }
+  .stat-box .num { font-size: 1rem; }
+  .section-header { flex-wrap: wrap; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="header">
+  <h1>AI 新聞 · 2026-06-24 <span class="date-weekday">星期三</span></h1>
+  <div class="sub">星期三 · 2026-06-24</div>
+  <nav class="nav">
+    <a href="index.html">🏠 主頁</a>
+    <a href="index.html">📋 目錄</a><a href="weekly-2026-W26.html">📊 第26週</a>
+  </nav>
+</header>
+<div class="stats">
+<div class="stat-box"><span class="num">10</span><span class="label">新聞總數</span></div>
+<div class="stat-box dow-box"><span class="num">星期三</span><span class="label">星期</span></div>
+<div class="stat-box"><span class="num">5</span><span class="label">⚡ GitHub 開源</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">🔬 科技新聞</span></div>
+<div class="stat-box"><span class="num">2</span><span class="label">📰 業界動態</span></div>
+<div class="stat-box"><span class="num">1</span><span class="label">📄 研究論文</span></div>
+</div><div class="section">
+<div class="section-header" style="border-bottom-color:#e3b34140;">
+<span class="section-icon">⚡</span>
+<span class="section-label" style="color:#e3b341;">GitHub 開源</span>
+<span class="section-count">5 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/openai/codex" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>openai/codex</a>
+<div class="badge-row"><span class="badge badge-signal" style="background:#8e44ad">🏢</span><span class="badge badge-stars">⭐ 44.7k</span></div>
+</div>
+<div class="card-description">OpenAI 官方 coding agent CLI，用 Codex models 做 code generation，支援 sandboxed execution、multi-file editing、Git-aware context management。Fafa 用開 Hermes Agent，了解主流 coding agent 生態對佢揀工具好重要。</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span><span class="meta-item">💬 OpenAI 官方 coding agent，同 Claude Code 正面競爭</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>anthropics/claude-code</a>
+<div class="badge-row"><span class="badge badge-signal" style="background:#8e44ad">🏢</span><span class="badge badge-stars">⭐ 44.7k</span></div>
+</div>
+<div class="card-description">Anthropic 官方 coding agent CLI，深度整合 Claude models。支援 terminal-based agent 模式、plan-and-execute workflow、multi-file refactoring。Fafa 係 Claude Max 用家，知道 Claude Code 嘅架構同限制有 direct 幫助。</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span><span class="meta-item">💬 Anthropic 官方 agent CLI，Claude 深度整合</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/cline/cline" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>cline/cline</a>
+<div class="badge-row"><span class="badge badge-signal" style="background:#e67e22">🔥</span><span class="badge badge-stars">⭐ 49.0k</span></div>
+</div>
+<div class="card-description">最多人用嘅 open-source coding agent VS Code extension。plan-and-execute 架構，自由揀 model provider。有 terminal 存取、browser 控制、MCP 整合。如果 Fafa 想揀開源替代方案同自組 agent toolchain，cline 係重要參考。</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span><span class="meta-item">💬 最多 Star 嘅 open-source coding agent extension</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/stablyai/orca" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>stablyai/orca</a>
+<div class="badge-row"><span class="badge badge-signal" style="background:#27ae60">💊</span><span class="badge badge-stars">⭐ 6.3k</span></div>
+</div>
+<div class="card-description">全新 Agent Development Environment (ADE)，專門俾運行 fleet of parallel agents 用。Desktop 同 mobile app，用自己的 API subscription 跑任何 coding agent。Fafa 對 agent orchestration 同 parallel execution 有興趣，呢個係 agent infrastructure 嘅新 category。</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span><span class="meta-item">💬 ADE for parallel agent fleet，agent orchestration 新範式</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#e3b341;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📦</span>open-webui/open-webui</a>
+<div class="badge-row"><span class="badge badge-signal" style="background:#e67e22">🔥</span><span class="badge badge-stars">⭐ 106.0k</span></div>
+</div>
+<div class="card-description">最 popular 嘅 local LLM web UI，106K stars。支援 ollama 開箱即用、OpenAI-compatible API、RAG pipeline、tool calling、multi-user。Fafa 用開 ollama 做 local inference，open-webui 係佢一定會用到嘅 companion tool。</div>
+<div class="card-meta"><span class="badge badge-source">github.com</span><span class="meta-item">💬 最 popular local LLM Web UI，ollama 最佳拍檔</span></div>
+</div>
+</div><div class="section">
+<div class="section-header" style="border-bottom-color:#58a6ff40;">
+<span class="section-icon">🔬</span>
+<span class="section-label" style="color:#58a6ff;">科技新聞</span>
+<span class="section-count">2 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://openai.com/daybreak" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>OpenAI Daybreak 自動化安全修補系統</a>
+</div>
+<div class="card-description">OpenAI 聯同 Trail of Bits 推出 Daybreak Initiative，用 AI 做自動化 security research。Codex Security + GPT-5.5-Cyber 達 85.6% CyberGym 成績。已經喺 cURL、Python、Linux Kernel 發現數百個漏洞並自動 patch。對 open-source 生態安全有深遠影響。</div>
+<div class="card-meta"><span class="badge badge-source">openai.com</span><span class="meta-item">💬 AI 自動 patch 開源漏洞，cURL/Python/Linux Kernel 已有成果</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#58a6ff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://sakana.ai/fugu" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">⚙️</span>Sakana AI Fugu Multi-Agent 模型路由平台</a>
+</div>
+<div class="card-description">東京 AI startup Sakana 推出 Fugu 平台，用 multi-agent routing 將 tasks 分配去不同模型，避免 vendor lock-in。Fugu Ultra 喺科學/工程 benchmark 超越 Claude Fable 5 同 Mythos Preview。對同時用多個 provider 嘅企業同 developer 好有用。</div>
+<div class="card-meta"><span class="badge badge-source">sakana.ai</span><span class="meta-item">💬 Multi-agent routing 避 vendor lock-in，benchmark 超越 Fable 5</span></div>
+</div>
+</div><div class="section">
+<div class="section-header" style="border-bottom-color:#bc8cff40;">
+<span class="section-icon">📰</span>
+<span class="section-label" style="color:#bc8cff;">業界動態</span>
+<span class="section-count">2 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://openai.com/index/samsung-chatgpt-codex" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>Samsung 全員導入 ChatGPT + Codex</a>
+</div>
+<div class="card-description">Samsung 成為歷來最大 enterprise AI deployment — 韓國全體員工及全球 DX 團隊全面使用 ChatGPT 同 Codex。覆蓋 R&D、manufacturing、marketing、corporate functions。證明企業級 AI adoption 正式進入主流。</div>
+<div class="card-meta"><span class="badge badge-source">openai.com</span><span class="meta-item">💬 最大 enterprise AI deployment，Samsung 全面引入</span></div>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#bc8cff;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://www.nvidia.com/en-us/data-center/vera" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">🌐</span>NVIDIA Vera CPU + Rubin GPU 登陸 Los Alamos</a>
+</div>
+<div class="card-description">新 HPE-NVIDIA supercomputers (Mission/Vision/Veritas) 用 Vera CPU 配合 Rubin GPU。Vera 對 agentic AI workload 快 7 倍，simulation 比 x86 快 3 倍。Agentic AI hardware 層面嘅重大 leap，對自建 inference infra 嘅 developer 有長遠影響。</div>
+<div class="card-meta"><span class="badge badge-source">nvidia.com</span><span class="meta-item">💬 NVIDIA Vera 7x agentic AI 加速，Rubin GPU 投產</span></div>
+</div>
+</div><div class="section">
+<div class="section-header" style="border-bottom-color:#3fb95040;">
+<span class="section-icon">📄</span>
+<span class="section-label" style="color:#3fb950;">研究論文</span>
+<span class="section-count">1 條</span>
+</div>
+<div class="card">
+<div class="card-accent-border" style="background:#3fb950;opacity:0.6;"></div>
+<div class="card-title-row">
+<a href="https://huggingface.co/papers/2606.16533" target="_blank" rel="noopener" class="card-title-link"><span class="emoji-prefix">📖</span>Kairos: Native World Model Stack for Physical AI</a>
+<div class="badge-row"><span class="badge badge-stars">⭐ 712</span></div>
+</div>
+<div class="card-description">24 位作者提出嘅原生世界模型架構，專為 Physical AI / robotics 設計。Unified world model 整合 perception、prediction、planning。712 GitHub stars，有完整 video demo。對 Agent 未來要同 physical world 互動有直接啟發。</div>
+<div class="card-meta"><span class="badge badge-source">huggingface.co</span><span class="meta-item">💬 Physical AI 世界模型架構，agent 同現實互動嘅關鍵技術</span></div>
+</div>
+</div><div class="summary-box"><div class="summary-label">📝 總結</div>今日爆多新聞！OpenAI Daybreak 自動 patch 開源漏洞、Sakana Fugu multi-agent routing benchmark 超 Fable 5、Samsung 全員 AI 導入。GitHub 方面 coding agent 三巨頭 codex/claude-code/cline 齊齊上榜，orca 做 agent orchestration 新 ADE。十條齊曬冇漏人！</div><footer class="footer">
+  <p>🤖 由 AI 自動生成 · <a href="https://github.com/fafafung/ai-news">GitHub</a></p>
+  <p style="margin-top:4px;font-size:0.75rem;opacity:0.7;">AI 新聞檔案 · 每日更新</p>
+</footer>
+</div>
+</body>
+</html>
