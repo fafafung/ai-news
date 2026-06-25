@@ -1,6 +1,133 @@
 {
   "entries": [
     {
+      "date": "2026-06-25",
+      "dow": "四",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 26,
+      "summary": "今日幾單大嘢：OpenAI 出咗自己第一粒 custom chip（Broadcom 代工）、Qualcomm 收購 Modular（Mojo 語言母公司）、Anthropic Claude Tag 直接植入 Slack、Google Gemini 3.5 Flash 出 Com…",
+      "first_item_snippet": "OpenAI 首款自研 AI 晶片（Broadcom 代工）: OpenAI  unveils 其首款自研 AI 晶片，由 Broadcom 代工生產。標誌住 OpenAI 正式開始自建 hardware infra，減…",
+      "cat_counts": {
+        "tech": 3,
+        "general": 3,
+        "github": 3,
+        "research": 1
+      },
+      "items": [
+        {
+          "title": "OpenAI 首款自研 AI 晶片（Broadcom 代工）",
+          "link": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "techcrunch.com",
+          "why": "OpenAI 第一粒 custom chip，Broadcom 代工，減少對 NVIDIA 依賴",
+          "description": "OpenAI  unveils 其首款自研 AI 晶片，由 Broadcom 代工生產。標誌住 OpenAI 正式開始自建 hardware infra，減少對 NVIDIA GPU 嘅依賴。對整個 AI infra 供應鏈有深遠影響。",
+          "image": ""
+        },
+        {
+          "title": "Google Gemini 3.5 Flash 推出 Computer Use 功能",
+          "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "Gemini 加入 computer use，同 Claude Computer Use 直接競爭",
+          "description": "Google 為 Gemini 3.5 Flash 加入 computer use 功能，可以 control 桌面瀏覽器操作。同 Anthropic 嘅 Computer Use 直接競爭，agent 操控 browser 嘅能力進一步商品化。",
+          "image": ""
+        },
+        {
+          "title": "Qualcomm 收購 AI startup Modular",
+          "link": "https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/",
+          "category": "general",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "reuters.com",
+          "why": "Qualcomm 收購 Modular（Mojo 語言母公司），AI chip 戰爭升級",
+          "description": "Qualcomm 宣佈收購 Modular，即係 Mojo 程式語言嘅母公司。Modular 嘅 Mojo 語言專門為 AI hardware 而設，Qualcomm 想將 AI compiler 技術收歸旗下，同 NVIDIA/AMD 爭奪 AI 晶片市佔。",
+          "image": ""
+        },
+        {
+          "title": "Anthropic Claude Tag — AI Agent 直接植入 Slack",
+          "link": "https://www.artificialintelligence-news.com/news/anthropic-slack-workplace-ai-agents/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "new",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "@Claude 直接喺 Slack thread 做 agent，workplace AI 正式落地",
+          "description": "Anthropic 推出 Claude Tag（研究預覽），用戶喺 Slack thread 打 @Claude 就可以 summon AI agent 入 conversation，可以 read context、break down tasks。Slack 正式變成 AI agent 嘅 workplace interface。",
+          "image": ""
+        },
+        {
+          "title": "Krea 2: SOTA Open-weights 12B Image Model",
+          "link": "https://www.krea.ai/blog/krea-2-technical-report",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "krea.ai",
+          "why": "Krea 出咗 SOTA 開源 12B 圖像模型，327 HN points",
+          "description": "Krea 推出 Krea 2，一個 SOTA open-weights 12B image generation model。喺 HN 上獲得 327 points，顯示開源 image gen 模型仍然有好大興趣同進展。",
+          "image": ""
+        },
+        {
+          "title": "DeusData/codebase-memory-mcp",
+          "link": "https://github.com/DeusData/codebase-memory-mcp",
+          "category": "github",
+          "stars": 11121,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "本週 GitHub trending #1，6,372 stars/week，MCP code intelligence",
+          "description": "High-performance code intelligence MCP server。將 codebase index 成 persistent knowledge graph，158 種語言，sub-ms query，號稱 reduce 99% tokens。對 MCP ecosystem 同 agent code understanding 都有參考價值。",
+          "image": ""
+        },
+        {
+          "title": "Panniantong/Agent-Reach",
+          "link": "https://github.com/Panniantong/Agent-Reach",
+          "category": "github",
+          "stars": 37625,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "37K stars，zero API fee 嘅 social media search for agents",
+          "description": "讓 AI agent 可以 search 同 read Twitter、Reddit、YouTube、GitHub、Bilibili、小紅書 — 一個 CLI 搞掂，zero API fees。對 agent 要拎 social signal 嘅 use case 好有用。",
+          "image": ""
+        },
+        {
+          "title": "calesthio/OpenMontage",
+          "link": "https://github.com/calesthio/OpenMontage",
+          "category": "github",
+          "stars": 11012,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "首個 open-source agentic video production system",
+          "description": "全球首個 open-source agentic video production system。12 pipelines、52 tools、500+ agent skills，將 AI coding assistant 變成完整嘅 video production studio。",
+          "image": ""
+        },
+        {
+          "title": "NVIDIA 45°C 液冷設計，數據中心用水接近零",
+          "link": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "nvidia.com",
+          "why": "NVIDIA 新 cooling tech，data center 用水量大幅降低",
+          "description": "NVIDIA 推出 45°C liquid cooling 設計，將數據中心用水量降到接近零。喺 AI factory scale 嘅時代，cooling efficiency 直接影響營運成本同 sustainability。",
+          "image": ""
+        },
+        {
+          "title": "CEO-Bench: Can Agents Play the Long Game?",
+          "link": "https://huggingface.co/papers/2606.18543",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Agent long-horizon decision-making benchmark，評估 agent 規劃能力",
+          "description": "CEO-Bench 係一個新嘅 benchmark 專為評估 AI agent 喺長期決策場景下嘅表現。測試 agent 嘅規劃、記憶同執行能力，對 agent 由 code generation 進化到完整 task orchestration 有意義。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-06-24",
       "dow": "三",
       "title": "AI 新聞 · 2026-06-24",
