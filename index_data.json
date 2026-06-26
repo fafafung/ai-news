@@ -1,6 +1,133 @@
 {
   "entries": [
     {
+      "date": "2026-06-26",
+      "dow": "五",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 26,
+      "summary": "今日大新聞係 OpenAI GPT-5.5-Cyber + Patch the Planet、Anthropic Claude Tag 入 Slack、SpaceX $6.3B Reflection AI 交易。GitHub 方面 worldmonitor 同 deer-flow…",
+      "first_item_snippet": "koala73/worldmonitor: AI-powered 全球情報 dashboard，整合 500+ news feeds、geopolitical monitoring、infrastructure trac…",
+      "cat_counts": {
+        "github": 5,
+        "tech": 2,
+        "general": 2,
+        "research": 1
+      },
+      "items": [
+        {
+          "title": "koala73/worldmonitor",
+          "link": "https://github.com/koala73/worldmonitor",
+          "category": "github",
+          "stars": 57900,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "AI 驅動全球情報 dashboard，自己 host 都得",
+          "description": "AI-powered 全球情報 dashboard，整合 500+ news feeds、geopolitical monitoring、infrastructure tracking。支援 local AI（Ollama），3D globe + WebGL map 雙引擎顯示，仲有 Country Instability Index（CII v8）。開源 AGPL-3.0，可以 self-host。Fafa 對呢類 geopolitics + AI 嘅嘢會想知。",
+          "image": ""
+        },
+        {
+          "title": "bytedance/deer-flow",
+          "link": "https://github.com/bytedance/deer-flow",
+          "category": "github",
+          "stars": 74758,
+          "signal": "big",
+          "source_domain": "github.com",
+          "why": "ByteDance 開源 SuperAgent harness，同 Hermes 概念可比",
+          "description": "ByteDance 嘅 open-source SuperAgent harness，用 LangGraph + LangChain 做底。支援 sub-agents、sandbox 隔離、skills 系統、context engineering。同 Hermes Agent 概念相似，但係 ByteDance 出品。Fafa 用開 agent framework 所以會想睇下對比。",
+          "image": ""
+        },
+        {
+          "title": "mukul975/Anthropic-Cybersecurity-Skills",
+          "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "category": "github",
+          "stars": 21356,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "817 個 cybersecurity skills 俾 AI agents，跟足 frameworks",
+          "description": "817 個 structured cybersecurity skills for AI agents，mapped 去 6 個 frameworks：MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF、MITRE F3。Work 到 Claude Code、Codex CLI、Copilot、Cursor、Gemini CLI 等 20+ platforms。Apache 2.0 license。實用性極高。",
+          "image": ""
+        },
+        {
+          "title": "withastro/flue",
+          "link": "https://github.com/withastro/flue",
+          "category": "github",
+          "stars": 6714,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "Astro 團隊嘅 agent harness framework，值得關注",
+          "description": "Astro 團隊整嘅 sandbox agent framework，TypeScript harness。唔係另一個 SDK，而係俾 agent 真正自主運行嘅框架：sessions、tools、skills、filesystem access、secure sandbox。可以 local CLI 行或者 deploy 去任何 runtime。Agent 概念同 Claude Code / Codex 類似。",
+          "image": ""
+        },
+        {
+          "title": "OpenCut-app/OpenCut",
+          "link": "https://github.com/OpenCut-app/OpenCut",
+          "category": "github",
+          "stars": 59816,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "開源 CapCut 替代品，web/desktop/mobile 都用得",
+          "description": "Open-source CapCut 替代品，Web / Desktop / Mobile 三端都支援。MIT license，用 Bun + Turbo 做 monorepo。雖然係 video editor 唔直接關 AI 事，但 Fafa 可能會有用（content creation）。正在重寫中，classic version 仲用得。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI GPT-5.5-Cyber 推出 + Patch the Planet 計劃",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-24-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "buildfastwithai.com",
+          "why": "OpenAI 專門 cyber model + 開源漏洞計劃 Patch the Planet",
+          "description": "OpenAI 推出專門嘅 cybersecurity model GPT-5.5-Cyber，CyberGym 最高單模型分數 85.6%。Partner 包括 Cloudflare、Cisco、CrowdStrike、Oracle 等。同時宣佈 Patch the Planet — 用 Codex Security 掃 30M+ commits 搵 vulnerability，由 Trail of Bits 人工審查先 disclosure。首批 project 包括 cURL、Go、Python、aiohttp 等 30+ 個。",
+          "image": ""
+        },
+        {
+          "title": "Anthropic Claude Tag — Workplace AI Agents 直接踩入 Slack",
+          "link": "https://www.artificialintelligence-news.com/news/anthropic-slack-workplace-ai-agents/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "Anthropic 將 Claude agent 直接放入 Slack channel",
+          "description": "Anthropic 推出 Claude Tag beta，喺 Slack shared channel 用 @Claude 就叫得郁。Asynchronous 操作、ambient monitoring、task delegation。Anthropic 內部用佢生咗 65% code。由 Opus 4.8 驅動。Security 方面有 scoped identities、channel-level memory、cost controls。",
+          "image": ""
+        },
+        {
+          "title": "SpaceX 簽 $6.3B AI 算力合約俾 Reflection AI",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-24-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "SpaceX $6.3B AI 算力 deal，Reflection AI 估值 $25B",
+          "description": "SpaceX 同 Reflection AI 簽咗 $150M/month 嘅算力合約到 2029 年，用 Nvidia GB300 喺 Colossus 2（Memphis）。Reflection AI 由 Google DeepMind 前員工創立，定位「American open-weight frontier AI」，而家估值 ~$25B。有趣嘅係 Nvidia 同時係 chip supplier 同 investor —「Nvidia sells the picks and owns part of the mine」。",
+          "image": ""
+        },
+        {
+          "title": "Samsung 全面開放 AI — ChatGPT Enterprise + Codex 全公司用",
+          "link": "https://www.artificialintelligence-news.com/news/samsung-chatgpt-enterprise-codex-employee-ai-use/",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "artificialintelligence-news.com",
+          "why": "Samsung 全面開放 AI tools，Codex Korea +800% growth",
+          "description": "Samsung Electronics 開放 ChatGPT Enterprise 同 Codex 俾全韓國員工 + 全球 Device eXperience 員工。Codex 全球 weekly active users 超過 5M，韓國自 Feb 2026 升咗 800%。Samsung 同時係 Stargate AI infrastructure 嘅 strategic memory partner，每月需求高達 900,000 DRAM wafers。",
+          "image": ""
+        },
+        {
+          "title": "Plans Don't Persist: Why Context Management Is Load Bearing for LLM Agents",
+          "link": "https://huggingface.co/papers/2606.22953",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Snowflake 研究 agent context management — 同 Hermes 直接相關",
+          "description": "Snowflake 嘅 paper 探討 LLM agents 點樣管理 context — 發現 agents 經常「lost in the middle」或者 plan 喺長時間執行中慢慢 drift。提出 context management 係 agent system 嘅 load-bearing component，而唔係可有可無嘅 optimization。對用開 agent 嘅 Fafa 好 relevant。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-06-25",
       "dow": "四",
       "item_count": 10,
