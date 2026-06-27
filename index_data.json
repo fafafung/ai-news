@@ -1,6 +1,133 @@
 {
   "entries": [
     {
+      "date": "2026-06-27",
+      "dow": "六",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 26,
+      "summary": "今日大新聞：OpenAI GPT-5.6 Sol 終於發佈 limited preview，Jalapeño 自研晶片殺到（50% cost reduction），Anthropic 指控阿里巴巴史上最大蒸餾攻擊。GitHub 方面 loop-engineering 同 agen…",
+      "first_item_snippet": "BuilderIO/agent-native: Builder.io 推出嘅開源框架，讓你喺真實 app 內部直接建立 agent，而唔係喺 chat 旁邊運行。支援 shared actions、SQL-backed …",
+      "cat_counts": {
+        "github": 5,
+        "tech": 2,
+        "general": 2,
+        "research": 1
+      },
+      "items": [
+        {
+          "title": "BuilderIO/agent-native",
+          "link": "https://github.com/BuilderIO/agent-native",
+          "category": "github",
+          "stars": 2558,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "開源 agent-native 框架，agent 直接嵌入真實 app 而唔係 chat 旁邊",
+          "description": "Builder.io 推出嘅開源框架，讓你喺真實 app 內部直接建立 agent，而唔係喺 chat 旁邊運行。支援 shared actions、SQL-backed state、tools、skills、observability 等 product-grade primitives，agent 同 UI 係同一系統嘅平等公民。仲有 templates 例如 Clips（screen recording + agent debug）、Plans（visual plan mode for coding agents）。對 Fafa 呢類玩 agent framework 嘅人好有參考價值。",
+          "image": ""
+        },
+        {
+          "title": "CopilotKit/OpenTag",
+          "link": "https://github.com/CopilotKit/OpenTag",
+          "category": "github",
+          "stars": 1200,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "開源自托管 Slack AI agent，Slack 內 Claude 替代方案",
+          "description": "CopilotKit 推出嘅開源 Slack AI agent，可以 self-hosted 運行。佢會自動分析 thread、回覆問題、call 你嘅 tools，仲可以 render rich results（table、bar chart）直接喺 Slack 回覆。支援 human-in-the-loop（例如 Approve gate），同一套 code 仲可以 deploy 去 Discord、Telegram、WhatsApp。對想喺團隊 workspace 自建 AI agent 嘅人嚟講好實用。",
+          "image": ""
+        },
+        {
+          "title": "cobusgreyling/loop-engineering",
+          "link": "https://github.com/cobusgreyling/loop-engineering",
+          "category": "github",
+          "stars": 1300,
+          "signal": "para",
+          "source_domain": "github.com",
+          "why": "Loop engineering patterns — 設計系統 prompt agent，唔再手動 prompt",
+          "description": "Loop engineering 嘅實踐參考 repository，教人設計系統去 prompt 同 orchestrate AI coding agents，而唔係手動 prompt 每個 agent。包含 7 個 production patterns（Daily Triage、PR Babysitter、CI Sweeper 等）、CLI tools（loop-audit、loop-init、loop-cost）。概念源自 Boris Cherny（Anthropic Claude Code head）同 Addy Osmani。對 Fafa 呢類深度用 coding agent 嘅人好有啟發性。",
+          "image": ""
+        },
+        {
+          "title": "opendatalab/MinerU",
+          "link": "https://github.com/opendatalab/MinerU",
+          "category": "github",
+          "stars": 18500,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "PDF/DOCX 轉 LLM-ready Markdown，Fafa 做 RAG 可以直接用",
+          "description": "OpenDataLab 嘅文件解析工具，將 PDF、DOCX、PPTX、XLSX 轉換做 LLM-ready 嘅 Markdown/JSON。支援多種 backend（pipeline、vlm-engine、hybrid-engine），可以 CLI/API/Docker 部署，仲有 MCP Server 整合 Cursor、Claude Desktop。對 Fafa 做 RAG（LangChain + Docling）嘅 workflow 直接有用，可以用嚟取代/補充 Docling 做 document chunking。",
+          "image": ""
+        },
+        {
+          "title": "ZhuLinsen/daily_stock_analysis",
+          "link": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "category": "github",
+          "stars": 50153,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "LLM 股票分析系統，50k stars，GitHub 本週爆升 +6,919 stars",
+          "description": "LLM 驅動嘅多市場股票智能分析系統（A股/港股/美股/日股/韓股），每日自動生成決策儀表板並推送去企業微信/Telegram/Discord/Slack。支援 GitHub Actions 零成本定時運行、Docker、15 種 Agent 策略問股（均線、纏論、波浪、趨勢等）。50k stars，GitHub trending 本週 +6,919 stars。唔係 AI infra repo，但係 LLM agent 應用嘅好示範。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI 發佈 GPT-5.6 Sol / Terra / Luna 預覽",
+          "link": "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "openai.com",
+          "why": "OpenAI GPT-5.6 三款模型 limited preview，美政府要求限制 rollout",
+          "description": "OpenAI 正式推出 GPT-5.6 家族嘅 limited preview，有三個 variants：Sol（旗艦推理模型）、Terra（平衡型）、Luna（輕量快速）。最大新聞係應 Trump 政府要求限制 rollout（只限特定合作夥伴），Sam Altman 明言「restrictions shouldn't be the norm」。模型內部代號「kindle-alpha」，傳聞有 1.5M token context、改善 Codex 回應速度。Polymarket 預測 83% 機率 6月28日前全面 launch。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI & Broadcom 聯手推出 Jalapeño 自研推理晶片",
+          "link": "https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "venturebeat.com",
+          "why": "OpenAI 首款自研推理晶片，目標降低 50% inference cost",
+          "description": "OpenAI 同 Broadcom 宣布首款 custom AI inference chip「Jalapeño」，9 個月由設計到 tape-out，由 TSMC 製造，Broadcom 提供 Tomahawk networking。Broadcom CEO Hock Tan 聲稱 inference cost per token 降低約 50%（OpenAI 更保守：「substantially better」per watt）。OpenAI 2025 年喺 ChatGPT serving 花咗約 $14B，減 50% 係 profitability 嘅關鍵杠杆。小型 prototype data center 預計 2026 年底運作。",
+          "image": ""
+        },
+        {
+          "title": "Anthropic 指控阿里巴巴發動史上最大規模模型蒸餾攻擊",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-26-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "buildfastwithai.com",
+          "why": "史上最大 AI 蒸餾攻擊，Anthropic 指控阿里巴巴 2,880 萬次對話",
+          "description": "Anthropic 向 Senate Banking Committee 發信，指控阿里巴巴用 25,000 個虛假帳戶生成 2,880 萬次 Claude 對話（2026年4月22日至6月5日），針對 agentic reasoning、software engineering 能力進行蒸餾。信中將事件定性為國家安全問題。阿里巴巴未公開回應。今年 2 月 Anthropic 亦曾指控 DeepSeek、Moonshot、MiniMax 用 24,000 帳戶做 1,600 萬次蒸餾。",
+          "image": ""
+        },
+        {
+          "title": "Google DeepMind 6 日內 4 位頂尖研究員離職",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-26-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "buildfastwithai.com",
+          "why": "6日內4位 DeepMind 頂尖人才流失，Shazeer 去 OpenAI，Jumper 去 Anthropic",
+          "description": "Google DeepMind 經歷人才流失潮：Transformer 共同作者兼 Gemini 聯合負責人 Noam Shazeer 轉投 OpenAI（6月18日），Nobel 得主 AlphaFold 負責人 John Jumper 加入 Anthropic（6月20日），AI coding lead Jonas Adler 同 pretraining specialist Alexander Pritzel 亦加入 Anthropic。Bloomberg 報導 Shazeer 其中一個 project 嘅 compute resource 被 reassign 去倫敦，加速咗佢嘅離職決定。",
+          "image": ""
+        },
+        {
+          "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards (Qwen)",
+          "link": "https://huggingface.co/papers/2606.26300",
+          "category": "research",
+          "stars": 0,
+          "signal": "para",
+          "source_domain": "huggingface.co",
+          "why": "Qwen 研究揭示 coding agent reward 嘅 fundamental limits",
+          "description": "Qwen 團隊發表嘅論文，探討 coding agent reward 嘅 fundamental limitations：驗證 horizon 限制意味著就算用更強嘅 reward model，coding agent 嘅表現都有天花板，冇簡單嘅 silver bullet。對 Fafa 呢類玩 agent framework、考慮點樣設計 agent reward/evaluation 嘅人嚟講好有參考價值。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-06-26",
       "dow": "五",
       "item_count": 10,
