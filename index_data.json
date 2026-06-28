@@ -1,6 +1,144 @@
 {
   "entries": [
     {
+      "date": "2026-06-28",
+      "dow": "日",
+      "item_count": 11,
+      "iso_year": 2026,
+      "iso_week": 26,
+      "summary": "今日係星期日但 AI 世界冇放假。最大單嘢係 Alphabet 一週冇咗四位大佬 + $2690 億市值，OpenAI 嘅 GPT-5.6 延遲到七月，仲有佢哋自研 chip Jalapeño 出咗（推理平一半）。GitHub 方面 cc-switch（107k⭐）同 claud…",
+      "first_item_snippet": "google-labs-code/design.md: Google Labs 推出 DESIGN.md 格式規範，讓 coding agent 能夠理解同應用 visual identity。結合 YAML front…",
+      "cat_counts": {
+        "github": 5,
+        "tech": 3,
+        "general": 2,
+        "research": 1
+      },
+      "items": [
+        {
+          "title": "google-labs-code/design.md",
+          "link": "https://github.com/google-labs-code/design.md",
+          "category": "github",
+          "stars": 22400,
+          "signal": "big",
+          "source_domain": "github.com",
+          "why": "Google 標準化 agent 設計系統描述，改變 agent 點樣理解 UI",
+          "description": "Google Labs 推出 DESIGN.md 格式規範，讓 coding agent 能夠理解同應用 visual identity。結合 YAML front matter（機器可讀嘅 design tokens）同 markdown prose（人類可讀嘅設計 rationale），支援 Tailwind、W3C DTCG 等格式 export。對於用 agent 做前端開發嘅人嚟講，呢個係一個標準化嘅 breakthrough — 以後 agent 唔會再亂用顏色同字型。",
+          "image": ""
+        },
+        {
+          "title": "penpot/penpot",
+          "link": "https://github.com/penpot/penpot",
+          "category": "github",
+          "stars": 52200,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "Open-source Figma 替代品，3.3k stars/week 爆升中",
+          "description": "Penpot 係 open-source 嘅設計協作平台，直接同 Figma 競爭。支援 SVG/CSS/HTML 標準、real-time collaboration、Design Tokens、MCP server integration。v2.16.0 剛剛 release。對於想用 open-source 替代 Figma 嘅團隊嚟講係一個成熟嘅選擇，而且 MCP server 令到 agent 可以直接同設計系統互動。",
+          "image": ""
+        },
+        {
+          "title": "shanraisshan/claude-code-best-practice",
+          "link": "https://github.com/shanraisshan/claude-code-best-practice",
+          "category": "github",
+          "stars": 61000,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "vibe coding → agentic engineering 嘅最佳實踐合集，61k stars",
+          "description": "從 vibe coding 進化到 agentic engineering 嘅完整實踐指南。包含 subagents、commands、skills、MCP servers、workflows、memory 等 Claude Code 進階用法，仲有各種 development workflow 範本（Superpowers、ECC、gstack 等）。Fafa 用緊 Hermes Agent，呢個 repo 嘅 concepts 好多都通用，尤其係 skill architecture 同 agent orchestration。",
+          "image": ""
+        },
+        {
+          "title": "farion1231/cc-switch",
+          "link": "https://github.com/farion1231/cc-switch",
+          "category": "github",
+          "stars": 107000,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "一個 app 管理晒所有 coding agent（包括 Hermes Agent），107k stars",
+          "description": "跨平台 desktop app，統一管理 Claude Code、Codex、Gemini CLI、OpenCode、OpenClaw、Hermes Agent 等 7 個 coding tool。支援 50+ provider presets、unified MCP & Skills management、system tray quick switch、cloud sync。仲有 usage tracking 同 cost dashboard。Fafa 用緊 Hermes Agent + Claude Code + OpenClaw，呢個 tool 可以一個 app 搞掂晒所有 provider config。",
+          "image": ""
+        },
+        {
+          "title": "0xShug0/audio.cpp",
+          "link": "https://github.com/0xShug0/audio.cpp",
+          "category": "github",
+          "stars": 1500,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "純 C++ audio inference，比 Python 快 5x，Fafa 搞 STT/TTS 必睇",
+          "description": "純 C++ ggml-based audio inference engine，支援 TTS、voice cloning、ASR、VAD、music generation、source separation。無需 Python dependency，multiple TTS paths 比 Python reference 快 1.8-5x。支援 Qwen3-ASR、OmniVoice、HeartMuLa 等主流 audio model。Fafa 幫同事搞廣東話 STT/TTS，呢個 project 可以用純 C++ 做 inference，快過 Python 好多。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI & Broadcom 推出「Jalapeño」自研推理晶片",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-26-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "OpenAI 自研 chip 降低 50% 推理成本，直接影響 LLM 定價生態",
+          "description": "OpenAI 同 Broadcom 合作設計嘅首款 custom inference chip「Jalapeño」，9 個月完成設計（業界最快），由 TSMC 生產。初步測試顯示推理成本比現有 Nvidia GPU 低 ~50%。目前行緊 unreleased GPT-5.3-Codex-Spark 模型。2026 年底小規模部署，2027 量產。OpenAI 2025 年 serve ChatGPT 用咗 ~$14B 喺第三方 GPU，呢個 chip 係盈利嘅關鍵。",
+          "image": ""
+        },
+        {
+          "title": "GPT-5.6 延期至七月，特朗普政府要求有限度預覽",
+          "link": "https://www.theguardian.com/technology/2026/jun/26/openai-ai-model-release-trump-us-sam-altman-gpt-anthropic-mythos",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "theguardian.com",
+          "why": "GPT-5.6 延遲 + 政府干預審批，影響所有 GPT developer 嘅 rollout plan",
+          "description": "GPT-5.6（代號 kindle-alpha）原定 6 月底 launch，Polymarket 預測由 83% 急跌至 ~18%。原因包括：reward audit pipeline redesign、IPO quiet period（S-1 6月8日已提交）、以及特朗普政府要求有限度 preview。三款版本：Sol（最強）、Terra（中階）、Luna（低價）。政府要求逐個客戶審批，OpenAI 公開表示「唔係長期 preferred model」。",
+          "image": ""
+        },
+        {
+          "title": "Anthropic 推出 Claude Design — 正面挑戰 Figma 同 Canva",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Anthropic 用 AI 顛覆設計工具市場，Figma 股價插水",
+          "description": "Anthropic 推出 Claude Design，一個由 Claude Opus 4.7 驅動嘅 AI 設計工具，可以從文字生成 website design、UI prototype、presentation、marketing materials。Figma 同 Adobe 股價即時下跌，Figma YTD 已跌 ~40-48%。Anthropic 嘅 product suite 擴張速度驚人：Claude Code（coding）、Claude Design（design）、Claude Cowork（productivity）。",
+          "image": ""
+        },
+        {
+          "title": "Alphabet 一週內四位 AI 研究員離職，市值蒸發 $2690 億",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "四日內四位 AI 大佬跳槽，Google AI 面臨人才空洞危機",
+          "description": "Google DeepMind 六日內四位頂尖研究員離職：Noam Shazeer（Transformer 共同作者、Gemini co-lead）→ OpenAI；John Jumper（諾貝爾獎得主、AlphaFold 負責人）→ Anthropic；Jonas Adler（AI coding lead）→ Anthropic；Alexander Pritzel（pretraining specialist）→ Anthropic。市值蒸發 $2690 億，係非業績期間最大嘅 tech 市值損失之一。Google 內部 compute politics（GPU 分配問題）被認為係主因。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI 考慮大幅降價對抗 Anthropic，IPO 前夕價格戰醞釀",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "OpenAI vs Anthropic 價格戰醞釀中，影響 LLM API 定價生態",
+          "description": "WSJ 報導 OpenAI 正考慮大幅降低 token 價格以贏回流失到 Claude Code 嘅企業客戶。Anthropic 收入急升，Series H 估值 $965B 一度超越 OpenAI。OpenAI 目前 $1.35 成本賺 $1 收入，Anthropic Q2 已有 ~$5.59 億營運利潤。兩家公司都已提交 S-1（OpenAI 目標 9月 IPO，Anthropic 10月）。價格戰直接影響 IPO roadshow 嘅 revenue 預測。",
+          "image": ""
+        },
+        {
+          "title": "Qwen-Image-Agent：Alibaba 推出真實世界圖片生成 agent",
+          "link": "https://huggingface.co/papers/2606.26907",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "Alibaba 嘅 agentic 圖片生成新方法，ComfyUI 用戶值得留意",
+          "description": "Alibaba Qwen 團隊發表 Qwen-Image-Agent，bridging the context gap in real-world image generation。呢個 paper 提出一個新嘅 agentic approach 去做圖片生成，唔係就咁 text-to-image，而係理解 context 再做生成。對於用 ComfyUI + Stable Diffusion 嘅 Fafa 嚟講，呢個方向可能會影響未來 image gen agent 嘅設計。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-06-27",
       "dow": "六",
       "item_count": 10,
