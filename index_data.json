@@ -1,6 +1,134 @@
 {
   "entries": [
     {
+      "date": "2026-06-29",
+      "dow": "一",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 27,
+      "summary": "今日最大件事梗係 GPT-5.6 Sol preview 啦，三層級策略直接衝擊市場，Luna 仲要平到同 DeepSeek Flash 鬥。Anthropic 都唔輸蝕，Claude Design 打 Figma + Slack agents 打 workplace。GitHu…",
+      "first_item_snippet": "GPT-5.6 Sol / Terra / Luna — OpenAI 三層級模型 Preview: OpenAI 正式預覽 GPT-5.6 系列，分為三個 tier：Sol（旗艦，解決 coding、security、…",
+      "cat_counts": {
+        "tech": 2,
+        "github": 5,
+        "general": 2,
+        "research": 1
+      },
+      "items": [
+        {
+          "title": "GPT-5.6 Sol / Terra / Luna — OpenAI 三層級模型 Preview",
+          "link": "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "openai.com",
+          "why": "OpenAI 最大架構更新，三層級策略直接對標 Anthropic + 中國開源模型",
+          "description": "OpenAI 正式預覽 GPT-5.6 系列，分為三個 tier：Sol（旗艦，解決 coding、security、science 等 hard problem）、Terra（日常平衡模型）、Luna（快速平價 volume tier）。Sol Ultra 喺 Terminal-Bench 2.1 達到 91.9%（新 SOTA），遠超 Claude Mythos 5 嘅 88.0%。Agent's Last Exam (code mode) 首次突破 50% 任務完成率。ExploitBench 上三個 tier 全部超過 OpenAI 嘅 'High' 門檻。目前因美國政府要求只開放俾 ~20 間 partner org，OpenAI 預計 'in coming weeks' 開放公眾 API 使用。定價策略進取：Luna $1/$6 per M tokens，直接對標 DeepSeek Flash。",
+          "image": "https://openai.com/img/previewing-gpt-5-6-sol/hero.jpg"
+        },
+        {
+          "title": "Anthropic 推出 Claude Design + Claude Agents 直接整合 Slack",
+          "link": "https://support.claude.com/en/articles/12138966-release-notes",
+          "category": "tech",
+          "stars": 0,
+          "signal": "big",
+          "source_domain": "support.claude.com",
+          "why": "Anthropic 系統性侵佔 Figma/Adobe 領地 + Slack 原生 agent integration",
+          "description": "Anthropic 同時發布兩個重要產品：Claude Design 係一個專門嘅 AI design app，可以生成 UI prototypes、website、marketing materials，由 Claude Opus 4.7 驅動，令 Figma 同 Adobe 股價大跌（Figma 今年跌 40-48%）。同日仲推出 Claude Agents 直接整合 Slack，企業用戶可以喺 Slack 入面用自然語言操作 Claude agents 做 workflow automation。呢啲動作顯示 Anthropic 正系統性擴張企業軟件版圖，繼 Claude Code 之後再攻 Design 同 Workplace 領域。",
+          "image": ""
+        },
+        {
+          "title": "palmier-io/palmier-pro",
+          "link": "https://github.com/palmier-io/palmier-pro",
+          "category": "github",
+          "stars": 9325,
+          "signal": "para",
+          "source_domain": "github.com",
+          "why": "首個開源 AI macOS 影片編輯器，MCP-native 設計，同 ComfyUI 生態互補",
+          "description": "macOS 原生 AI 影片編輯器，Y Combinator S24 出品，GPLv3 開源。內置 Generative AI 功能，支援 Seedance、Kling、Nano Banana Pro 等模型直接喺 timeline 生成影片/圖片。重點係內置 MCP Server，可以連接 Claude Code、Codex、Cursor 做 AI-assisted 編輯。編輯器本身免費開源，只有 generative AI 部分需要付費。macOS 26 (Tahoe) on Apple Silicon only。對 Fafa 嘅 ComfyUI/影片 workflow 有直接參考價值。",
+          "image": ""
+        },
+        {
+          "title": "deepseek-ai/DeepSpec",
+          "link": "https://github.com/deepseek-ai/DeepSpec",
+          "category": "github",
+          "stars": 3200,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "DeepSeek 開源完整 speculative decoding toolkit，直接影響 local inference 效能",
+          "description": "DeepSeek 官方開源完整 speculative decoding 訓練/評估 codebase。支援三種演算法：DSpark（自家論文）、DFlash、Eagle3。包括 data preparation、draft model training、evaluation scripts，全套 pipeline。目標模型用 Qwen3-4B 做示範，8 GPU 單節點訓練。對 Fafa 有 local inference 興趣嚟講，speculative decoding 係加速推理嘅關鍵技術，DeepSeek 開源成套 codebase 對 ollama/vllm 使用者有直接幫助。MIT License。",
+          "image": ""
+        },
+        {
+          "title": "usestrix/strix",
+          "link": "https://github.com/usestrix/strix",
+          "category": "github",
+          "stars": 5800,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "AI agent 做 security pentesting 嘅開源方案，CI/CD native integration",
+          "description": "開源 AI 安全測試工具，用 autonomous AI agents 做 dynamic analysis — 真係 run 你嘅 code、搵 vulnerability、自動產生 PoC。支援 CI/CD integration，可以自動 scan PR 並 block insecure code 先上 production。多 agent orchestration（Graph of Agents）做 comprehensive testing。支援 GPT-5.4、Claude Sonnet 4.6、Gemini 3 Pro 等模型。Apache 2.0 License。對 Fafa 嚟講係 security tooling 嘅新 paradigm — 用 AI agent 代替傳統 pentesting。",
+          "image": ""
+        },
+        {
+          "title": "repoprompt/repoprompt-ce",
+          "link": "https://github.com/repoprompt/repoprompt-ce",
+          "category": "github",
+          "stars": 2400,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "Context engineering 專用工具，解決 coding agent 最大痛點 — context understanding",
+          "description": "macOS 原生 context engineering app 嘅 Community Edition（免費開源）。幫 coding agents 理解 codebase：組合 files、CodeMaps、Git diffs 成 focused context，再 feed 俾 Claude Code、Codex 等 AI 工具。內置 MCP server 可以俾 CLI agents 連接嚟 search repos、inspect files、orchestrate work。Apache 2.0 License。對 Fafa 嘅 Hermes Agent / Claude Code 日常有直接幫助 — 解決 coding agent 最大嘅痛點：context understanding。",
+          "image": ""
+        },
+        {
+          "title": "JCodesMore/ai-website-cloner-template",
+          "link": "https://github.com/JCodesMore/ai-website-cloner-template",
+          "category": "github",
+          "stars": 22982,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "一個 command clone 網站成 Next.js，22.9k⭐ 證明係 coding agent 殺手級應用",
+          "description": "用一個 command 將任何網站 clone 成 clean Next.js codebase 嘅 template。支援 Claude Code、Codex CLI、OpenCode、Cline 等主流 coding agent。Multi-phase pipeline：inspection → spec generation → parallel building。每個 builder 接到完整 component spec，唔使靠 agent 自己 guess design tokens。MIT License。已經 22.9k stars，足見需求強大。雖然主要用嚟 prototyping/learning，唔適合用嚟抄襲。",
+          "image": ""
+        },
+        {
+          "title": "Alphabet 一星期內四名 DeepMind 高層離職，市值蒸發 $269B",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "AI 人才爭奪戰白熱化，Google 人才流失直接反映喺 $269B 市值損失",
+          "description": "六日內四名 senior DeepMind 研究員離職：Noam Shazeer（Transformer 論文 co-author）→ OpenAI，John Jumper（Nobel 得主、AlphaFold 負責人）→ Anthropic，Jonas Adler（Gemini AI coding lead）→ Anthropic，Alexander Pritzel（Gemini pretraining）→ Anthropic。Google 2024 年俾咗 $2.7B 請返 Shazeer 但兩年唔夠就走。推因係 Google 嘅 bureaucracy，拉力係 Anthropic/OpenAI 提供 compute access 同 autonomy。Gemini 3.5 Pro 再次延期（連續第二次 miss I/O 承諾）。",
+          "image": ""
+        },
+        {
+          "title": "Shadow AI 已達企業 AI 用量嘅三分之二 — 安全風險急升",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "2/3 企業 AI 用量經個人賬戶，data leak 風險比想像中大",
+          "description": "Harmonic Security 研究顯示，企業員工有三分之二嘅 AI-related activity 係用緊個人免費帳戶（ChatGPT、Gemini、Claude）做工作相關 tasks。員工 bypass 公司 approved tools，造成 data security 同 IP exposure 風險。最近 Anthropic-Alibaba distillation case 正正展示咗呢個 attack vector。對企業 IT 同 AI governance 係重大警示。Samsung 最近就開放咗 ChatGPT Enterprise 同 Codex 權限俾員工（之前 ban 咗），反映企業正從 'ban' 轉向 'manage' 策略。",
+          "image": ""
+        },
+        {
+          "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
+          "link": "https://huggingface.co/papers/2606.26300",
+          "category": "research",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "huggingface.co",
+          "why": "證明了 coding agent reward 嘅 fundamental limit，影響所有 agent toolchain 設計",
+          "description": "Qwen 團隊發表重要論文，證明 coding agent reward 嘅 fundamental limitations：單純靠 reward-based 方法無法根本解決 coding agent 嘅 verification problem。論文指出 verification horizon 係固有嘅理論限制，唔係 engineering 問題可以 bypass。對所有做 agent toolchain（包括 Fafa 用緊嘅 Claude Code、Codex、Hermes Agent）都有 direct implications — 解釋咗點解 coding agent 有時會 produce 睇嚟啱但實際錯嘅 code。",
+          "image": ""
+        }
+      ],
+      "hero_image": "https://openai.com/img/previewing-gpt-5-6-sol/hero.jpg"
+    },
+    {
       "date": "2026-06-28",
       "dow": "日",
       "item_count": 11,
