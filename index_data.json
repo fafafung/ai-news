@@ -1,6 +1,132 @@
 {
   "entries": [
     {
+      "date": "2026-06-30",
+      "dow": "二",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 27,
+      "summary": "今日最大件事係 Qualcomm 收購 Modular、GPT-5.6 Sol 被政府要求限制發布、Google 內部 coding AI 團隊大執位、仲有 RAISE US 啟動 $5 億 worker retraining。GitHub 方面 AWS 官方出 agent to…",
+      "first_item_snippet": "aws/agent-toolkit-for-aws: AWS 官方推出嘅 Agent Toolkit，包 MCP servers、skills、plugins，俾 AI agents 直接喺 AWS 上開發。支援 Cla…",
+      "cat_counts": {
+        "github": 5,
+        "tech": 2,
+        "general": 3
+      },
+      "items": [
+        {
+          "title": "aws/agent-toolkit-for-aws",
+          "link": "https://github.com/aws/agent-toolkit-for-aws",
+          "category": "github",
+          "stars": 1612,
+          "signal": "big",
+          "source_domain": "github.com",
+          "why": "AWS 官方 Agent Toolkit，MCP + Skills 全包",
+          "description": "AWS 官方推出嘅 Agent Toolkit，包 MCP servers、skills、plugins，俾 AI agents 直接喺 AWS 上開發。支援 Claude Code、Codex、Cursor、Kiro 等多個 agent platform，每個 platform 都有對應嘅 plugin install 流程。仲有 AWS MCP Server 可以 list/read AWS resources、run CLI commands、execute Python boto3 scripts。對成日用 AWS 嘅 developer 嚟講，係 official 而且 production-grade 嘅工具包。",
+          "image": ""
+        },
+        {
+          "title": "topoteretes/cognee",
+          "link": "https://github.com/topoteretes/cognee",
+          "category": "github",
+          "stars": 25701,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "Open-source AI memory platform，Fafa 用緊類似嘢",
+          "description": "Open-source AI memory platform，俾 AI agents 有 persistent long-term memory across sessions。支援 ingest 任何格式嘅 data，build 一個 self-hosted knowledge graph，agents 可以 recall、connect、act with full context。有 Claude Code Plugin 同 OpenClaw Plugin。對 Fafa 嚟講好 relevant — 佢用緊 Mem0/Zep，cognee 行 knowledge graph 路線，做法唔同但目標一致。",
+          "image": ""
+        },
+        {
+          "title": "SMJAI/open-memory-protocol",
+          "link": "https://github.com/SMJAI/open-memory-protocol",
+          "category": "github",
+          "stars": null,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "跨 Tool AI 記憶標準，agent memory 領域重要嘗試",
+          "description": "Open Memory Protocol (OMP)：一個 vendor-neutral 嘅規範，定義 AI tools 點樣 store、retrieve、share memory about users。目標係解決「每個 AI tool 都獨立記住你，轉 tool 就 reset」嘅問題。支援 Claude (via MCP)、OpenAI Assistants、自訂 REST API。Spec 定義三種 memory type：Episodic、Semantic、Procedural。對 agent memory 呢個領域係一個好重要嘅標準化嘗試。",
+          "image": ""
+        },
+        {
+          "title": "Unclecheng-li/VulnClaw",
+          "link": "https://github.com/Unclecheng-li/VulnClaw",
+          "category": "github",
+          "stars": null,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "自然語言→自動滲透測試，AI+MCP 安全應用",
+          "description": "AI Agent + MCP 工具鏈 + 滲透 Skill 編排，輸入自然語言就自動完成「情報收集 → 漏洞發現 → 漏洞利用 → 報告生成」全流程。核心重構係用「黑板圖 + OODA 求解循環」，目標驅動唔再係固定輪數。支援 13 個 LLM provider（DeepSeek、MiniMax、GLM、Qwen 等），內置 7 個 core skill + 14 個專項 skill。對 security 有興趣嘅 developer 嚟講係好 powerful 嘅 tool。",
+          "image": ""
+        },
+        {
+          "title": "kunchenguid/no-mistakes",
+          "link": "https://github.com/kunchenguid/no-mistakes",
+          "category": "github",
+          "stars": 4350,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "Git push 前 AI validation，code quality 自動 gate",
+          "description": "一個 local Git proxy，push 之前行 AI-driven validation pipeline。唔係直接 push 去 origin，而係 push 去 no-mistakes，佢會開一個 disposable worktree，行 review → test → lint → push → PR → CI，全部 check pass 先 forward 去 remote。Agent-agnostic，支援 Claude Code、Codex、OpenCode、Copilot 等。對於想確保 code quality 嘅 developer 係好實用嘅 tool。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI 預覽 GPT-5.6 Sol — 政府要求限制發布",
+          "link": "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "OpenAI 最新旗艦被政府叫停，model release 政治化",
+          "description": "OpenAI 喺 6月26號 preview 咗 GPT-5.6 家族：Sol（旗艦）、Terra（低成本）、Luna（最快）。但 Trump administration 要求限制發布，OpenAI 配合只俾 approved partners 用。呢個係繼 Anthropic 嘅 Mythos/Claude Opus 之後又一個 model 因 safety/security 被政府干預 release。Sol 嘅系統卡顯示佢喺 cyber defense 方面有顯著進步，但同時引發安全憂慮。",
+          "image": ""
+        },
+        {
+          "title": "Google AI Coding Strike Team 改戰術 — 轉向 Midtraining",
+          "link": "https://theinformation.com/articles/google-revamps-new-ai-coding-strike-team-amid-struggle-catch-anthropic",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "theinformation.com",
+          "why": "Google coding AI 內部大執位，Sergey Brin 親筆 memo 承認落後",
+          "description": "Google 嘅 AI coding strike team（今年 4 月成立）由 Sebastian Borgeaud 帶領、Sergey Brin 親自監督，而家決定 pivot 去 midtraining 戰術。Midtraining 係喺 pretraining 同 post-training 之間，用 specialist data  improve domain capabilities 唔使 full rerun。背後原因係 Google 5 個月內 lost 6 個知名 researcher（Denny Zhou → Meta, Noam Shazeer → OpenAI, John Jumper → Anthropic 等），Anthropic 目前 ~100% code with AI，Google 只得 ~50%。Sergey Brin memo：「要贏 final sprint，必須 urgently bridge agentic execution gap。」",
+          "image": ""
+        },
+        {
+          "title": "Qualcomm 以 $3.92B 收購 Modular（Mojo 語言 + MAX 平台）",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-30-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Qualcomm 買 Mojo 語言，挑戰 Nvidia CUDA 地位",
+          "description": "Qualcomm 宣佈以 39.2 億美元收購 Modular，即係 Mojo 程式語言同 MAX 平台嘅 creator。Modular 嘅 MAX platform 可以抽象硬件層，做到 write once run on Qualcomm/Nvidia/Apple Silicon/cloud TPUs。Qualcomm 通過呢個 acquisition 得到一個 software ecosystem 同 Nvidia 嘅 CUDA 競爭，令 Snapdragon/Dragonfly chips 喺 enterprise AI 更 viable。對整個 AI 硬件生態嚟講係重要嘅一步。",
+          "image": ""
+        },
+        {
+          "title": "RAISE US 啟動 $5 億 AI Worker Retraining 計劃",
+          "link": "https://www.buildfastwithai.com/blogs/ai-news-today-june-30-2026",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "buildfastwithai.com",
+          "why": "Amazon/Anthropic/Microsoft/OpenAI 聯手推 worker retraining",
+          "description": "由前 Commerce Secretary Gina Raimondo 同前 Gov. Eric Holcomb 領導嘅 bipartisan nonprofit，目標籌集 $10 億目前已 secured over $5 億。Anchor partners 包括 Amazon、Anthropic、Microsoft、OpenAI Foundation，仲有 Bank of America、IBM、Cisco、GM 等。計劃 pilot retraining、apprenticeships、career navigation，tied to employer demand。Sam Altman 話「幫人應對 AI 帶嚟嘅經濟轉變係而家就要開始諗嘅嘢。」",
+          "image": ""
+        },
+        {
+          "title": "Alphabet 完成史上最大 $847.5 億 Equity Raise 用於 AI Infra",
+          "link": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Upsize-and-Pricing-of-84-75-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure--and-Compute-2026-QzN3D9yMAj/default.aspx",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "abc.xyz",
+          "why": "史上最大 equity financing，全部投入 AI infra",
+          "description": "Alphabet 正式完成 $847.5 億 equity financing，係企業史上最大。結構包括 $300 億 underwritten public offering（oversubscribed）、$400 億 at-the-market program（Q3 2026）、$100 億 private placement to Berkshire Hathaway。資金用嚟擴建 AI compute 同 data centers。Sundar Pichai 話 compute demand 超過 supply，2026 capex guidance 係 $1800-1900 億，2027 年仲會再升。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-06-29",
       "dow": "一",
       "item_count": 10,
