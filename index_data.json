@@ -1,6 +1,133 @@
 {
   "entries": [
     {
+      "date": "2026-07-01",
+      "dow": "三",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 27,
+      "summary": "今日大新聞：Anthropic 出 Claude Sonnet 5（最平 agentic model）、Google 出新 image/video model、Alphabet 史上最大 $84.75B AI 融資、美團用國產芯片訓練萬億參數模型。GitHub 方面 google…",
+      "first_item_snippet": "google/agents-cli: Google 官方推出 agents-cli，一個 CLI 工具讓 coding agent（Claude Code、Codex 等）可以直接建立、評估、部署 AI agent 去 …",
+      "cat_counts": {
+        "github": 5,
+        "tech": 2,
+        "general": 2,
+        "research": 1
+      },
+      "items": [
+        {
+          "title": "google/agents-cli",
+          "link": "https://github.com/google/agents-cli",
+          "category": "github",
+          "stars": 4100,
+          "signal": "big",
+          "source_domain": "github.com",
+          "why": "Google 官方 agent CLI，直接對接 Agent Engine + ADK workflow",
+          "description": "Google 官方推出 agents-cli，一個 CLI 工具讓 coding agent（Claude Code、Codex 等）可以直接建立、評估、部署 AI agent 去 Google Cloud（Gemini Enterprise Agent Platform）。內置多個 agent skills：ADK 開發、deployment、eval、observability。對 Fafa 直接用 Google Agent Dev Kit + Agent Engine 嘅 workflow 極度相關 — 可以大幅簡化 agent 開發到 production 嘅流程。",
+          "image": ""
+        },
+        {
+          "title": "browser-use/video-use",
+          "link": "https://github.com/browser-use/video-use",
+          "category": "github",
+          "stars": 12700,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "用 coding agent 剪片，browser-use 團隊新作，12.7k⭐",
+          "description": "由 browser-use 團隊（browser-use 本身係最 popular 嘅 browser automation for AI agents 工具）推出嘅 video editing 工具。Drop raw footage 入 folder，同 Claude Code / Codex 講你要咩效果，就出 final.mp4。唔係 frame-by-frame 睇片（太貴），而係轉錄 transcript + 結構化 metadata，同 browser-use 俾 DOM 代替 screenshot 嘅思路一樣慳 token。MIT license，完全 open source。",
+          "image": ""
+        },
+        {
+          "title": "Robbyant/lingbot-map",
+          "link": "https://github.com/Robbyant/lingbot-map",
+          "category": "github",
+          "stars": 8900,
+          "signal": "new",
+          "source_domain": "github.com",
+          "why": "開源 3D foundation model，streaming reconstruction，Apache 2.0",
+          "description": "Feed-forward 3D foundation model，可以從 video / image sequence 即時 reconstruct 3D scene。支援 streaming inference（逐 frame 處理）、KV cache temporal consistency、sliding window 處理 3000+ frames。Apache 2.0 license，有 HuggingFace model weights。對 robotics / 3D vision 場景好有用。",
+          "image": ""
+        },
+        {
+          "title": "diegosouzapw/OmniRoute",
+          "link": "https://github.com/diegosouzapw/OmniRoute",
+          "category": "github",
+          "stars": 500,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "免費 AI gateway，237 providers，auto-fallback，慳 token",
+          "description": "免費 AI gateway，一個 endpoint 連去 237 個 provider（50+ 免費），支援 Claude Code / Codex / Cursor / Cline / Copilot 等 16+ coding agent。內置 17 種 routing strategy（auto-fallback、cost-optimized、round-robin），RTK + Caveman token compression save 15-95% tokens。對用多個模型嘅 developer 嚟講可以大幅降低 API cost。",
+          "image": ""
+        },
+        {
+          "title": "interviewstreet/hiring-agent",
+          "link": "https://github.com/interviewstreet/hiring-agent",
+          "category": "github",
+          "stars": 4000,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "HackerRank 開源 AI resume agent，local LLM 可行",
+          "description": "由 HackerRank / InterviewStreet 推出嘅 open-source AI resume scoring agent。PDF → structured extraction → GitHub enrichment（fetch profile + repos）→ LLM evaluation with fairness constraints。支援 local Ollama 或 Google Gemini。MIT license，Python codebase，對 HR tech / recruitment automation 場景有參考價值。",
+          "image": ""
+        },
+        {
+          "title": "Claude Sonnet 5",
+          "link": "https://www.anthropic.com/news/claude-sonnet-5",
+          "category": "tech",
+          "stars": null,
+          "signal": "big",
+          "source_domain": "anthropic.com",
+          "why": "Anthropic 最 agentic Sonnet，$2/M tokens，agentic coding 大升",
+          "description": "Anthropic 6月30日推出 Claude Sonnet 5，最 agentic 嘅 Sonnet 型號。可以 plan、用 browser/terminal tools、autonomously run tasks。Introductory pricing $2/$10 per M tokens（至8月31日），之後 $3/$15。Agentic coding benchmark 63.2%（Opus 4.8 係 69.2%，但貴一倍）。Sonnet 4.6 用戶應該即 upgrade。同時係 free / Pro plan default model。",
+          "image": ""
+        },
+        {
+          "title": "Google Nano Banana 2 Lite + Gemini Omni Flash",
+          "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+          "category": "tech",
+          "stars": null,
+          "signal": "big",
+          "source_domain": "blog.google",
+          "why": "Google 新 image gen 4秒/$0.034 + conversational video editing",
+          "description": "Google DeepMind 推出兩款新模型：Nano Banana 2 Lite（gemini-3.1-flash-lite-image）係最快最平嘅 image gen model — 4秒出圖，$0.034/張，prompt adherence 強，in-image text readable。Gemini Omni Flash 係 conversational video editing model，$0.10/秒 video output，可以自然語言剪片、animate image、加 narration。兩個可以 chain 埋：gen image → animate to video。",
+          "image": ""
+        },
+        {
+          "title": "Alphabet $84.75B 史上最大 AI 基建融資",
+          "link": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Proposed-80-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure-and-Compute-2026-b0myAMewCa/default.aspx",
+          "category": "general",
+          "stars": null,
+          "signal": "big",
+          "source_domain": "abc.xyz",
+          "why": "歷史最大 AI infra 融資，Berkshire $10B 入場",
+          "description": "Alphabet 宣佈 $84.75B equity raise（原本 $80B，加碼至 $84.75B），史上最大 AI infrastructure 融資。其中 Berkshire Hathaway 獨資 $10B 買入 Alphabet 股票。資金用於 AI compute、data center。2026 capex guidance $180-190B，2027 會再升。Alphabet 最近12個月營運現金流 ~$174B，Cloud backlog $460B。Google 同時在追趕 Anthropic 嘅 coding agent 能力差距。",
+          "image": ""
+        },
+        {
+          "title": "Meituan LongCat-2.0 — 全國產芯片訓練的萬億參數模型",
+          "link": "https://techxplore.com/news/2026-06-china-meituan-ai-domestic-chips.html",
+          "category": "general",
+          "stars": null,
+          "signal": "big",
+          "source_domain": "techxplore.com",
+          "why": "萬億參數模型完全用國產芯片訓練，美團里程碑",
+          "description": "美團（Meituan）宣佈 LongCat-2.0 LLM，聲稱係「業界首個用 50,000 塊國產芯片完成端到端訓練和推論嘅萬億參數模型」。效能宣稱可媲美 Google Gemini 3.1 Pro。美團 AI 團隊自 2023 年已經開始探索國產芯片。呢個係中國半導體自主化嘅重要里程碑，證明大規模訓練唔再完全依賴 Nvidia GPU。",
+          "image": ""
+        },
+        {
+          "title": "Scaling the Horizon, Not the Parameters — 35B Agent 達至萬億參數效能",
+          "link": "https://huggingface.co/papers/2606.30616",
+          "category": "research",
+          "stars": null,
+          "signal": "new",
+          "source_domain": "huggingface.co",
+          "why": "35B agent 用 test-time compute 打平 trillion-param 效能",
+          "description": "InternScience 嘅論文展示一個只有 35B 參數嘅 agent system（透過 test-time compute scaling + multi-agent orchestration）可以達到萬億參數模型嘅 performance。核心 insight 係 scaling horizon（推理深度）比 scaling parameters（模型大小）更有效。對 agent framework 設計者直接相關 — 細 model + smart orchestration 可以取代大 model。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-06-30",
       "dow": "二",
       "item_count": 10,
