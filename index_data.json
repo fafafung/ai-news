@@ -1,6 +1,132 @@
 {
   "entries": [
     {
+      "date": "2026-07-02",
+      "dow": "四",
+      "item_count": 10,
+      "iso_year": 2026,
+      "iso_week": 27,
+      "summary": "今日焦點：Anthropic Claude Sonnet 5 正式成為 default model，Google 推出 Gemini Omni Flash 影片模型，加州政府簽署歷史性 AI 合約。GitHub 方面有 Meta 開源 Astryx design system、L…",
+      "first_item_snippet": "msitarzewski/agency-agents: 一個從 Reddit thread 誕生嘅 massive AI agent collection，而家有 232 個 specialist agents 橫跨 1…",
+      "cat_counts": {
+        "github": 5,
+        "tech": 3,
+        "general": 2
+      },
+      "items": [
+        {
+          "title": "msitarzewski/agency-agents",
+          "link": "https://github.com/msitarzewski/agency-agents",
+          "category": "github",
+          "stars": 123000,
+          "signal": "hot",
+          "source_domain": "github.com",
+          "why": "232 個 specialist AI agents 嘅 massive collection，123k stars 爆升",
+          "description": "一個從 Reddit thread 誕生嘅 massive AI agent collection，而家有 232 個 specialist agents 橫跨 16 個部門（Engineering、Security、Design、Marketing 等）。每個 agent 有獨特 personality、domain expertise、同 production-ready workflow。支援 Claude Code、Cursor、Codex、Gemini CLI 等 14+ 個 tool。123k stars 證明呢個 community project 已經成為 agent ecosystem 嘅重要 reference。",
+          "image": ""
+        },
+        {
+          "title": "facebook/astryx",
+          "link": "https://github.com/facebook/astryx",
+          "category": "github",
+          "stars": null,
+          "signal": "big",
+          "source_domain": "github.com",
+          "why": "Meta 開源 agent-ready design system，150+ components，八年內部驗證",
+          "description": "Meta 開源咗內部用咗八年嘅 design system Astryx，聲稱係 Meta 最大嘅 design system（13,000+ apps 用緊）。Ship 150+ accessible components、7 個 ready-made themes、CLI tooling，特別係標榜「agent ready」— 即係 people 同 AI assistants 用同一套 tooling 嚟 build UI。React + StyleX 基底，MIT license。對 Fafa 嚟講，如果佢做 agent 相關嘅 frontend 或者想俾 agent build UI，呢個係好重要嘅參考。",
+          "image": ""
+        },
+        {
+          "title": "xbtlin/ai-berkshire",
+          "link": "https://github.com/xbtlin/ai-berkshire",
+          "category": "github",
+          "stars": 8200,
+          "signal": "para",
+          "source_domain": "github.com",
+          "why": "AI 價值投資 framework，四大師方法論 + 多 agent 並行研究",
+          "description": "一個用 Claude Code/Codex 做價值投資研究嘅 framework，將巴菲特、芒格、段永平、李錄四大師嘅方法論系統化成 18 個 skills。有多 agent parallel research（/investment-team 同時開 4 個 agent 研究同一間公司）、強制給結論機制（唔俾 AI 打太極）、金融級 precision（decimal.Decimal 計算）。實盤兩年累計 +146 萬回報，跑贏標普 500 每年 46-50 個百分點。",
+          "image": ""
+        },
+        {
+          "title": "tigicion/dao-code",
+          "link": "https://github.com/tigicion/dao-code",
+          "category": "github",
+          "stars": 1100,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "DeepSeek-V4 agent，cache engineering 做到比 Claude 平 18-30 倍",
+          "description": "一個 open-source TypeScript terminal coding agent，專為 DeepSeek-V4 優化。核心賣點係 cache economics：用 byte-stable prefix 同 cache-reusing forks 令 DeepSeek prefix cache hit rate 達到 95%+，實際成本比 Claude Opus 4.8 平 ~30 倍、比 Sonnet 4.6 平 ~18 倍。支援 1M context、Skills/MCP/Hooks、cross-session memory、self-correction reflection layer、Claude Code config compatible。Fafa 有用 ollama/local inference 嘅經驗，呢個 agent 展示咗點樣用 cache engineering 大幅降低 agent 成本。",
+          "image": ""
+        },
+        {
+          "title": "langchain-ai/openwiki",
+          "link": "https://github.com/langchain-ai/openwiki",
+          "category": "github",
+          "stars": 320,
+          "signal": "pain",
+          "source_domain": "github.com",
+          "why": "LangChain 出的 CLI，auto-generate agent-friendly codebase docs",
+          "description": "LangChain 最新出品嘅 CLI tool，專門用嚟自動 generate 同 maintain agent-friendly 嘅 codebase documentation。會自動創建 openwiki/ folder 同埋寫入 AGENTS.md / CLAUDE.md 令 coding agent 知道點樣參考啲 docs。支援 OpenRouter、Anthropic、OpenAI 等多個 provider，仲有 GitHub Action 可以每日 auto-update docs。Fafa 用 LangChain，呢個 tool 直接解決 agent docs 嘅痛點。",
+          "image": ""
+        },
+        {
+          "title": "Claude Sonnet 5 正式推出 — Near-Opus 性能、Sonnet 價錢",
+          "link": "https://www.anthropic.com/news/claude-sonnet-5",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "Default model 轉 Sonnet 5，近 Opus 性能但同 Sonnet 價錢，有 breaking changes",
+          "description": "Anthropic 喺 6 月 30 日推出 Claude Sonnet 5，7 月 1 日起成為所有 Free/Pro 用戶嘅 default model。Introductory pricing $2/$10 per M tokens（到 8 月 31 日），之後回復 $3/$15 — 同 Sonnet 4.6 同價但性能大幅提升。SWE-bench Pro 63.2%、OSWorld 81.2%、Terminal-Bench 80.4%，接近 Opus 4.8 水平。有三個 breaking changes 要留意：adaptive thinking 強制開啟、temperature/top_p 參數會被 reject、新 tokenizer 會 output 多 1.0-1.35x tokens。Cursor 同 Zapier 都報告 agent 表現大幅提升。",
+          "image": ""
+        },
+        {
+          "title": "Google 推出 Gemini Omni Flash 影片模型 + Nano Banana 2 Lite 圖像模型",
+          "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "blog.google",
+          "why": "Google 兩個新模型：conversational video editing + 更快 image gen",
+          "description": "Google 喺 6 月 30 日同步推出兩個新模型：Gemini Omni Flash 係 conversational video editing 模型，支援 720p 即時影片編輯，每秒 $0.10，用 Nano Banana pipeline。Nano Banana 2 Lite 係更快更平嘅 image generator（Gemini 3.1 Flash Lite Image 嘅 rebrand），定位係輕量級圖像生成。對 Fafa 嚟講，如果佢用 ComfyUI + Stable Diffusion 做 image gen，呢類 Google 嘅輕量模型可能係更快嘅 alternative 做 prototyping。",
+          "image": ""
+        },
+        {
+          "title": "OpenAI GPT-5.6 Sol 預覽 — 下一代模型架構",
+          "link": "https://openai.com/index/previewing-gpt-5-6-sol",
+          "category": "tech",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "openai.com",
+          "why": "OpenAI 下一代模型預覽，Sol/Terra/Luna 三個 tier",
+          "description": "OpenAI 喺 6 月 26 日預覽咗 GPT-5.6 Sol，係佢哋下一代旗艦模型。分三個 tier：Sol（最強）、Terra（平衡）、Luna（輕量快速）。雖然係預覽階段，但標誌住 OpenAI 嘅模型路線圖進入新世代。對於 Fafa 用緊多個 LLM provider 嚟講，呢個係重要嘅 roadmap signal。",
+          "image": ""
+        },
+        {
+          "title": "加州政府簽署歷史性 Anthropic 合約 — 全州 30 萬公務員半價用 Claude",
+          "link": "https://www.anthropic.com/news/california-claude-deal",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "anthropic.com",
+          "why": "美國最大州政府 AI 合約，30 萬公務員半價用 Claude，Anthropic IPO signal",
+          "description": "加州政府與 Anthropic 簽署美國史上最大型嘅州政府 AI 部署合約：所有州政府機構同自願加入嘅城市/縣可以喺 SITeS portal 以五折使用 Claude。包括免費 workforce training、generative AI technical assistance。名為「Poppy」嘅 AI assistant 已喺 67 個部門 pilot 俾 2,800+ 員工使用，7 月全面 rollout 到 30 萬公務員。DMV、Medicaid、cybersecurity 等都已開始部署。呢單嘢政治上係對 Trump 政府 hostile 態度嘅 counterweight，商業上係 Anthropic IPO 前最大規模嘅 public sector validation。",
+          "image": ""
+        },
+        {
+          "title": "五眼聯盟聯合警告：AI 網絡攻擊「幾個月內」到來，唔係幾年",
+          "link": "https://www.cyber.gov.au",
+          "category": "general",
+          "stars": 0,
+          "signal": "",
+          "source_domain": "cyber.gov.au",
+          "why": "五眼聯盟警告 AI 網絡攻擊幾個月內爆發，mention Claude Mythos/GPT-5.5-Cyber",
+          "description": "ASD（澳洲）、CSE（加拿大）、GCHQ（英國）、NSA/CISA（美國）五個頂級網絡安全機構聯合發出警告，標題為「The AI Shift in Cyber Risk: Why Leaders Must Act Now」。關鍵句子：Frontier AI models 預計會超出當前業界預期，從根本上改變攻防能力，時間線係「months, not years」。報告特別提到 Anthropic Claude Mythos 同 OpenAI GPT-5.5-Cyber 嘅 offensive capabilities。CISA 已將 mandatory patch deadline 縮短到 3 日。",
+          "image": ""
+        }
+      ]
+    },
+    {
       "date": "2026-07-01",
       "dow": "三",
       "item_count": 10,
